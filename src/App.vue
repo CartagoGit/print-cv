@@ -20,7 +20,9 @@ import { RouterView } from 'vue-router';
 <style>
 #app {
 	display: flex;
-	background-color: red;
+	background-color: var(--pink-500);
+	width: 100%;
+	height: 100%;
 }
 </style>
 <style scoped>
