@@ -3,16 +3,28 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-	<aside>
-		<span @click="$router.push({ name: 'home' })">Pepon</span>
+	<div class="app">
+		<aside>
+			<span @click="$router.push({ name: 'home' })">Home</span>
+			<span @click="$router.push({ name: 'cv' })">Curriculum</span>
 
-		<nav>
-			<span @click="$router.push({ name: 'mario' })">Mario</span>
-		</nav>
-	</aside>
-	<main>
-		<RouterView />
-	</main>
+			<nav>
+				<span @click="$router.push({ name: 'mario' })">Mario</span>
+			</nav>
+		</aside>
+		<main>
+			<RouterView />
+		</main>
+	</div>
 </template>
-
-<style scoped></style>
+<style>
+#app {
+	display: flex;
+	background-color: red;
+}
+</style>
+<style scoped>
+aside {
+	background-color: blue;
+}
+</style>
