@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router';
 <template>
 	<aside>
 		<span @click="$router.push({ name: 'home' })">Home</span>
-		<span @click="$router.push({ name: 'cv' })">Curriculum</span>
+		<!-- <span @click="$router.push({ name: 'cv' })">Curriculum</span> -->
 
 		<nav>
 			<span @click="$router.push({ name: 'mario' })">Mario</span>
@@ -37,7 +37,7 @@ aside {
 main {
 	background-color: burlywood;
 	display: flex;
-	padding: 10px;
+	padding: 20px;
 	justify-content: center;
 
 	.curriculum{
