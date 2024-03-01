@@ -62,7 +62,8 @@ main {
 	display: flex;
 	padding: 20px;
 	justify-content: center;
-	overflow: scroll;
+	height: 100vh;
+	overflow: auto;
 
 	.curriculum {
 		aspect-ratio: 1.414;
