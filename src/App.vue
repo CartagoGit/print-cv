@@ -4,11 +4,19 @@ import { RouterView } from 'vue-router';
 
 <template>
 	<aside>
-		<span @click="$router.push({ name: 'home' })">Home</span>
-		<!-- <span @click="$router.push({ name: 'cv' })">Curriculum</span> -->
-
+		<header>
+			<span
+				@click="$router.push({ name: 'home' })"
+				class="btn">
+				Home
+			</span>
+		</header>
 		<nav>
-			<span @click="$router.push({ name: 'mario' })">Mario</span>
+			<span
+				@click="$router.push({ name: 'mario' })"
+				class="btn">
+				Mario
+			</span>
 		</nav>
 	</aside>
 	<main>
@@ -28,11 +36,13 @@ import { RouterView } from 'vue-router';
 </style>
 <style scoped>
 aside {
-	background-color: aqua;
+	background-color: var(--gray-700);
+	color: var(--gray-100);
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 20px;
 }
 main {
 	background-color: burlywood;
@@ -40,13 +50,12 @@ main {
 	padding: 20px;
 	justify-content: center;
 
-	.curriculum{
+	.curriculum {
 		aspect-ratio: 1.414;
 		width: 210mm;
 		height: 297mm;
 		background-color: white;
 		box-shadow: 0 0 10px 0 black;
-		
 	}
 }
 </style>
