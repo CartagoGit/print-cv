@@ -24,7 +24,7 @@
 			</section>
 		</header>
 		<nav>
-			<h2>Curriculums</h2>
+			<h3>Curriculums</h3>
 			<span
 				v-for="route in routes"
 				@click="$router.push({ name: route.nameRoute })"

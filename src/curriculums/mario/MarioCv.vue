@@ -47,12 +47,13 @@ const cvDate = 'Feb 2024';
 	--tertiary: #80888c;
 	--bold-font: 'Myriad Pro Bold Condensed';
 	--regular-font: 'Myriad Pro';
+	--page-padding: 36px;
 }
 .page {
 	display: grid;
 	position: relative;
 	/* padding: 10mm; */
-	padding: 36px;
+	padding: var(--page-padding);
 	font-family: var(--regular-font);
 	color: var(--secondary);
 	font-size: 14px;
@@ -84,7 +85,7 @@ const cvDate = 'Feb 2024';
 	}
 	article.field-data {
 		grid-column: 1 / 3;
-		outline: 1px solid green;
+		/* outline: 1px solid green; */
 		display: grid;
 		grid-template-columns: 220px 1fr;
 		row-gap: 15px;
@@ -102,7 +103,7 @@ const cvDate = 'Feb 2024';
 .content {
 	width: 100%;
 	height: 100%;
-	outline: 1px solid aqua;
+	/* outline: 1px solid aqua; */
 	display: flex;
 	flex-direction: column;
 	gap: 26px;
@@ -113,17 +114,17 @@ section {
 	grid-template-columns: 220px 1fr;
 	row-gap: 15px;
 	column-gap: 10px;
-	outline: 1px solid purple;
+	/* outline: 1px solid purple; */
 }
 
 .personal {
 	height: 50mm;
 }
 
-.cv-expedition{
+.cv-expedition {
 	position: absolute;
-	bottom: 36px;
-	right: 36px;
-	font-size: 12px;
+	bottom: var(--page-padding);
+	right: var(--page-padding);
+	font-size: 10px;
 }
 </style>

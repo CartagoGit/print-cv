@@ -13,12 +13,12 @@ const fields: IFieldsData[] = [
 		subCompany: '(AZUR GLOBAL BUSINESS S.L Group)',
 		where: 'Sevilla',
 		date: {
-			start: 'Sept 2021',
-			end: 'Oct 2022',
+			start: 'Oct 2022',
+			end: 'Actual',
 		},
 		place: 'Desarrollador de software.',
 		description:
-			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos para contabilidad con WSL2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Manejo de repositorios usando Git.',
+			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos compatibles con Wsl2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Manejo de repositorios usando Git.',
 	},
 	{
 		company: 'Profesional Independiente',
