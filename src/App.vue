@@ -6,6 +6,9 @@
 				class="btn">
 				Home
 			</span>
+			<span class="actions">
+				<font-awesome-icon :icon="['fas', 'file-pdf']" />
+			</span>
 		</header>
 		<nav>
 			<h2>Curriculums</h2>
@@ -59,6 +62,13 @@ aside {
 		display: flex;
 		justify-content: space-between;
 		background-color: var(--gray-800);
+
+		.actions {
+			display: flex;
+			gap: 20px;
+			font-size: 20px;
+			color: var(--gray-100);
+		}
 	}
 	nav {
 		display: flex;
