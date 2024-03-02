@@ -8,9 +8,10 @@ RUN echo "Project: ${PROJECT}"
 # Install bash
 RUN apk add --no-cache bash
 
-WORKDIR /${DOCKER_FOLDER}/${PROJECT}
+WORKDIR ${DOCKER_FOLDER}
 
 COPY package*.json ./
 
-RUN bun install --global tsx
+RUN bun install --global tsx 
+
 
