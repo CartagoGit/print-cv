@@ -7,13 +7,13 @@
 					@click="$router.push({ name: 'home' })" />
 			</section>
 			<section>
-				<span class="group-icons">
-					<ZoomOutIcon class="icon" />
+				<span class="group-icons disabled">
+					<ZoomOutIcon class="icon"  />
 					<ZoomInIcon class="icon" />
 				</span>
 			</section>
 			<section>
-				<span class="group-icons">
+				<span class="group-icons disabled">
 					<PdfIcon class="icon" />
 				</span>
 			</section>
