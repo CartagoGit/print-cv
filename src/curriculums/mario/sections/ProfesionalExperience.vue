@@ -89,8 +89,7 @@ const fields: IFieldsData[] = [
 			'Contrato de prácticas. Funciones: Apoyo en proyecto desarrollado en Java.',
 	},
 	{
-		company: 'MUÑOZ Y DIEZMA, S.L.',
-		subCompany: '(Publibici)',
+		company: 'MUÑOZ Y DIEZMA, S.L. (Publibici)',
 		where: 'Sevilla',
 		date: {
 			start: 'Dic 2006',

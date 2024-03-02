@@ -12,15 +12,21 @@
 				<OficialEducation />
 			</section>
 		</div>
+		<span class="cv-expedition">{{ cvDate }}</span>
 	</div>
 	<h3>Página 2 - Cursor y habilidades</h3>
-	<div class="page">Página 2</div>
+	<div class="page">
+		Página 2
+		<span class="cv-expedition">{{ cvDate }}</span>
+	</div>
 </template>
 
 <script setup lang="ts">
 import PersonalInfo from './sections/PersonalInfo.vue';
 import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 import OficialEducation from './sections/OficialEducation.vue';
+
+const cvDate = 'Feb 2024';
 </script>
 <style>
 @font-face {
@@ -44,7 +50,9 @@ import OficialEducation from './sections/OficialEducation.vue';
 }
 .page {
 	display: grid;
-	padding: 10mm;
+	position: relative;
+	/* padding: 10mm; */
+	padding: 36px;
 	font-family: var(--regular-font);
 	color: var(--secondary);
 	font-size: 14px;
@@ -87,8 +95,6 @@ import OficialEducation from './sections/OficialEducation.vue';
 		grid-column: 2 / 3;
 		line-height: 22px;
 	}
-
-	
 }
 </style>
 <style scoped>
@@ -112,5 +118,12 @@ section {
 
 .personal {
 	height: 50mm;
+}
+
+.cv-expedition{
+	position: absolute;
+	bottom: 36px;
+	right: 36px;
+	font-size: 12px;
 }
 </style>
