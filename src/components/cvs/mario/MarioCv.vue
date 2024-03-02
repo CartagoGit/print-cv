@@ -67,6 +67,7 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 	gap: 26px;
 }
 
+article.with-date,
 section {
 	display: grid;
 	grid-template-columns: 50mm 1fr;

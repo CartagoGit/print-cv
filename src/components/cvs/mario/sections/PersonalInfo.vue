@@ -32,8 +32,6 @@ import {
 	CertificatesIcon,
 } from '@/assets/icons/contact/contact.icons.ts';
 
-const phone = '627 63 39 20';
-
 const fields = [
 	{
 		icon: PhoneIcon,
