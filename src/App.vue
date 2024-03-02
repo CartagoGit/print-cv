@@ -3,18 +3,18 @@
 		<header>
 			<section>
 				<HomeIcon
-					class="icon icon--logo"
+					class="icon icon--header icon--logo"
 					@click="$router.push({ name: 'home' })" />
 			</section>
 			<section>
 				<span class="group-icons disabled">
-					<ZoomOutIcon class="icon" />
-					<ZoomInIcon class="icon" />
+					<ZoomOutIcon class="icon icon--header" />
+					<ZoomInIcon class="icon icon--header" />
 				</span>
 			</section>
 			<section>
 				<span class="group-icons disabled">
-					<PdfIcon class="icon" />
+					<PdfIcon class="icon icon--header" />
 				</span>
 			</section>
 		</header>

@@ -15,15 +15,25 @@
 import PersonalInfo from './sections/PersonalInfo.vue';
 </script>
 <style>
+@font-face {
+	font-family: 'Myriad Pro Bold Condensed';
+	src: url('@/assets/fonts/MyriadPro-BoldCond.ttf') format('truetype');
+	font-weight: regular;
+	font-style: normal;
+}
 :root {
 	--primary: #3cb878;
 	--secondary: #626c70;
 	--tertiary: #80888c;
+	--bold-font: 'Myriad Pro Bold Condensed';
+	--normal-font: 'Myriad Pro';
 }
 .page {
 	display: grid;
 	padding: 10mm;
-	font-family: 'Myriad Pro';
+	font-family: var(--normal-font);
+	color: var(--secondary);
+	font-size: 16px;
 	h1,
 	h2,
 	h3,
@@ -31,10 +41,11 @@ import PersonalInfo from './sections/PersonalInfo.vue';
 	h5,
 	h6 {
 		color: var(--primary);
+		font-family: var(--bold-font);
 		font-weight: bold;
 	}
 	h1 {
-		font-size: 30pt;
+		font-size: 48px;
 	}
 
 	.icon {
@@ -43,13 +54,6 @@ import PersonalInfo from './sections/PersonalInfo.vue';
 }
 </style>
 <style scoped>
-@font-face {
-	font-family: 'Myriad Pro Bold Condensed';
-	src: url('../assets/fonts/MyriadPro-BoldCond.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
 .content {
 	width: 100%;
 	height: 100%;

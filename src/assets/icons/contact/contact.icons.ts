@@ -5,6 +5,7 @@ import LinkedinIcon from './linkedin.icon.svg';
 import BirthdayIcon from './birthday.icon.svg';
 import NpmIcon from './npm.icon.svg';
 import WorldIcon from './world.icon.svg';
+import CertificatesIcon from './certificates.icon.svg';
 
 export {
 	EmailIcon,
@@ -14,4 +15,5 @@ export {
 	BirthdayIcon,
 	NpmIcon,
 	WorldIcon,
+    CertificatesIcon
 };
