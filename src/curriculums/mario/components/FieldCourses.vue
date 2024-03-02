@@ -6,13 +6,13 @@
 			<span class="company font-bold">{{ field.place }}</span>
 			<span class="badges">
 				<span
-					class="font-regular time badge badge--blue"
+					class="font-regular time badge"
 					v-if="field.time">
 					{{ field.time }} h
 				</span>
 				<span
 					v-if="field.isOnline"
-					class="font-regular online badge badge--purple">
+					class="font-regular online badge">
 					online
 				</span>
 			</span>
@@ -63,8 +63,8 @@ defineProps({
 		gap: 1px;
 		align-items: center;
 		grid-column: 2 / 3;
-		.badge {
-			opacity: 0.8;
+		.badge{
+			background-color: var(--primary);
 		}
 	}
 	.time {
