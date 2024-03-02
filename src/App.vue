@@ -8,7 +8,7 @@
 			</section>
 			<section>
 				<span class="group-icons disabled">
-					<ZoomOutIcon class="icon"  />
+					<ZoomOutIcon class="icon" />
 					<ZoomInIcon class="icon" />
 				</span>
 			</section>
@@ -33,6 +33,12 @@
 		<div
 			v-else
 			class="curriculum">
+			<h1>Currículum vitae de: 
+				{{
+					routes.find((route) => route.nameRoute === $route.name)
+						?.text ?? 'Error getting route'
+				}}
+			</h1>
 			<RouterView />
 		</div>
 	</main>
@@ -105,14 +111,5 @@ main {
 	justify-content: center;
 	height: 100vh;
 	overflow: auto;
-
-	.curriculum {
-		aspect-ratio: 1.414;
-		/* Size A4 */
-		width: 210mm;
-		height: 297mm;
-		background-color: white;
-		box-shadow: 0 0 10px 0 black;
-	}
 }
 </style>

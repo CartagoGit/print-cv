@@ -17,3 +17,12 @@ body {
 	pointer-events: none !important;
 	opacity: 0.2 !important;
 }
+
+.page {
+	aspect-ratio: 1.414;
+	/* Size A4 */
+	width: 210mm;
+	height: 297mm;
+	background-color: white;
+	box-shadow: 0 0 10px 0 black;
+}

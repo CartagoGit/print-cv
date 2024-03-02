@@ -1,10 +1,13 @@
+<script setup lang="ts"></script>
 
-<script setup lang="ts">
+<template>Cv</template>
 
-</script>
+<style scoped>
+@font-face {
+	font-family: 'Myriad Pro Bold Condensed';
+	src: url('../assets/fonts/MyriadPro-BoldCond.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 
-<template>
-	Cv
-</template>
-
-<style scoped></style>
+</style>
