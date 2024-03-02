@@ -11,6 +11,33 @@ body {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+
+	// Estilos para Chrome y Safari
+	::-webkit-scrollbar {
+		width: 8px; // Ancho del scrollbar
+		transition: 300ms ease all;
+	}
+	::-webkit-scrollbar-track {
+		transition: 300ms ease all;
+
+		background: var(--gray-600); // Color de fondo del track
+	}
+	::-webkit-scrollbar-thumb {
+		transition: 300ms ease all;
+		border-radius: 20px;
+		background: var(--gray-400); // Color del thumb
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--gray-500); // Color del thumb al pasar el mouse
+	}
+
+	// Asegurarse de que los estilos de Firefox no se apliquen wn otros
+	@supports not (scrollbar-width: thin) {
+		// Estilos para Firefox
+		// Estilos específicos para Firefox
+		scrollbar-width: thin; // Ancho del scrollbar
+		scrollbar-color: var(--gray-400) var(--gray-600); // Color del thumb y del track
+	}
 }
 
 *:disabled,
