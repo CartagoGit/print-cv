@@ -1,50 +1,50 @@
 <template>
-
-		<aside>
-			<header>
-				<section>
-					<HomeIcon
-						class="icon icon--logo"
-						@click="$router.push({ name: 'home' })" />
-				</section>
-				<section>
-					<span class="group-icons disabled">
-						<ZoomOutIcon class="icon" />
-						<ZoomInIcon class="icon" />
-					</span>
-				</section>
-				<section>
-					<span class="group-icons disabled">
-						<PdfIcon class="icon" />
-					</span>
-				</section>
-			</header>
-			<nav>
-				<h2>Curriculums</h2>
-				<span
-					v-for="route in routes"
-					@click="$router.push({ name: route.nameRoute })"
-					class="link btn">
-					{{ route.text }}
+	<aside>
+		<header>
+			<section>
+				<HomeIcon
+					class="icon icon--logo"
+					@click="$router.push({ name: 'home' })" />
+			</section>
+			<section>
+				<span class="group-icons disabled">
+					<ZoomOutIcon class="icon" />
+					<ZoomInIcon class="icon" />
 				</span>
-			</nav>
-		</aside>
-		<main>
-			<RouterView v-if="$route.name === 'home'" />
-			<div
-				v-else
-				class="curriculum">
-				<h1>
-					Currículum vitae de
-					{{
-						routes.find((route) => route.nameRoute === $route.name)
-							?.text ?? 'Error getting route'
-					}}
-				</h1>
-				<RouterView />
-			</div>
-		</main>
-
+			</section>
+			<section>
+				<span class="group-icons disabled">
+					<PdfIcon class="icon" />
+				</span>
+			</section>
+		</header>
+		<nav>
+			<h2>Curriculums</h2>
+			<span
+				v-for="route in routes"
+				@click="$router.push({ name: route.nameRoute })"
+				class="link btn">
+				{{ route.text }}
+			</span>
+		</nav>
+	</aside>
+	<main>
+		<RouterView
+			v-if="$route.name === 'home'"
+			class="home" />
+		<div
+			v-else
+			class="curriculum">
+			<h1>
+				Currículum vitae de
+				{{
+					routes.find((route) => route.nameRoute === $route.name)
+						?.text ?? 'Error getting route'
+				}}
+			</h1>
+			<RouterView />
+		</div>
+	</main>
 </template>
 
 <script setup lang="ts">
@@ -57,20 +57,16 @@ import {
 } from '@/assets/icons/header/header.icons.ts';
 
 const routes = [{ text: 'Mario', nameRoute: 'mario' }];
-for (let i = 0; i < 30; i++) {
-	routes.push({ text: `Mario ${i}`, nameRoute: `mario${i}` });
-}
 </script>
 
 <style>
 #app {
-
-    display: grid;
-    grid-template-columns: 300px 1fr;
+	display: grid;
+	grid-template-columns: 300px 1fr;
 	background-color: var(--gray-200);
 	height: 100vh;
-    width: 100%;
-    overflow: hidden;
+	width: 100%;
+	overflow: hidden;
 }
 </style>
 <style scoped>
@@ -134,6 +130,8 @@ main {
 		text-align: center;
 		margin-bottom: 20px;
 	}
+
+	.home,
 	.curriculum {
 		overflow-y: auto;
 		padding: 20px;
