@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="description">
-			<span class="font-bold">
+			<span class="font-bold m5">
 				{{ field.job }}
 			</span>
 			<span class="font-regular">
@@ -144,5 +144,8 @@ const fields: IProfesionalExperiencie[] = [
 			color: var(--primary);
 		}
 	}
+
+
 }
+
 </style>
