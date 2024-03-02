@@ -1,23 +1,21 @@
-version: "3.8"
+version: '3.8'
 services:
-  app:
-    container_name: ${DOCKER_IMAGE}-container
-    ports:
-      - "${VITE_PORT}:${VITE_PORT}"
-    build:
-      context: .
-      args:
-        - PROJECT=${PROJECT}
-        - DOCKER_FOLDER=${DOCKER_FOLDER}
-      dockerfile: Dockerfile
-    image: ${DOCKER_IMAGE}
-    volumes:
-      - .:/app
-      # - .:${DOCKER_FOLDER}
-    # command: ["sh", "-c", "bun i && bun run dev"]
-    command: ["tail", "-f"]
-    restart: always
-    tty: true
-    init: true
-    ulimits:
-      memlock: -1
+    app:
+        container_name: ${DOCKER_IMAGE}-container
+        ports:
+            - '${VITE_PORT}:${VITE_PORT}'
+        build:
+            context: .
+            args:
+                - PROJECT=${PROJECT}
+                - DOCKER_FOLDER=${DOCKER_FOLDER}
+            dockerfile: Dockerfile
+        image: ${DOCKER_IMAGE}
+        volumes:
+            - .:${DOCKER_FOLDER}
+        command: ['sh', '-c', 'bun i && bun run dev']
+        restart: always
+        tty: true
+        init: true
+        ulimits:
+            memlock: -1
