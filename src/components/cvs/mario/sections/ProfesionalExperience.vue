@@ -1,9 +1,10 @@
 <template>
+	<h2 class="section-title">Experiencia profesional</h2>
 	<article
 		class="with-date"
 		v-for="field of fields">
-		<div></div>
-		<div>{{ field.job }}</div>
+		<div class="info"></div>
+		<div class="description">{{ field.job }}</div>
 	</article>
 </template>
 
@@ -11,6 +12,17 @@
 import type { IProfesionalExperiencie } from '@/shared/interfaces/index.interfaces';
 
 const fields: IProfesionalExperiencie[] = [
+	{
+		company: 'BEATEAM S.L. (AZUR GLOBAL BUSINESS S.L Group)',
+		where: 'Sevilla',
+		date: {
+			start: 'Sept 2021',
+			end: 'Oct 2022',
+		},
+		job: 'Desarrollador de software.',
+		description:
+			'Funciones: Lenguaje de Etiquetas - HTML 5 + CSS / Sass. Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular / Javascript (ES6) / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; C# Windows Form y WCF; y en Unity C#. Control de Repositorios Git + GitHub. Desarrollo en MongoDB (No-SQL) usando Node.js/Mongoose; y SQL en Bases de Datos relacionales. Gestión de proyectos con Notion para llevar un control de proyectos.',
+	},
 	{
 		company: 'Profesional Independiente',
 		where: 'Sevilla',
@@ -90,4 +102,6 @@ const fields: IProfesionalExperiencie[] = [
 	},
 ];
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>

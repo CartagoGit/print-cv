@@ -14,7 +14,7 @@
 			<component
 				:is="field.icon"
 				class="icon icon--info" />
-			<span>
+			<span class="font-bold">
 				{{ field.value }}
 			</span>
 		</span>
@@ -93,7 +93,6 @@ const fields = [
 .info {
 	display: grid;
 	grid-template-columns: 55mm 1fr;
-	font-weight: bold;
 
 	h1 {
 		grid-column: 1 / 3;

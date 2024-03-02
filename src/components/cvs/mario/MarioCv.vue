@@ -25,19 +25,25 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 	font-weight: regular;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('@/assets/fonts/MyriadPro-Regular.ttf') format('truetype');
+	font-weight: regular;
+	font-style: normal;
+}
 :root {
 	--primary: #3cb878;
 	--secondary: #626c70;
 	--tertiary: #80888c;
 	--bold-font: 'Myriad Pro Bold Condensed';
-	--normal-font: 'Myriad Pro';
+	--regular-font: 'Myriad Pro';
 }
 .page {
 	display: grid;
 	padding: 10mm;
-	font-family: var(--normal-font);
+	font-family: var(--regular-font);
 	color: var(--secondary);
-	font-size: 16px;
+	font-size: 14px;
 	h1,
 	h2,
 	h3,
@@ -55,28 +61,46 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 	.icon {
 		fill: var(--primary);
 	}
+
+	.font-regular {
+		font-family: var(--normal-font);
+	}
+
+	.font-bold {
+		font-family: var(--bold-font);
+		font-size: 16px;
+	}
+	article.with-date {
+		grid-column: 1 / 3;
+		outline: 1px solid green;
+		display: grid;
+		grid-template-columns: 50mm 1fr;
+		gap: 10mm;
+	}
+
+	.section-title {
+		grid-column: 2 / 3;
+		line-height: 22px;
+	}
 }
 </style>
 <style scoped>
+/* TODO comentar los colores de los bordes */
 .content {
 	width: 100%;
 	height: 100%;
-	border: 1px solid aqua;
+	outline: 1px solid aqua;
 	display: flex;
 	flex-direction: column;
 	gap: 26px;
 }
 
-article.with-date,
 section {
 	display: grid;
 	grid-template-columns: 50mm 1fr;
-	border: 1px solid purple;
-	gap: 10mm;
-}
-
-article.with-date{
-	grid-column: 1 / 3;
+	row-gap: 26px;
+	column-gap: 10mm;
+	outline: 1px solid purple;
 }
 
 .personal {
