@@ -17,8 +17,11 @@
 	<h3>Página 2 - Cursos y habilidades</h3>
 	<div class="page">
 		<div class="content">
-			<section class="complementary-education">
+			<section class="complementary-education lower-gap">
 				<ComplementaryEducation />
+			</section>
+			<section class="lang lower-gap">
+				<Lang />
 			</section>
 		</div>
 		<span class="cv-expedition">{{ cvDate }}</span>
@@ -30,6 +33,7 @@ import PersonalInfo from './sections/PersonalInfo.vue';
 import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 import OficialEducation from './sections/OficialEducation.vue';
 import ComplementaryEducation from './sections/ComplementaryEducation.vue';
+import Lang from './sections/Lang.vue';
 import './styles/global.mario.scss';
 
 const cvDate = 'Feb 2024';
@@ -58,7 +62,7 @@ section {
 	height: 50mm;
 }
 
-.complementary-education {
+.lower-gap {
 	row-gap: 10px;
 }
 .cv-expedition {

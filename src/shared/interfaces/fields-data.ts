@@ -10,9 +10,11 @@ export interface IFieldsData {
 }
 
 export interface IFieldCourse {
-	place: string;
-	date: string;
+	place?: string;
+	date?: string;
 	description: string;
+	subDescription?: string;
+
 	time?: number;
 	isOnline?: boolean;
 }

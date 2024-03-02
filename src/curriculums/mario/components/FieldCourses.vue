@@ -21,8 +21,13 @@
 			</span>
 		</div>
 		<div class="description">
-			<span class="font-bold">
+			<span class="font-bold mr5">
 				{{ field.description }}
+			</span>
+			<span
+				v-if="field.subDescription"
+				class="font-regular">
+				{{ field.subDescription }}
 			</span>
 		</div>
 	</article>
@@ -44,20 +49,22 @@ defineProps({
 	grid-template-columns: 1fr 60px 56px;
 	grid-template-rows: 1fr;
 	gap: 2px;
-	.company, .badges, .date {
+	.company,
+	.badges,
+	.date {
 		grid-row: 1;
 	}
 	.company {
 		text-wrap: nowrap;
-		grid-column: 1 / 3
+		grid-column: 1 / 3;
 	}
 	.badges {
 		display: flex;
 		gap: 1px;
 		align-items: center;
 		grid-column: 2 / 3;
-		.badge{
-			opacity: 0.8
+		.badge {
+			opacity: 0.8;
 		}
 	}
 	.time {

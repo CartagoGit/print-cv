@@ -1,6 +1,6 @@
 import { IFieldCourse } from '../../../shared/interfaces/fields-data';
 <template>
-	<h2 class="section-title">Formación complementaria</h2>
+	<h2 class="section-title section-title--lower-gap">Formación complementaria</h2>
 	<FieldCourses :fields="fields" />
 </template>
 
@@ -182,8 +182,3 @@ const fields: IFieldCourse[] = [
 	},
 ];
 </script>
-<style scoped>
-h2 {
-	margin-bottom: 5px;
-}
-</style>
