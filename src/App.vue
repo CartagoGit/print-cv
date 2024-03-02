@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router';
-</script>
-
 <template>
 	<aside>
 		<header>
@@ -12,19 +8,31 @@ import { RouterView } from 'vue-router';
 			</span>
 		</header>
 		<nav>
+			<h2>Curriculums</h2>
 			<span
-				@click="$router.push({ name: 'mario' })"
+				v-for="route in routes"
+				@click="$router.push({ name: route.nameRoute })"
 				class="link btn">
-				Mario
+				{{ route.text }}
 			</span>
 		</nav>
 	</aside>
 	<main>
-		<div class="curriculum">
+		<RouterView v-if="$route.name === 'home'" />
+		<div
+			v-else
+			class="curriculum">
 			<RouterView />
 		</div>
 	</main>
 </template>
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router';
+
+const routes = [{ text: 'Mario', nameRoute: 'mario' }];
+</script>
+
 <style>
 #app {
 	display: grid;
@@ -49,13 +57,16 @@ aside {
 		padding: 20px;
 		width: 100%;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		background-color: var(--gray-800);
 	}
 	nav {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+		align-items: center;
 		gap: 20px;
+		overflow-y: auto;
 	}
 }
 main {
