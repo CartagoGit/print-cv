@@ -13,6 +13,6 @@ export interface IFieldCourse {
 	place: string;
 	date: string;
 	description: string;
-	time: number;
+	time?: number;
 	isOnline?: boolean;
 }

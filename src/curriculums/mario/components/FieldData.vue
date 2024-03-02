@@ -21,8 +21,8 @@
 				{{ field.place }}
 			</span>
 			<span
-				class="font-regular"
-				v-id="field.description">
+				v-if="field.description"
+				class="font-regular">
 				{{ field.description }}
 			</span>
 		</div>
