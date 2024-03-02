@@ -5,6 +5,6 @@ export interface IProfesionalExperiencie {
     subCompany?: string;
     where: string;
     date: IDate;
-    job: string;
-    description: string;
+    place: string;
+    description?: string;
 }

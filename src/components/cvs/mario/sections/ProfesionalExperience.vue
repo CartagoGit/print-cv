@@ -18,8 +18,8 @@
 			</div>
 		</div>
 		<div class="description">
-			<span class="font-bold m5">
-				{{ field.job }}
+			<span class="font-bold mr5">
+				{{ field.place }}
 			</span>
 			<span class="font-regular">
 				{{ field.description }}
@@ -40,7 +40,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: 'Sept 2021',
 			end: 'Oct 2022',
 		},
-		job: 'Desarrollador de software.',
+		place: 'Desarrollador de software.',
 		description:
 			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos para contabilidad con WSL2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue.',
 	},
@@ -51,7 +51,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: 'Sept 2021',
 			end: 'Oct 2022',
 		},
-		job: 'Desarrollador de software.',
+		place: 'Desarrollador de software.',
 		description:
 			'Funciones: Lenguaje de Etiquetas - HTML 5 + CSS / Sass. Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular / Javascript (ES6) / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; C# Windows Form y WCF; y en Unity C#. Control de Repositorios Git + GitHub. Desarrollo en MongoDB (No-SQL) usando Node.js/Mongoose; y SQL en Bases de Datos relacionales. Gestión de proyectos con Notion para llevar un control de proyectos.',
 	},
@@ -63,7 +63,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: 'Oct 2016',
 			end: 'Feb 2019',
 		},
-		job: 'Técnico de Telecomunicaciones.',
+		place: 'Técnico de Telecomunicaciones.',
 		description:
 			'Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar.',
 	},
@@ -75,7 +75,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: 'May 2014',
 			end: 'Sep 2016',
 		},
-		job: 'Técnico de Telecomunicaciones.',
+		place: 'Técnico de Telecomunicaciones.',
 		description:
 			'Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar.',
 	},
@@ -86,7 +86,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: '2006',
 			end: '2014',
 		},
-		job: 'Soporte de hardware.',
+		place: 'Soporte de hardware.',
 		description:
 			'Funciones: Mantenimiento de computadoras informáticas y consolas, así como de otros dispositivos electrónicos para particulares. ',
 	},
@@ -97,7 +97,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: 'Abr 2013',
 			end: 'Jun 2013',
 		},
-		job: 'Desarrollador de software.',
+		place: 'Desarrollador de software.',
 		description:
 			'Contrato de prácticas. Funciones: Desarrollo web en intranet empleando SharePoint.',
 	},
@@ -108,7 +108,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: 'Nov 2012',
 			end: 'Dic 2012',
 		},
-		job: 'Desarrollador de software.',
+		place: 'Desarrollador de software.',
 		description:
 			'Contrato de prácticas. Funciones: Apoyo en proyecto desarrollado en Java.',
 	},
@@ -120,7 +120,7 @@ const fields: IProfesionalExperiencie[] = [
 			start: 'Dic 2006',
 			end: 'Mar 2007',
 		},
-		job: 'Repartidor de publicidad.',
+		place: 'Repartidor de publicidad.',
 		description:
 			'Funciones: Exposición al público y reparto de publicidad.',
 	},
@@ -130,22 +130,24 @@ const fields: IProfesionalExperiencie[] = [
 .info {
 	display: flex;
 	flex-direction: column;
+
 	.company {
 		white-space: pre;
 	}
 	.where-date {
+        margin-top: 3px;
 		display: grid;
 		grid-template-columns: auto 60%;
 		.where,
 		.date {
 			justify-self: end;
+			display: flex;
+			align-items: end;
+			font-size: 13px;
 		}
 		.date {
 			color: var(--primary);
 		}
 	}
-
-
 }
-
 </style>
