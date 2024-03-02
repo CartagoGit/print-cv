@@ -58,6 +58,9 @@ section {
 	height: 50mm;
 }
 
+.complementary-education {
+	row-gap: 10px;
+}
 .cv-expedition {
 	position: absolute;
 	bottom: var(--page-padding);

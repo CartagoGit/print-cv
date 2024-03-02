@@ -182,5 +182,8 @@ const fields: IFieldCourse[] = [
 	},
 ];
 </script>
-
-<style scoped></style>
+<style scoped>
+h2 {
+	margin-bottom: 5px;
+}
+</style>
