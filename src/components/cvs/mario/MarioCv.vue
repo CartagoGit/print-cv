@@ -5,6 +5,9 @@
 			<section class="personal">
 				<PersonalInfo />
 			</section>
+			<section class="profesional-experience">
+				<ProfesionalExperience />
+			</section>
 		</div>
 	</div>
 	<h3>Página 2 - Cursor y habilidades</h3>
@@ -13,6 +16,7 @@
 
 <script setup lang="ts">
 import PersonalInfo from './sections/PersonalInfo.vue';
+import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 </script>
 <style>
 @font-face {
@@ -58,6 +62,9 @@ import PersonalInfo from './sections/PersonalInfo.vue';
 	width: 100%;
 	height: 100%;
 	border: 1px solid aqua;
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
 }
 
 section {
