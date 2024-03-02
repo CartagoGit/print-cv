@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  app:
+    container_name: ${DOCKER_IMAGE}-container
+    ports:
+      - "${VITE_PORT}:${VITE_PORT}"
+    build:
+      context: .
+      args:
+        - PROJECT=${PROJECT}
+      dockerfile: Dockerfile
+    image: ${DOCKER_IMAGE}
+    volumes:
+      - .:/_projects/${PROJECT}
+    command: ["sh", "-c", "bun i && bun run dev"]
+    restart: always
+    tty: true
+    init: true
+    ulimits:
+      memlock: -1

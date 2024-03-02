@@ -13,6 +13,7 @@ const router = createRouter({
 			path: '/cv',
 			name: 'cv',
 			component: () => import('../views/CvView.vue'),
+			components:[],
 			children: [
 				{
 					path: 'mario',
