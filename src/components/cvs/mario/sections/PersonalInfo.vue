@@ -13,8 +13,10 @@
 			class="field">
 			<component
 				:is="field.icon"
-				class="icon icon-info" />
-			{{ field.value }}
+				class="icon icon--info" />
+			<span>
+				{{ field.value }}
+			</span>
 		</span>
 	</article>
 </template>
@@ -41,22 +43,22 @@ const fields = [
 		icon: GithubIcon,
 		value: 'github.com/CartagoGit',
 	},
-    {
-        icon: EmailIcon,
-        value: 'cv2mario@gmail.com',
-    },
-    {
-        icon: LinkedinIcon,
-        value: 'linkedin.com/in/mario-cabrero-volarich',
-    },
+	{
+		icon: EmailIcon,
+		value: 'cv2mario@gmail.com',
+	},
+	{
+		icon: LinkedinIcon,
+		value: 'linkedin.com/in/mario-cabrero-volarich',
+	},
 	{
 		icon: WorldIcon,
 		value: '41007 - Sevilla ',
 	},
-    {
-        icon: NpmIcon,
-        value: 'npmjs.com/~cartago-git',
-    },
+	{
+		icon: NpmIcon,
+		value: 'npmjs.com/~cartago-git',
+	},
 	{
 		icon: BirthdayIcon,
 		value: '04/07/1988',
@@ -92,7 +94,7 @@ const fields = [
 }
 .info {
 	display: grid;
-	grid-template-columns: 50mm 1fr;
+	grid-template-columns: 55mm 1fr;
 	font-weight: bold;
 
 	h1 {
