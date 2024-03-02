@@ -16,7 +16,7 @@ const router = createRouter({
 				{
 					path: 'mario',
 					name: 'mario',
-					component: () => import('../components/cvs/MarioCv.vue'),
+					component: () => import('../components/cvs/mario/MarioCv.vue'),
 				},
 			],
 		},
