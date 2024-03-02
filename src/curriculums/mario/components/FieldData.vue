@@ -33,7 +33,7 @@
 import type { IFieldsData } from '@/shared/interfaces/index.interfaces';
 import { defineProps } from 'vue';
 
-const props = defineProps({
+defineProps({
 	fields: Array as () => IFieldsData[],
 });
 </script>

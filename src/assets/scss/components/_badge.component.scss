@@ -1,0 +1,14 @@
+.badge{
+    font-size:10px;
+    padding: 1px 3px;
+    background: var(--gray-400);
+    border-radius: 5px;
+    color: var(--gray-200);
+
+    &--blue {
+        background: var(--sky-700);
+    }
+    &--green {
+        background: var(--green-700);
+    }
+}

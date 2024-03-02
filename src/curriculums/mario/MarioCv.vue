@@ -16,7 +16,11 @@
 	</div>
 	<h3>Página 2 - Cursos y habilidades</h3>
 	<div class="page">
-		Página 2
+		<div class="content">
+			<section class="complementary-education">
+				<ComplementaryEducation />
+			</section>
+		</div>
 		<span class="cv-expedition">{{ cvDate }}</span>
 	</div>
 </template>
@@ -25,6 +29,7 @@
 import PersonalInfo from './sections/PersonalInfo.vue';
 import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 import OficialEducation from './sections/OficialEducation.vue';
+import ComplementaryEducation from './sections/ComplementaryEducation.vue';
 import './styles/global.mario.scss';
 
 const cvDate = 'Feb 2024';
