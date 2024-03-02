@@ -1,14 +1,22 @@
 <template>
 	<aside>
 		<header>
-			<span
-				@click="$router.push({ name: 'home' })"
-				class="btn">
-				Home
-			</span>
-			<span class="actions">
-				<font-awesome-icon :icon="['fas', 'file-pdf']" />
-			</span>
+			<section>
+				<HomeIcon
+					class="icon icon--logo"
+					@click="$router.push({ name: 'home' })" />
+			</section>
+			<section>
+				<span class="group-icons">
+					<ZoomOutIcon class="icon" />
+					<ZoomInIcon class="icon" />
+				</span>
+			</section>
+			<section>
+				<span class="group-icons">
+					<PdfIcon class="icon" />
+				</span>
+			</section>
 		</header>
 		<nav>
 			<h2>Curriculums</h2>
@@ -32,6 +40,12 @@
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
+import {
+	HomeIcon,
+	PdfIcon,
+	ZoomInIcon,
+	ZoomOutIcon,
+} from '@/assets/icons/header/header.icons.ts';
 
 const routes = [{ text: 'Mario', nameRoute: 'mario' }];
 </script>
@@ -59,15 +73,21 @@ aside {
 
 		padding: 20px;
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		background-color: var(--gray-800);
-
-		.actions {
+		section {
 			display: flex;
-			gap: 20px;
-			font-size: 20px;
-			color: var(--gray-100);
+			justify-content: center;
+		}
+		.group-icons {
+			border-radius: 30px;
+			background-color: var(--gray-900);
+			border: 1px solid var(--gray-600);
+			padding: 10px 15px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
 		}
 	}
 	nav {

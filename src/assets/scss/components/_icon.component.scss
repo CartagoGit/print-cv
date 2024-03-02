@@ -1,0 +1,16 @@
+.icon {
+	fill: var(--gray-100);
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transition: 300ms ease fill;
+	filter: drop-shadow(0 0 1px var(--gray-400));
+
+	&:hover {
+		fill: var(--gray-400);
+	}
+    &--logo{
+        width: 40px;
+        height: 40px;
+    }
+}
