@@ -1,47 +1,50 @@
 <template>
-	<aside>
-		<header>
-			<section>
-				<HomeIcon
-					class="icon icon--logo"
-					@click="$router.push({ name: 'home' })" />
-			</section>
-			<section>
-				<span class="group-icons disabled">
-					<ZoomOutIcon class="icon" />
-					<ZoomInIcon class="icon" />
+
+		<aside>
+			<header>
+				<section>
+					<HomeIcon
+						class="icon icon--logo"
+						@click="$router.push({ name: 'home' })" />
+				</section>
+				<section>
+					<span class="group-icons disabled">
+						<ZoomOutIcon class="icon" />
+						<ZoomInIcon class="icon" />
+					</span>
+				</section>
+				<section>
+					<span class="group-icons disabled">
+						<PdfIcon class="icon" />
+					</span>
+				</section>
+			</header>
+			<nav>
+				<h2>Curriculums</h2>
+				<span
+					v-for="route in routes"
+					@click="$router.push({ name: route.nameRoute })"
+					class="link btn">
+					{{ route.text }}
 				</span>
-			</section>
-			<section>
-				<span class="group-icons disabled">
-					<PdfIcon class="icon" />
-				</span>
-			</section>
-		</header>
-		<nav>
-			<h2>Curriculums</h2>
-			<span
-				v-for="route in routes"
-				@click="$router.push({ name: route.nameRoute })"
-				class="link btn">
-				{{ route.text }}
-			</span>
-		</nav>
-	</aside>
-	<main>
-		<RouterView v-if="$route.name === 'home'" />
-		<div
-			v-else
-			class="curriculum">
-			<h1>Currículum vitae de: 
-				{{
-					routes.find((route) => route.nameRoute === $route.name)
-						?.text ?? 'Error getting route'
-				}}
-			</h1>
-			<RouterView />
-		</div>
-	</main>
+			</nav>
+		</aside>
+		<main>
+			<RouterView v-if="$route.name === 'home'" />
+			<div
+				v-else
+				class="curriculum">
+				<h1>
+					Currículum vitae de
+					{{
+						routes.find((route) => route.nameRoute === $route.name)
+							?.text ?? 'Error getting route'
+					}}
+				</h1>
+				<RouterView />
+			</div>
+		</main>
+
 </template>
 
 <script setup lang="ts">
@@ -54,29 +57,47 @@ import {
 } from '@/assets/icons/header/header.icons.ts';
 
 const routes = [{ text: 'Mario', nameRoute: 'mario' }];
+for (let i = 0; i < 30; i++) {
+	routes.push({ text: `Mario ${i}`, nameRoute: `mario${i}` });
+}
 </script>
 
 <style>
 #app {
-	display: grid;
-	grid-template-columns: 300px 1fr;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
 	background-color: var(--gray-200);
-	width: 100%;
-	height: 100%;
+	height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 </style>
 <style scoped>
+main,
+aside {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.container {
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	overflow: hidden;
+}
+
 aside {
 	display: flex;
 	background-color: var(--gray-700);
 	color: var(--gray-100);
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
 	box-shadow: 0 0 10px 0 black;
 	header {
 		box-shadow: 0 0 2px 0 black;
-
 		padding: 20px;
 		width: 100%;
 		display: grid;
@@ -97,19 +118,29 @@ aside {
 		}
 	}
 	nav {
+		padding: 20px;
 		display: flex;
+		overflow-y: auto;
 		flex-direction: column;
 		width: 100%;
 		align-items: center;
 		gap: 20px;
-		overflow-y: auto;
 	}
 }
 main {
-	display: flex;
-	padding: 20px;
 	justify-content: center;
-	height: 100vh;
-	overflow: auto;
+	color: var(--gray-700);
+	h1 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.curriculum {
+		overflow-y: auto;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
 }
 </style>
