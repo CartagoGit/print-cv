@@ -74,11 +74,12 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 		grid-column: 1 / 3;
 		outline: 1px solid green;
 		display: grid;
-		grid-template-columns: 50mm 1fr;
-		gap: 10mm;
+		grid-template-columns: 220px 1fr;
+		row-gap: 15px;
+		column-gap: 10px;
 	}
 
-	.section-title {
+	h2.section-title {
 		grid-column: 2 / 3;
 		line-height: 22px;
 	}
@@ -97,9 +98,9 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 
 section {
 	display: grid;
-	grid-template-columns: 50mm 1fr;
-	row-gap: 26px;
-	column-gap: 10mm;
+	grid-template-columns: 220px 1fr;
+	row-gap: 15px;
+	column-gap: 10px;
 	outline: 1px solid purple;
 }
 
