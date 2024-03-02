@@ -41,7 +41,8 @@ defineProps({
 .info-place {
 	display: grid;
 	width: 100%;
-	grid-template-columns: 1fr auto 1fr;
+	grid-template-columns: 1fr 60px 56px;
+	gap: 2px;
 	.date {
 		color: var(--primary);
 		justify-self: end;
@@ -50,10 +51,16 @@ defineProps({
 		font-size: 13px;
 	}
 	.badges {
-		display: grid;
-		grid: auto / auto auto;
-		gap: 3px;
+		display: flex;
+		gap: 1px;
 		align-items: center;
+	}
+	.time {
+		min-width: 20px;
+		margin-right: auto;
+	}
+	.online {
+		margin-left: auto;
 	}
 }
 </style>
