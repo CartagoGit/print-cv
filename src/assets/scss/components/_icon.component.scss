@@ -8,12 +8,12 @@
 	align-items: center;
 
 	&--logo {
-		width: 40px;
+		width: 60px;
 	}
 	&--header {
 		cursor: pointer;
 		&:hover {
-			fill: var(--gray2100);
+			fill: var(--gray-100);
 		}
 	}
 	&--info {

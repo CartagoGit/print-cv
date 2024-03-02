@@ -1,10 +1,15 @@
 <template>
 	<aside>
 		<header>
-			<section>
+			<section class="logo">
 				<HomeIcon
 					class="icon icon--header icon--logo"
 					@click="$router.push({ name: 'home' })" />
+			</section>
+			<section>
+				<span class="group-icons disabled">
+					<LangIcon class="icon icon--header" />
+				</span>
 			</section>
 			<section>
 				<span class="group-icons disabled">
@@ -54,6 +59,7 @@ import {
 	PdfIcon,
 	ZoomInIcon,
 	ZoomOutIcon,
+	LangIcon,
 } from '@/assets/icons/header/header.icons.ts';
 
 const routes = [{ text: 'Mario', nameRoute: 'mario' }];
@@ -77,14 +83,6 @@ aside {
 	overflow: auto;
 }
 
-.container {
-	height: 100vh;
-	width: 100%;
-	display: grid;
-	grid-template-columns: 300px 1fr;
-	overflow: hidden;
-}
-
 aside {
 	display: flex;
 	background-color: var(--gray-700);
@@ -94,14 +92,19 @@ aside {
 	box-shadow: 0 0 10px 0 black;
 	header {
 		box-shadow: 0 0 2px 0 black;
+		gap: 20px;
 		padding: 20px;
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		background-color: var(--gray-800);
+
 		section {
 			display: flex;
 			justify-content: center;
+			&.logo {
+				grid-column: 1 / 4;
+			}
 		}
 		.group-icons {
 			border-radius: 30px;

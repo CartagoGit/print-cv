@@ -75,6 +75,10 @@ section {
 	gap: 10mm;
 }
 
+article.with-date{
+	grid-column: 1 / 3;
+}
+
 .personal {
 	height: 50mm;
 }
