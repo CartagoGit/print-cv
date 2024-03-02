@@ -1,37 +1,13 @@
 <template>
 	<h2 class="section-title">Experiencia profesional</h2>
-	<article
-		class="with-date"
-		v-for="field of fields">
-		<div class="info">
-			<div class="company font-bold">{{ field.company }}</div>
-			<div
-				class="sub-company font-regular"
-				v-if="field.subCompany">
-				{{ field.subCompany }}
-			</div>
-			<div class="where-date">
-				<span class="where font-bold">({{ field.where }})</span>
-				<span class="date font-regular">
-					{{ field.date.start }} - {{ field.date.end }}
-				</span>
-			</div>
-		</div>
-		<div class="description">
-			<span class="font-bold mr5">
-				{{ field.place }}
-			</span>
-			<span class="font-regular">
-				{{ field.description }}
-			</span>
-		</div>
-	</article>
+	<FieldData :fields="fields" />
 </template>
 
 <script setup lang="ts">
-import type { IProfesionalExperiencie } from '@/shared/interfaces/index.interfaces';
+import type { IFieldsData } from '@/shared/interfaces/index.interfaces';
+import FieldData from '../components/FieldData.vue';
 
-const fields: IProfesionalExperiencie[] = [
+const fields: IFieldsData[] = [
 	{
 		company: 'BEATEAM S.L.',
 		subCompany: '(AZUR GLOBAL BUSINESS S.L Group)',
@@ -42,7 +18,7 @@ const fields: IProfesionalExperiencie[] = [
 		},
 		place: 'Desarrollador de software.',
 		description:
-			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos para contabilidad con WSL2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue.',
+			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos para contabilidad con WSL2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Manejo de repositorios usando Git.',
 	},
 	{
 		company: 'Profesional Independiente',
@@ -53,7 +29,7 @@ const fields: IProfesionalExperiencie[] = [
 		},
 		place: 'Desarrollador de software.',
 		description:
-			'Funciones: Lenguaje de Etiquetas - HTML 5 + CSS / Sass. Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular / Javascript (ES6) / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; C# Windows Form y WCF; y en Unity C#. Control de Repositorios Git + GitHub. Desarrollo en MongoDB (No-SQL) usando Node.js/Mongoose; y SQL en Bases de Datos relacionales. Gestión de proyectos con Notion para llevar un control de proyectos.',
+			'Funciones: Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; Control de Repositorios Git + GitHub.',
 	},
 	{
 		company: 'EXCELLENCE FIELD FACTORY, S.L.',
@@ -126,28 +102,4 @@ const fields: IProfesionalExperiencie[] = [
 	},
 ];
 </script>
-<style scoped>
-.info {
-	display: flex;
-	flex-direction: column;
-
-	.company {
-		white-space: pre;
-	}
-	.where-date {
-        margin-top: 3px;
-		display: grid;
-		grid-template-columns: auto 60%;
-		.where,
-		.date {
-			justify-self: end;
-			display: flex;
-			align-items: end;
-			font-size: 13px;
-		}
-		.date {
-			color: var(--primary);
-		}
-	}
-}
-</style>
+<style scoped></style>

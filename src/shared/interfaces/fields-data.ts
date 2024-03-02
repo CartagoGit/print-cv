@@ -1,6 +1,6 @@
 import type { IDate } from './index.interfaces';
 
-export interface IProfesionalExperiencie {
+export interface IFieldsData {
     company: string;
     subCompany?: string;
     where: string;

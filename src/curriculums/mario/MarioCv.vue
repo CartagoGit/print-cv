@@ -8,6 +8,9 @@
 			<section class="profesional-experience">
 				<ProfesionalExperience />
 			</section>
+			<section class="oficial-education">
+				<OficialEducation />
+			</section>
 		</div>
 	</div>
 	<h3>Página 2 - Cursor y habilidades</h3>
@@ -17,6 +20,7 @@
 <script setup lang="ts">
 import PersonalInfo from './sections/PersonalInfo.vue';
 import ProfesionalExperience from './sections/ProfesionalExperience.vue';
+import OficialEducation from './sections/OficialEducation.vue';
 </script>
 <style>
 @font-face {
@@ -70,7 +74,7 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 		font-family: var(--bold-font);
 		font-size: 16px;
 	}
-	article.with-date {
+	article.field-data {
 		grid-column: 1 / 3;
 		outline: 1px solid green;
 		display: grid;
@@ -83,6 +87,8 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 		grid-column: 2 / 3;
 		line-height: 22px;
 	}
+
+	
 }
 </style>
 <style scoped>

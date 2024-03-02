@@ -1,2 +1,2 @@
 export * from './date.interface';
-export * from './profesional-experiencie.interface';
+export * from './fields-data';
