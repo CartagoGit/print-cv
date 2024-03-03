@@ -19,7 +19,7 @@
 					<ZoomInIcon
 						class="icon icon--header"
 						@click="zoomIn" />
-					<span class="scale">{{ scale * 100 }}%</span>
+					<span class="scale">{{ scale }}%</span>
 				</span>
 			</section>
 			<section>
@@ -49,7 +49,9 @@
 		<div
 			ref="curriculum"
 			v-else
-			:style="{ transform: `scale(${scale})` }"
+			:style="{
+				transform: `scale(${Math.round(scale) / 100})`,
+			}"
 			id="curriculum">
 			<h1>
 				Currículum vitae de
@@ -81,30 +83,29 @@ import {
 import { ref } from 'vue';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
+import { CURRICULUMS_ROUTES_DATA } from './shared/data/curriculums.data';
 
 const route = useRoute();
 
 const curriculum = ref<HTMLElement | null>(null);
-const scale = ref(1);
+const scale = ref(100);
 const isLoading = ref(false);
 const reRender = ref(0);
 
-const routes = [
-	{ text: 'Mario', nameRoute: 'mario', name: 'Mario Cabrero Volarich' },
-];
+const routes = CURRICULUMS_ROUTES_DATA;
 
-watch(route, () => (scale.value = 1), { immediate: true });
+watch(route, () => (scale.value = 100), { immediate: true });
 
 const zoomIn = () => {
-	if (scale.value >= 2.6 || !curriculum?.value) return;
-	scale.value += 0.2;
-	scale.value = Math.round(scale.value * 10) / 10;
+	if (scale.value >= 260 || !curriculum?.value) return;
+	scale.value += 20;
+	scale.value = Math.round(scale.value);
 	reRender.value++;
 };
 const zoomOut = () => {
-	if (scale.value <= 0.2 || !curriculum?.value) return;
-	scale.value -= 0.2;
-	scale.value = Math.round(scale.value * 10) / 10;
+	if (scale.value <= 20 || !curriculum?.value) return;
+	scale.value -= 20;
+	scale.value = Math.round(scale.value);
 	reRender.value++;
 };
 const generatePDF = async () => {
