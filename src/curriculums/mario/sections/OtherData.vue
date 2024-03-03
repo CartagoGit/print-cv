@@ -7,12 +7,8 @@
 	<div class="techs">
 		<h2 class="section-title">Conocimientos técnicos</h2>
 		<div class="kind-techs">
-			<div class="usual">
-				<h3 class="section-title">Frecuentes</h3>
-			</div>
-			<span class="used">
-				<h3 class="section-title">Usadas</h3>
-			</span>
+            <Techs />
+			
 		</div>
 	</div>
 	<div class="contact font-bold">
@@ -58,108 +54,7 @@ import { infoContactObject } from '../constants/info-contact.constant';
 
 const { email, github, linkedin, phone } = infoContactObject;
 
-const skills = {
-	environment: {
-		kind: 'environment',
-		name: 'Entornos',
-		usual: ['Windows', 'Android'],
-		used: ['Linux', 'Ubuntu'],
-	},
-	ide: {
-		kind: 'ide',
-		name: 'IDEs',
-		usual: ['Visual Studio Code'],
-		used: ['Visual Studio', 'Android Studio'],
-	},
-	languages: {
-		kind: 'languages',
-		name: 'Lenguajes',
-		usual: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Sass'],
-		used: ['C#', 'Dart', 'Solidity', 'PHP', 'Yaml', 'Shell script'],
-	},
-	frontend: {
-		kind: 'frontend',
-		name: 'Frontend Frameworks',
-		usual: ['Angular', 'Ionic', 'React'],
-		used: [
-			'Vue',
-			'Flutter',
-			'JQuery',
-			'Vite',
-			'Svelte',
-			'Livewire',
-			'Tailwind',
-			'Bootstrap',
-		],
-	},
-	backend: {
-		kind: 'backend',
-		name: 'Backend Frameworks',
-		usual: ['Node.js'],
-		used: ['Nest.js', 'Laravel'],
-	},
-	dependencies: {
-		kind: 'dependencies',
-		name: 'Gestores de dependencias',
-		usual: ['Npm', 'Bun.js', 'Rxjs', 'Prettier'],
-		used: [
-			'Yarn',
-			'Express.js',
-			'Chart.js',
-			'Redux',
-			'Web3',
-			'Electron',
-			'Nodemon',
-			'ts-node',
-			'tsx',
-			'nx',
-			'quasar',
-			'gradle',
-			'jest',
-			'.env',
-			'cordova',
-			'storybook',
-		],
-	},
-	repositories: {
-		kind: 'repositories',
-		name: 'Repositorios',
-		usual: ['Github', 'Gitlab'],
-		used: [],
-	},
-	terminals: {
-		kind: 'terminals',
-		name: 'Terminales',
-		usual: ['Zsh', 'Git Bash', 'Wsl2', 'Cmd'],
-		used: ['Powershell', 'Bash'],
-	},
-	databases: {
-		kind: 'databases',
-		name: 'Bases de datos',
-		usual: [],
-		used: ['MongoDB', 'MySql', 'Postgres', 'MariaDB'],
-	},
-	cloud: {
-		kind: 'cloud',
-		name: 'Cloud',
-		usual: [],
-		used: ['Netlify', 'Heroku', 'Railway'],
-	},
-	others: {
-		kind: 'others',
-		name: 'Otros',
-		usual: ['Docker', 'Postman', 'ChatGpt'],
-		used: [
-			'Markdown',
-			'Office',
-			'LibreOffice',
-			'Tor',
-			'Unity',
-			'Slack',
-			'Discord',
-		],
-	},
-};
+
 </script>
 
 <style scoped lang="scss">
