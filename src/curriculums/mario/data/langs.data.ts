@@ -1,14 +1,15 @@
-import type { IFieldCourse } from "@/shared/interfaces/index.interfaces";
+import type { IFieldCourse } from '@/shared/interfaces/index.interfaces';
 
 export const LANGS_DATA: IFieldCourse[] = [
 	{
 		place: 'BRITISH COUNCIL',
 		date: 'Jul 2020',
-		description: 'Inglés - B2 APTIS',
+		description: 'B2 - Inglés',
 		subDescription:
-			'del Common European Framework of Reference for Languages',
+			'APTIS. Common European Framework of Reference for Languages',
 	},
 	{
-		description: 'Español - Competencia bilingüe/nativa',
+		description: 'C2 - Español',
+		subDescription: 'Competencia bilingüe/nativa',
 	},
 ];
