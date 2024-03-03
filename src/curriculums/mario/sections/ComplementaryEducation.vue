@@ -1,7 +1,6 @@
-import { IFieldCourse } from '../../../shared/interfaces/fields-data';
 <template>
 	<h2 class="section-title section-title--lower-gap">
-		Formación complementaria
+		{{ $t('MARIO.COURSES.TITLE') }}
 	</h2>
 	<FieldCourses :fields="fields" />
 </template>

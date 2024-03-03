@@ -1,5 +1,7 @@
 <template>
-	<h2 class="section-title section-title--lower-gap">Idiomas</h2>
+	<h2 class="section-title section-title--lower-gap">
+		{{ $t('MARIO.LANGUAGES.TITLE') }}
+	</h2>
 	<FieldCourses :fields="fields" />
 </template>
 

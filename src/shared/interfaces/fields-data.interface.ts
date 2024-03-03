@@ -13,8 +13,8 @@ export interface IFieldsData {
 export interface IFieldCourse {
 	place?: string;
 	date?: string;
-	description: string;
-	subDescription?: string;
+	description: ComputedRef<string>;
+	subDescription?: ComputedRef<string>;
 	time?: number;
 	isOnline?: boolean;
 }

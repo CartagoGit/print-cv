@@ -22,12 +22,12 @@
 		</div>
 		<div class="description">
 			<span class="font-bold mr5">
-				{{ field.description }}
+				{{ field.description.value }}
 			</span>
 			<span
 				v-if="field.subDescription"
 				class="font-regular">
-				{{ field.subDescription }}
+				{{ field.subDescription.value }}
 			</span>
 		</div>
 	</article>

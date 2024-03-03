@@ -5,7 +5,7 @@
 		"PAGE2": "Page 2 - Courses and skills"
 	},
 	"PROFESSIONAL_EXPERIENCE": {
-        "TITLE": "Professional Experience",
+		"TITLE": "Professional Experience",
 		"DATA": {
 			"BEATEAM": {
 				"WHERE": "Seville",
@@ -68,7 +68,7 @@
 		}
 	},
 	"OFICIAL_EDUCATION": {
-        "TITLE": "Formal Education",
+		"TITLE": "Formal Education",
 		"DATA": {
 			"VELAZQUEZ": {
 				"WHERE": "Seville",
@@ -89,6 +89,44 @@
 				"END": "2006",
 				"PLACE": "Technological Baccalaureate."
 			}
+		}
+	},
+	"COURSES": {
+		"TITLE": "Complementary Training",
+		"ANGULAR_ADVANCED": "Advanced Angular: Take your basics to the next level - MEAN",
+		"DOCKER": "Docker - Practical usage guide for developers",
+		"SOLID": "SOLID Principles and Clean Code",
+		"RXJS": "ReactiveX - RxJs - From zero to details",
+		"ANGULAR_BASIC": "Angular From 0 to Expert",
+		"DAPPS_ETH": "Learn to Program Ethereum DApps by building your own game",
+		"UNITY": "Art for Video Games: Unity, Photoshop, Adobe Illustrator: from Zero to Advanced",
+		"BOOTSTRAP": "Bootstrap 5: The Complete, Practical, and From Scratch Course",
+		"NOTION": "Learn everything about Notion: 3 courses in 1",
+		"JAVASCRIPT_MODERN": "Modern JavaScript: Guide to mastering the language",
+		"REACT": "React: From Zero to Expert (Hooks and MERN)",
+		"BLOCKCHAIN": "Complete Blockchain Course from zero to expert",
+		"SOLIDITY": "Smart Contracts and Blockchain with Solidity from A to Z",
+		"GIT": "GIT+GitHub: A complete version control system from scratch",
+		"MOBILE_APPS": "Mobile Apps Development",
+		"CSS": "Mastering CSS: Responsive, SASS, Flexbox, Grid, and Bootstrap",
+		"INTRO_DEV_WEB_2": "Introduction to Web Development II",
+		"INTRO_DEV_WEB_1": "Introduction to Web Development I",
+		"VPM_COMPANIES": "Movistar VPN Companies Configurator Course",
+		"PREVENTIVE_RESOURCE": "Basic Level Occupational Risk Prevention Technician (Preventive Resource)",
+		"COPPER": "Copper faithful friend of communication",
+		"FTTH": "Connecting the future with Fiber Optics (4th Edition)",
+		"FLASH": "Development of Flash applications on Android and iOS"
+	},
+
+	"LANGUAGES": {
+		"TITLE": "Languages",
+		"SPANISH": {
+			"DESCRIPTION": "C2 - Spanish",
+			"SUBDESCRIPTION": "Native proficiency"
+		},
+		"ENGLISH": {
+			"DESCRIPTION": "B2 - English",
+			"SUBDESCRIPTION": "APTIS. Common European Framework of Reference for Languages"
 		}
 	}
 }

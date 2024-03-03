@@ -75,5 +75,42 @@
 				"PLACE": "Bachillerato Tecnológico."
 			}
 		}
+	},
+	"COURSES": {
+		"TITLE": "Formación complementaria",
+		"ANGULAR_ADVANCED": "Angular Avanzado: Lleva tus bases al siguiente nivel - MEAN",
+		"DOCKER": "Docker - Guía práctica de uso para desarrolladores",
+		"SOLID": "Principios SOLID y Clean Code",
+		"RXJS": "ReactiveX - RxJs - De cero hasta los detalles",
+		"ANGULAR_BASIC": "Angular de 0 a Experto",
+		"DAPPS_ETH": "Aprende a Programar Etherum DApps construyendo tu propio juego",
+		"ADOBE": "Arte para Videojuegos: Unity, Photoshop, Adobe Illustrator: de Cero a Avanzado",
+		"BOOTSTRAP": "Bootstrap 5: El Curso Completo, Práctico y Desde Cero",
+		"NOTION": "Aprende todo sobre Notion: 3 cursos en 1",
+		"JAVASCRIPT_MODERN": "JavaScript Moderno: Guía para dominar el lenguaje",
+		"REACT_BASIC": "React: De cero a experto ( Hooks y MERN )",
+		"BLOCKCHAIN": "Curso Completo de Blockchain de cero a experto",
+		"SOLIDITY": "Smart Contracts y Blockchain con Solidity de la A a la Z",
+		"GIT": "GIT+GitHub: Todo un sistema de control de versiones de cero",
+		"MOBILE_APPS": "Desarrollo de Apps Móviles",
+		"CSS": "Master en CSS: Responsive, SASS, Flexbox, Grid y Bootstrap",
+		"INTRO_DEV_WEB_2": "Introducción al Desarrollo Web II",
+		"INTRO_DEV_WEB_1": "Introducción al Desarrollo Web I",
+		"VPM_COMPANIES": "Curso configurador Movistar VPN empresas",
+		"PREVENTIVE_RESOURCE": "Técnico de Prevención de Riesgos Laborales de Nivel Básico (Recurso Preventivo)",
+		"COPPER": "Cobre fiel amigo de la comunicación",
+		"FTTH": "Conectando el futuro con Fibra Óptica (4º Edición)",
+		"FLASH": "Desarrollo de aplicaciones Flash en Android e iOS"
+	},
+	"LANGUAGES": {
+		"TITLE": "Idiomas",
+		"SPANISH": {
+			"DESCRIPTION": "C2 - Español",
+			"SUBDESCRIPTION": "Competencia nativa"
+		},
+		"ENGLISH": {
+			"DESCRIPTION": "B2 - Inglés",
+			"SUBDESCRIPTION": "APTIS. Common European Framework of Reference for Languages"
+		}
 	}
 }

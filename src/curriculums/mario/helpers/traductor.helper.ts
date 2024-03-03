@@ -27,6 +27,33 @@ type IPlace = 'SEVILLE';
 
 type ISection = 'PROFESSIONAL_EXPERIENCE' | 'OFICIAL_EDUCATION';
 
+type ICourses =
+	| 'ANGULAR_ADVANCED'
+	| 'DOCKER'
+	| 'SOLID'
+	| 'RXJS'
+    | 'ANGULAR_BASIC'
+	| 'DAPPS_ETH'
+	| 'ADOBE'
+	| 'BOOTSTRAP'
+	| 'NOTION'
+	| 'JAVASCRIPT_MODERN'
+	| 'REACT_BASIC'
+	| 'BLOCKCHAIN'
+	| 'SOLIDITY'
+	| 'GIT'
+	| 'MOBILE_APPS'
+	| 'CSS'
+	| 'INTRO_DEV_WEB_2'
+	| 'INTRO_DEV_WEB_1'
+	| 'VPM_COMPANIES'
+	| 'PREVENTIVE_RESOURCE'
+	| 'COPPER'
+	| 'FTTH'
+	| 'FLASH';
+type ILanguages = 'ENGLISH' | 'SPANISH' 
+type ILanguagesFields = 'DESCRIPTION' | "SUBDESCRIPTION" 
+
 export const tFieldsData = (data: {
 	cv: IKindTraductions;
 	kind: IKindPROFESSIONALExperience | IKindOficialEducation;
@@ -49,3 +76,13 @@ export const tPlace = (
 		() => (pre ? pre : '') + t(`PLACES.${place}`) + (next ? next : '')
 	);
 };
+
+export const tCourses = (course: ICourses) => {
+	return computed(() => t(`MARIO.COURSES.${course}`));
+};
+
+
+export const tLangGrade = (props: {lang: ILanguages, key: ILanguagesFields}) => {
+    const {lang, key} = props;
+    return computed(() => t(`MARIO.LANGUAGES.${lang}.${key}`));
+}
