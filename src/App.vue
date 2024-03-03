@@ -42,11 +42,12 @@
 			</span>
 		</nav>
 	</aside>
-	<main>
+	<main :key="reRender">
 		<RouterView
 			v-if="$route.name === 'home'"
 			class="home" />
 		<div
+			ref="curriculum"
 			v-else
 			:style="{ transform: `scale(${scale})` }"
 			id="curriculum">
@@ -60,11 +61,16 @@
 			<RouterView />
 		</div>
 	</main>
+	<div
+		class="is-loading"
+		v-if="isLoading">
+		Cargando
+	</div>
 </template>
 
 <script setup lang="ts">
-import { watch } from 'vue';
-import { RouterView, onBeforeRouteLeave, useRoute } from 'vue-router';
+import { onUpdated, watch } from 'vue';
+import { RouterView, useRoute } from 'vue-router';
 import {
 	HomeIcon,
 	PdfIcon,
@@ -77,51 +83,79 @@ import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 
 const route = useRoute();
-const curriculum = ref(document.getElementById('curriculum'));
+
+const curriculum = ref<HTMLElement | null>(null);
 const scale = ref(1);
 const isLoading = ref(false);
-
-const routes = [{ text: 'Mario', nameRoute: 'mario' }];
+const reRender = ref(0);
+console.log(curriculum);
+const routes = [
+	{ text: 'Mario', nameRoute: 'mario', name: 'Mario Cabrero Volarich' },
+];
 
 watch(
 	route,
 	() => {
+		console.log(route);
 		scale.value = 1;
-		curriculum.value = document.getElementById('curriculum');
 	},
 	{ immediate: true }
 );
 
 const zoomIn = () => {
-	if (scale.value >= 2.6) return;
+	if (scale.value >= 2.6 || !curriculum?.value) return;
 	scale.value += 0.2;
+	scale.value = Math.round(scale.value * 10) / 10;
+	reRender.value++;
 };
 const zoomOut = () => {
-	if (scale.value <= 0.2) return;
+	if (scale.value <= 0.2 || !curriculum?.value) return;
 	scale.value -= 0.2;
+	scale.value = Math.round(scale.value * 10) / 10;
+	reRender.value++;
 };
 const generatePDF = async () => {
-	if (!curriculum.value) return;
+	if (!curriculum.value)
+		return console.error('No se encontró el currículum', curriculum);
+
 	isLoading.value = true;
 	const pages = curriculum.value.querySelectorAll('.page');
 	const doc = new jsPDF();
-	for (let i = 0; i < pages.length; i++) {
-		const page = pages[i];
-		const canvas = await html2canvas(page as HTMLElement, {
-			scale: 2,
-		});
-		const imgData = canvas.toDataURL('image/png');
-		const imgProps = doc.getImageProperties(imgData);
-		const pdfWidth = doc.internal.pageSize.getWidth();
-		const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-		doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-		if (i < pages.length - 1) {
-			doc.addPage();
+	try {
+		for (let i = 0; i < pages.length; i++) {
+			const page = pages[i];
+			const canvas = await html2canvas(page as HTMLElement, {
+				scale: 3,
+			});
+			const imgData = canvas.toDataURL('image/png');
+			const imgProps = doc.getImageProperties(imgData);
+			const pdfWidth = doc.internal.pageSize.getWidth();
+			const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+			doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+			if (i < pages.length - 1) {
+				doc.addPage();
+			}
 		}
-	}
+		const nameCv = routes
+			.find((route) => route.nameRoute === route.nameRoute)
+			?.name.split(' ')
+			.join('_');
+		if (!nameCv) throw new Error('No se encontró nombre de cv');
+		const nameDoc = `${nameCv}_${new Date().getFullYear()}_${(
+			new Date().getMonth() + 1
+		)
+			.toString()
+			.padStart(2, '0')}_${new Date()
+			.getDate()
+			.toString()
+			.padStart(2, '0')}_cv.pdf`;
 
-	doc.save('documento.pdf');
-	isLoading.value = false;
+		doc.save(nameDoc);
+	} catch (err) {
+		console.error(err);
+	} finally {
+		isLoading.value = false;
+	}
 };
 </script>
 
@@ -213,5 +247,20 @@ main {
 		align-items: center;
 		transform-origin: top left;
 	}
+}
+
+.is-loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	color: var(--gray-100);
+	transition: 300ms ease all;
 }
 </style>
