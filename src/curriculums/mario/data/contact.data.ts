@@ -12,6 +12,7 @@ import type {
 	IInfoContact,
 	IKindContact,
 } from '@/shared/interfaces/info-contact.interface';
+import { tPlace } from '../helpers/traductor.helper';
 
 export const CONTACT_DATA: IInfoContact[] = [
 	{
@@ -41,8 +42,8 @@ export const CONTACT_DATA: IInfoContact[] = [
 	{
 		kind: 'location',
 		icon: WorldIcon,
-		value: '41008 - Sevilla ',
-		shortValue: 'Sevilla',
+		value: tPlace('SEVILLE', { pre: '41008 - ' }),
+		shortValue: tPlace('SEVILLE').value,
 	},
 	{
 		kind: 'npm',

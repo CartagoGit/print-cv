@@ -4,10 +4,8 @@
 		"PAGE1": "Page 1 - Information",
 		"PAGE2": "Page 2 - Courses and skills"
 	},
-	"PLACES": {
-		"SEVILLE": "Seville"
-	},
-	"PROFESIONAL_EXPERIENCE": {
+	"PROFESSIONAL_EXPERIENCE": {
+        "TITLE": "Professional Experience",
 		"DATA": {
 			"BEATEAM": {
 				"WHERE": "Seville",
@@ -70,6 +68,7 @@
 		}
 	},
 	"OFICIAL_EDUCATION": {
+        "TITLE": "Formal Education",
 		"DATA": {
 			"VELAZQUEZ": {
 				"WHERE": "Seville",

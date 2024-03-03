@@ -1,3 +1,5 @@
+import type { ComputedRef } from 'vue';
+
 export type IKindContact =
 	| 'email'
 	| 'phone'
@@ -10,7 +12,7 @@ export type IKindContact =
 
 export interface IInfoContact {
 	kind: IKindContact;
-	value: string;
-    shortValue: string;
+	value: string | ComputedRef<string>;
+	shortValue: string | ComputedRef<string>;
 	icon: string;
 }

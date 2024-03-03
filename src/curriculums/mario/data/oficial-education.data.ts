@@ -1,15 +1,10 @@
 import type { IFieldsData } from '@/shared/interfaces/index.interfaces';
-import { tFieldsData } from '../helpers/traductor.helper';
+import { tFieldsData, tPlace } from '../helpers/traductor.helper';
 
 export const OFICIAL_EDUCATION_DATA: IFieldsData[] = [
 	{
 		company: 'I.E.S. VELÁZQUEZ',
-		where: tFieldsData({
-			cv: 'MARIO',
-			section: 'OFICIAL_EDUCATION',
-			kind: 'VELAZQUEZ',
-			key: 'WHERE',
-		}),
+		where: tPlace('SEVILLE'),
 		date: {
 			start: '2010',
 			end: '2013',
@@ -23,12 +18,7 @@ export const OFICIAL_EDUCATION_DATA: IFieldsData[] = [
 	},
 	{
 		company: 'Universidad de Sevilla',
-		where: tFieldsData({
-			cv: 'MARIO',
-			section: 'OFICIAL_EDUCATION',
-			kind: 'US',
-			key: 'WHERE',
-		}),
+		where: tPlace('SEVILLE'),
 		date: {
 			start: '2006',
 			end: '2009',
@@ -48,12 +38,7 @@ export const OFICIAL_EDUCATION_DATA: IFieldsData[] = [
 	},
 	{
 		company: 'I.E.S. SAN PABLO',
-		where: tFieldsData({
-			cv: 'MARIO',
-			section: 'OFICIAL_EDUCATION',
-			kind: 'SANPABLO',
-			key: 'WHERE',
-		}),
+		where: tPlace('SEVILLE'),
 		date: {
 			start: '2004',
 			end: '2006',

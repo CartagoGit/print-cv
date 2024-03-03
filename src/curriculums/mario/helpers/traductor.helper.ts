@@ -4,7 +4,7 @@ import { computed } from 'vue';
 import { i18nInstance } from '@/shared/helpers/traduction.helper';
 const { t } = i18nInstance.global;
 
-type IKindProfesionalExperience =
+type IKindPROFESSIONALExperience =
 	| 'BEATEAM'
 	| 'INDEPENDIENT2'
 	| 'EXCELLENCE'
@@ -18,17 +18,18 @@ type IKindOficialEducation = 'VELAZQUEZ' | 'US' | 'SANPABLO';
 
 type IPropsFieldsData =
 	| 'COMPANY' // Opcional
-	| 'WHERE'
 	| 'START'
 	| 'END'
 	| 'PLACE'
 	| 'DESCRIPTION';
 
-type ISection = 'PROFESIONAL_EXPERIENCE' | 'OFICIAL_EDUCATION';
+type IPlace = 'SEVILLE';
+
+type ISection = 'PROFESSIONAL_EXPERIENCE' | 'OFICIAL_EDUCATION';
 
 export const tFieldsData = (data: {
 	cv: IKindTraductions;
-	kind: IKindProfesionalExperience | IKindOficialEducation;
+	kind: IKindPROFESSIONALExperience | IKindOficialEducation;
 	key: IPropsFieldsData;
 	section: ISection;
 }) => {
@@ -37,4 +38,14 @@ export const tFieldsData = (data: {
 	const translatePoint = `${base}.${section}.DATA.${kind}.${key}`;
 
 	return computed(() => t(translatePoint));
+};
+
+export const tPlace = (
+	place: IPlace,
+	options?: { pre?: string; next?: string }
+) => {
+	const { pre, next } = options || {};
+	return computed(
+		() => (pre ? pre : '') + t(`PLACES.${place}`) + (next ? next : '')
+	);
 };

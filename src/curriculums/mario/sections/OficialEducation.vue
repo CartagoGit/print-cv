@@ -1,5 +1,5 @@
 <template>
-	<h2 class="section-title">Formación reglada</h2>
+	<h2 class="section-title">{{ $t('MARIO.OFICIAL_EDUCATION.TITLE') }}</h2>
 	<FieldData :fields="fields" />
 </template>
 

@@ -5,8 +5,8 @@
 			<section class="personal">
 				<PersonalInfo />
 			</section>
-			<section class="profesional-experience">
-				<ProfesionalExperience />
+			<section class="professional-experience">
+				<ProfessionalExperience />
 			</section>
 			<section class="oficial-education">
 				<OficialEducation />
@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import PersonalInfo from '../sections/PersonalInfo.vue';
-import ProfesionalExperience from '../sections/ProfesionalExperience.vue';
+import ProfessionalExperience from '../sections/ProfessionalExperience.vue';
 import OficialEducation from '../sections/OficialEducation.vue';
 import ComplementaryEducation from '../sections/ComplementaryEducation.vue';
 import Lang from '../sections/Lang.vue';
@@ -79,4 +79,4 @@ section {
 	position: relative;
 	height: 100%;
 }
-</style>
+</style>../sections/ProfessionalExperience.vue

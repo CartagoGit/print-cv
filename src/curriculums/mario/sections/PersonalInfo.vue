@@ -15,7 +15,11 @@
 				:is="field.icon"
 				class="icon icon--info" />
 			<span class="font-bold">
-				{{ field.value }}
+				{{
+					typeof field.value === 'string'
+						? field.value
+						: field.value.value
+				}}
 			</span>
 		</span>
 	</article>

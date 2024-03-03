@@ -4,5 +4,8 @@
 	},
 	"HOME": {
 		"TITLE": "An app to create curriculum vitae with CSS and generate PDFs."
+	},
+	"PLACES": {
+		"SEVILLE": "Seville"
 	}
 }
