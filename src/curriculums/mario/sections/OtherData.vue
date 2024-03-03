@@ -5,11 +5,8 @@
 		<span class="font-bold">Disponibilidad inmediata</span>
 	</div>
 	<div class="techs">
-		<h2 class="section-title">Conocimientos técnicos</h2>
-		<div class="kind-techs">
-            <Techs />
-			
-		</div>
+		<h2 class="section-title">Conocimientos tecnológicos</h2>
+		<Techs />
 	</div>
 	<div class="contact font-bold">
 		<span class="contact-field linkedin">
@@ -37,7 +34,7 @@
 			<span>{{ email.shortValue }}</span>
 		</span>
 	</div>
-	<div class="skills">
+	<!-- <div class="skills">
 		<h3 class="section-title">Habilidades</h3>
 		<span class="font-bold skill-fields">
 			<span>Pensamiento creativo</span>
@@ -46,15 +43,14 @@
 			<span>/</span>
 			<span>Resolución de problemas</span>
 		</span>
-	</div>
+	</div> -->
 </template>
 
 <script setup lang="ts">
+import Techs from '../components/Techs.vue';
 import { infoContactObject } from '../constants/info-contact.constant';
 
 const { email, github, linkedin, phone } = infoContactObject;
-
-
 </script>
 
 <style scoped lang="scss">
@@ -62,12 +58,16 @@ const { email, github, linkedin, phone } = infoContactObject;
 	display: flex;
 	gap: 10px;
 	flex-direction: column;
+    h3{
+        margin-bottom: 5px;
+    }
 }
 
 .techs {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 15px;
+    margin-bottom: 5px;
 }
 
 .contact {

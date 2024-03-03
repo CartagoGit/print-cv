@@ -11,6 +11,7 @@ import GitlabIcon from '@/assets/icons/techs/gitlab.icon.svg';
 import HtmlIcon from '@/assets/icons/techs/html.icon.svg';
 import IonicIcon from '@/assets/icons/techs/ionic.icon.svg';
 import JavascriptIcon from '@/assets/icons/techs/javascript.icon.svg';
+import NestIcon from '@/assets/icons/techs/nest.icon.svg';
 import NodeIcon from '@/assets/icons/techs/node.icon.svg';
 import NpmIcon from '@/assets/icons/techs/npm.icon.svg';
 import PostmanIcon from '@/assets/icons/techs/postman.icon.svg';
@@ -40,6 +41,7 @@ export {
 	HtmlIcon,
 	IonicIcon,
 	JavascriptIcon,
+	NestIcon,
 	NodeIcon,
 	NpmIcon,
 	PostmanIcon,

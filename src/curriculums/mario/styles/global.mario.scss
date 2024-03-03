@@ -39,6 +39,11 @@
 
 	.icon {
 		fill: var(--primary);
+		color: var(--primary);
+		* {
+			fill: var(--primary);
+			color: var(--primary);
+		}
 	}
 
 	.font-regular {

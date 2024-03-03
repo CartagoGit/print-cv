@@ -63,7 +63,7 @@ section {
 }
 
 .lower-gap {
-	row-gap: 5px;
+	row-gap: 7px;
 }
 .personal {
 	height: 50mm;
@@ -78,6 +78,6 @@ section {
 .other-data {
 	position: relative;
 	height: 100%;
-	grid-template-rows: 1fr auto;
+	/* grid-template-rows: 1fr auto; */
 }
 </style>

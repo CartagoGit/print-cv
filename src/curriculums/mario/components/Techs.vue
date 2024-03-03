@@ -1,10 +1,123 @@
 <template>
-	<div class="usual">
-		<h3 class="section-title">Frecuentes</h3>
+	<div class="kind-tech usual">
+		<div class="field environments">
+			<span class="name font-bold">{{ techs.environments.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.environments.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
+
+		<div class="field languages">
+			<span class="name font-bold">{{ techs.languages.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.languages.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
+
+		<div class="field frontend">
+			<span class="name font-bold">{{ techs.frontend.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.frontend.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
+
+		<div class="field backend">
+			<span class="name font-bold">{{ techs.backend.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.backend.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
+
+		<div class="field dependencies">
+			<span class="name font-bold">{{ techs.dependencies.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.dependencies.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
+
+		<div class="field repositories">
+			<span class="name font-bold">{{ techs.repositories.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.repositories.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
+		<div class="field terminals">
+			<span class="name font-bold">{{ techs.terminals.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.terminals.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
+		<div class="field others">
+			<span class="name font-bold">{{ techs.others.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.others.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
 	</div>
-	<span class="used">
-		<h3 class="section-title">Usadas</h3>
-	</span>
 </template>
 
 <script lang="ts" setup>
@@ -22,6 +135,7 @@ import {
 	HtmlIcon,
 	IonicIcon,
 	JavascriptIcon,
+	NestIcon,
 	NodeIcon,
 	NpmIcon,
 	PostmanIcon,
@@ -32,6 +146,7 @@ import {
 	TerminalIcon,
 	TypescriptIcon,
 	VisualStudioCodeIcon,
+	VueIcon,
 	WindowsIcon,
 	WslIcon,
 } from '@/assets/icons/techs/techs.icons';
@@ -66,14 +181,14 @@ const techs: Record<IKindTech, ITech> = {
 	},
 	frontend: {
 		kind: 'frontend',
-		name: 'Frontend Frameworks',
+		name: 'Frontend',
 		usual: [
 			{ name: 'Angular', icon: AngularIcon },
 			{ name: 'Ionic', icon: IonicIcon },
-			{ name: 'React', icon: ReactIcon },
+			{ name: 'ReactJs', icon: ReactIcon },
+			{ name: 'VueJs', icon: VueIcon },
 		],
 		used: [
-			'Vue',
 			'Flutter',
 			'JQuery',
 			'Vite',
@@ -85,13 +200,16 @@ const techs: Record<IKindTech, ITech> = {
 	},
 	backend: {
 		kind: 'backend',
-		name: 'Backend Frameworks',
-		usual: [{ name: 'Node.js', icon: NodeIcon }],
-		used: ['Nest.js', 'Laravel'],
+		name: 'Backend',
+		usual: [
+			{ name: 'Node.js', icon: NodeIcon },
+			{ name: 'Nest.js', icon: NestIcon },
+		],
+		used: ['Laravel'],
 	},
 	dependencies: {
 		kind: 'dependencies',
-		name: 'Gestores de dependencias',
+		name: 'Dependencias',
 		usual: [
 			{ name: 'Npm', icon: NpmIcon },
 			{ name: 'Bun.js', icon: BunIcon },
@@ -170,4 +288,39 @@ const techs: Record<IKindTech, ITech> = {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.icon {
+	width: 20px;
+	height: 20px;
+}
+.kind-tech {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	gap: 10px;
+}
+.group-fields {
+	display: grid;
+	gap: 5px;
+	grid-template-columns: 55% 45%;
+}
+.field {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	align-items: center;
+	flex-grow: 0;
+	gap: 8px;
+}
+.techs {
+	display: fleX;
+	gap: 10px;
+	width: 100%;
+}
+.tech {
+	flex-grow: 0;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+</style>
