@@ -12,7 +12,9 @@
 	},
 	"dependencies": {
 		"vue": "^3.4.15",
-		"vue-router": "^4.2.5"
+		"vue-router": "^4.2.5",
+		"jspdf": "2.5.1",
+		"html2canvas": "1.4.1"
 	},
 	"devDependencies": {
 		"@tsconfig/node20": "^20.1.2",

@@ -18,7 +18,7 @@ const fields: IFieldsData[] = [
 		},
 		place: 'Desarrollador de software.',
 		description:
-			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos compatibles con Wsl2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Scripts bash y Node.js para automatización de tareas. Uso git bash para manejo de repositorios y de terminal Wsl2 para acceso ssh.',
+			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos compatibles con Wsl2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Scripts bash y Node.js para automatización de tareas. Uso de git bash para manejo de repositorios y de terminal Wsl2 para acceso ssh.',
 	},
 	{
 		company: 'Profesional Independiente',

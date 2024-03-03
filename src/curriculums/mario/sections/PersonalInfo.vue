@@ -37,7 +37,7 @@ const fields = infoContact;
 		width: 52mm;
 		height: 52mm;
 		border-radius: 100%;
-		border: solid 3mm var(--primary);
+		border: solid 6px var(--primary);
 		box-sizing: content-box;
 		img {
 			position: absolute;

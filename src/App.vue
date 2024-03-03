@@ -23,8 +23,12 @@
 				</span>
 			</section>
 			<section>
-				<span class="group-icons disabled">
-					<PdfIcon class="icon icon--header" />
+				<span
+					class="group-icons"
+					v-bind:disabled="!curriculum">
+					<PdfIcon
+						class="icon icon--header"
+						@click="generatePDF()" />
 				</span>
 			</section>
 		</header>
@@ -45,7 +49,7 @@
 		<div
 			v-else
 			:style="{ transform: `scale(${scale})` }"
-			class="curriculum">
+			id="curriculum">
 			<h1>
 				Currículum vitae de
 				{{
@@ -59,7 +63,8 @@
 </template>
 
 <script setup lang="ts">
-import { RouterView, onBeforeRouteLeave } from 'vue-router';
+import { watch } from 'vue';
+import { RouterView, onBeforeRouteLeave, useRoute } from 'vue-router';
 import {
 	HomeIcon,
 	PdfIcon,
@@ -68,10 +73,26 @@ import {
 	LangIcon,
 } from '@/assets/icons/header/header.icons.ts';
 import { ref } from 'vue';
+import { jsPDF } from 'jspdf';
+import html2canvas from 'html2canvas';
+
+const route = useRoute();
+const curriculum = ref(document.getElementById('curriculum'));
+const scale = ref(1);
+
 
 const routes = [{ text: 'Mario', nameRoute: 'mario' }];
 
-const scale = ref(1);
+
+watch(
+	route,
+	() => {
+		scale.value = 1;
+		curriculum.value = document.getElementById('curriculum');
+	},
+	{ immediate: true }
+);
+
 const zoomIn = () => {
 	if (scale.value >= 2.6) return;
 	scale.value += 0.2;
@@ -80,9 +101,26 @@ const zoomOut = () => {
 	if (scale.value <= 0.2) return;
 	scale.value -= 0.2;
 };
-onBeforeRouteLeave(() => {
-	scale.value = 1;
-});
+const generatePDF = async () => {
+	if (!curriculum.value) return;
+	const pages = curriculum.value.querySelectorAll('.page');
+	const doc = new jsPDF();
+
+	// for (let i = 0; i < pages.length; i++) {
+	pages.forEach(async (page, index) => {
+		const canvas = await html2canvas(page as HTMLElement);
+		const imgData = canvas.toDataURL('image/png');
+		const imgProps = doc.getImageProperties(imgData);
+		const pdfWidth = doc.internal.pageSize.getWidth();
+		const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+		doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+		if (index < pages.length - 1) {
+			doc.addPage();
+		}
+	});
+
+	doc.save('documento.pdf');
+};
 </script>
 
 <style>
@@ -135,14 +173,13 @@ aside {
 			display: flex;
 			align-items: center;
 			gap: 10px;
-			.scale{
+			.scale {
 				position: absolute;
 				bottom: -18px;
 				left: 50%;
 				transform: translateX(-50%);
 				font-size: 12px;
 				color: var(--gray-400);
-
 			}
 		}
 	}
@@ -165,7 +202,7 @@ main {
 	}
 
 	.home,
-	.curriculum {
+	#curriculum {
 		overflow-y: auto;
 		padding: 20px;
 		display: flex;

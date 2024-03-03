@@ -67,6 +67,5 @@ export const infoContact: IInfoContact[] = [
 export let infoContactObject = {} as Record<IKindContact, IInfoContact>;
 
 infoContact.forEach((contact) => {
-	console.log('contact', JSON.stringify(contact));
 	infoContactObject[contact.kind] = contact;
 });
