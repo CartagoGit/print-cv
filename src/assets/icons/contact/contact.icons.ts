@@ -6,6 +6,7 @@ import BirthdayIcon from './birthday.icon.svg';
 import NpmIcon from './npm.icon.svg';
 import WorldIcon from './world.icon.svg';
 import CertificatesIcon from './certificates.icon.svg';
+import CarIcon from './car.icon.svg';
 
 export {
 	EmailIcon,
@@ -15,5 +16,6 @@ export {
 	BirthdayIcon,
 	NpmIcon,
 	WorldIcon,
-    CertificatesIcon
+	CertificatesIcon,
+	CarIcon,
 };

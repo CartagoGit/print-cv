@@ -32,14 +32,14 @@
 </template>
 
 <script setup lang="ts">
-import PersonalInfo from './sections/PersonalInfo.vue';
-import ProfesionalExperience from './sections/ProfesionalExperience.vue';
-import OficialEducation from './sections/OficialEducation.vue';
-import ComplementaryEducation from './sections/ComplementaryEducation.vue';
-import Lang from './sections/Lang.vue';
-import OtherData from './sections/OtherData.vue';
-import './styles/global.mario.scss';
-import { CURRICULUM_YEAR_DATA } from './data/curriculum.data';
+import PersonalInfo from '../sections/PersonalInfo.vue';
+import ProfesionalExperience from '../sections/ProfesionalExperience.vue';
+import OficialEducation from '../sections/OficialEducation.vue';
+import ComplementaryEducation from '../sections/ComplementaryEducation.vue';
+import Lang from '../sections/Lang.vue';
+import OtherData from '../sections/OtherData.vue';
+import '../styles/global.mario.scss';
+import { CURRICULUM_YEAR_DATA } from '../data/curriculum.data';
 
 const cvDate = CURRICULUM_YEAR_DATA;
 </script>

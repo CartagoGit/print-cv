@@ -1,71 +1,59 @@
 <template>
-	<div class="other-data">
-		<h3 class="section-title">Otros datos de interés</h3>
-		<span
-			v-for="otherData of otherInterestData"
-			class="font-bold">
-			{{ otherData }}
-		</span>
+	<div class="aside">
+		<div class="open-projects">
+			<h3 class="section-title">Proyectos abiertos</h3>
+			<OpenProjects />
+		</div>
+		<div class="other-interest-data">
+			<h3 class="section-title">Otros datos de interés</h3>
+			<OtherInterestData />
+		</div>
 	</div>
-	<div class="techs">
-		<h2 class="section-title">Conocimientos tecnológicos</h2>
-		<Techs />
+	<div class="main">
+		<div class="techs">
+			<h2 class="section-title">Conocimientos tecnológicos</h2>
+			<Techs />
+		</div>
 	</div>
 	<div class="contact font-bold">
-		<span class="contact-field linkedin">
+		<span
+			v-for="contact of contactData"
+			class="contact-field">
 			<component
-				:is="linkedin.icon"
+				:is="contact.icon"
 				class="icon icon--info" />
-			<span>{{ linkedin.shortValue }}</span>
-		</span>
-		<span class="contact-field github">
-			<component
-				:is="github.icon"
-				class="icon icon--info" />
-			<span>{{ github.shortValue }}</span>
-		</span>
-		<span class="contact-field phone">
-			<component
-				:is="phone.icon"
-				class="icon icon--info" />
-			<span>{{ phone.shortValue }}</span>
-		</span>
-		<span class="contact-field email">
-			<component
-				:is="email.icon"
-				class="icon icon--info" />
-			<span>{{ email.shortValue }}</span>
+			<span>{{ contact.shortValue }}</span>
 		</span>
 	</div>
-	<!-- <div class="skills">
-		<h3 class="section-title">Habilidades</h3>
-		<span class="font-bold skill-fields">
-			<span>Pensamiento creativo</span>
-			<span>/</span>
-			<span>Pensamiento crítico</span>
-			<span>/</span>
-			<span>Resolución de problemas</span>
-		</span>
-	</div> -->
 </template>
 
 <script setup lang="ts">
+import OpenProjects from '../components/OpenProjects.vue';
+import OtherInterestData from '../components/OtherInterestData.vue';
 import Techs from '../components/Techs.vue';
 import { CONTACT_DATA_OBJ } from '../data/contact.data';
-import { OTHER_INTEREST_DATA } from '../data/other-interest.data';
 
-const { email, github, linkedin, phone } = CONTACT_DATA_OBJ;
-const otherInterestData = OTHER_INTEREST_DATA;
+const { email, linkedin, phone } = CONTACT_DATA_OBJ;
+const contactData = [linkedin, email, phone];
 </script>
 
 <style scoped lang="scss">
-.other-data {
+.main {
+	display: flex;
+}
+
+.other-interest-data,
+.open-projects {
 	display: flex;
 	gap: 10px;
 	flex-direction: column;
 	h3 {
 		margin-bottom: 5px;
 	}
+}
+
+.other-interest-data {
+	margin-top: 15px;
 }
 
 .techs {
@@ -87,17 +75,4 @@ const otherInterestData = OTHER_INTEREST_DATA;
 		gap: 5px;
 	}
 }
-
-.skills {
-	h3 {
-		margin-bottom: 10px;
-	}
-	grid-column: 2 /3;
-	.skill-fields {
-		display: flex;
-		justify-content: space-between;
-	}
-	margin-bottom: 5px;
-}
 </style>
-../constants/contact.constant../data/info-contact.constant
