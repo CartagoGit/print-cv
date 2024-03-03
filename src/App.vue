@@ -12,9 +12,14 @@
 				</span>
 			</section>
 			<section>
-				<span class="group-icons disabled">
-					<ZoomOutIcon class="icon icon--header" />
-					<ZoomInIcon class="icon icon--header" />
+				<span class="group-icons">
+					<ZoomOutIcon
+						class="icon icon--header"
+						@click="zoomOut" />
+					<ZoomInIcon
+						class="icon icon--header"
+						@click="zoomIn" />
+					<span class="scale">{{ scale * 100 }}%</span>
 				</span>
 			</section>
 			<section>
@@ -39,6 +44,7 @@
 			class="home" />
 		<div
 			v-else
+			:style="{ transform: `scale(${scale})` }"
 			class="curriculum">
 			<h1>
 				Currículum vitae de
@@ -53,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
+import { RouterView, onBeforeRouteLeave } from 'vue-router';
 import {
 	HomeIcon,
 	PdfIcon,
@@ -61,8 +67,22 @@ import {
 	ZoomOutIcon,
 	LangIcon,
 } from '@/assets/icons/header/header.icons.ts';
+import { ref } from 'vue';
 
 const routes = [{ text: 'Mario', nameRoute: 'mario' }];
+
+const scale = ref(1);
+const zoomIn = () => {
+	if (scale.value >= 2.6) return;
+	scale.value += 0.2;
+};
+const zoomOut = () => {
+	if (scale.value <= 0.2) return;
+	scale.value -= 0.2;
+};
+onBeforeRouteLeave(() => {
+	scale.value = 1;
+});
 </script>
 
 <style>
@@ -107,6 +127,7 @@ aside {
 			}
 		}
 		.group-icons {
+			position: relative;
 			border-radius: 30px;
 			background-color: var(--gray-900);
 			border: 1px solid var(--gray-600);
@@ -114,6 +135,15 @@ aside {
 			display: flex;
 			align-items: center;
 			gap: 10px;
+			.scale{
+				position: absolute;
+				bottom: -18px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 12px;
+				color: var(--gray-400);
+
+			}
 		}
 	}
 	nav {
@@ -142,6 +172,7 @@ main {
 		flex-direction: column;
 		width: 100%;
 		align-items: center;
+		transform-origin: top left;
 	}
 }
 </style>
