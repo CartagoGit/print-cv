@@ -15,6 +15,7 @@ body {
 	// Estilos para Chrome y Safari
 	::-webkit-scrollbar {
 		width: 8px; // Ancho del scrollbar
+		height: 8px; // Alto del scrollbar
 		transition: 300ms ease all;
 	}
 	::-webkit-scrollbar-track {
