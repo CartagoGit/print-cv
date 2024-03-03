@@ -1,8 +1,11 @@
 <template>
 	<div class="other-data">
 		<h3 class="section-title">Otros datos de interés</h3>
-		<span class="font-bold">Carnet V de conducir (2014)</span>
-		<!-- <span class="font-bold">Disponibilidad inmediata</span> -->
+		<span
+			v-for="data of otherInterestData"
+			class="font-bold">
+			{{ data }}
+		</span>
 	</div>
 	<div class="techs">
 		<h2 class="section-title">Conocimientos tecnológicos</h2>
@@ -49,8 +52,10 @@
 <script setup lang="ts">
 import Techs from '../components/Techs.vue';
 import { CONTACT_DATA_OBJ } from '../data/contact.data';
+import { OTHER_INTEREST_DATA } from '../data/other-interest.data';
 
 const { email, github, linkedin, phone } = CONTACT_DATA_OBJ;
+const otherInterestData = OTHER_INTEREST_DATA;
 </script>
 
 <style scoped lang="scss">
@@ -58,16 +63,16 @@ const { email, github, linkedin, phone } = CONTACT_DATA_OBJ;
 	display: flex;
 	gap: 10px;
 	flex-direction: column;
-    h3{
-        margin-bottom: 5px;
-    }
+	h3 {
+		margin-bottom: 5px;
+	}
 }
 
 .techs {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 .contact {
@@ -94,4 +99,5 @@ const { email, github, linkedin, phone } = CONTACT_DATA_OBJ;
 	}
 	margin-bottom: 5px;
 }
-</style>../constants/contact.constant../data/info-contact.constant
+</style>
+../constants/contact.constant../data/info-contact.constant

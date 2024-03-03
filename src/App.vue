@@ -9,23 +9,28 @@
 			<section>
 				<span class="group-icons disabled">
 					<LangIcon class="icon icon--header" />
+					<span class="float">
+						{{ lang === 'es' ? 'Español' : 'English' }}
+					</span>
 				</span>
 			</section>
 			<section>
-				<span class="group-icons">
+				<span
+					class="group-icons"
+					:class="{ disabled: !curriculum }">
 					<ZoomOutIcon
 						class="icon icon--header"
 						@click="zoomOut" />
 					<ZoomInIcon
 						class="icon icon--header"
 						@click="zoomIn" />
-					<span class="scale">{{ scale }}%</span>
+					<span class="float">{{ scale }}%</span>
 				</span>
 			</section>
 			<section>
 				<span
 					class="group-icons"
-					v-bind:disabled="!curriculum">
+					:class="{ disabled: !curriculum }">
 					<PdfIcon
 						class="icon icon--header"
 						@click="generatePDF()" />
@@ -91,6 +96,7 @@ const curriculum = ref<HTMLElement | null>(null);
 const scale = ref(100);
 const isLoading = ref(false);
 const reRender = ref(0);
+const lang = ref('es');
 
 const routes = CURRICULUMS_ROUTES_DATA;
 
@@ -210,7 +216,7 @@ aside {
 			display: flex;
 			align-items: center;
 			gap: 10px;
-			.scale {
+			.float {
 				position: absolute;
 				bottom: -18px;
 				left: 50%;
