@@ -39,8 +39,9 @@ import ComplementaryEducation from './sections/ComplementaryEducation.vue';
 import Lang from './sections/Lang.vue';
 import OtherData from './sections/OtherData.vue';
 import './styles/global.mario.scss';
+import { CURRICULUM_YEAR_DATA } from './data/curriculum.data';
 
-const cvDate = 'Feb 2024';
+const cvDate = CURRICULUM_YEAR_DATA;
 </script>
 
 <style scoped>

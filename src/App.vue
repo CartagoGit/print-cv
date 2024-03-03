@@ -118,7 +118,7 @@ const generatePDF = async () => {
 	if (!curriculum.value)
 		return console.error('No se encontró el currículum', curriculum);
 	isLoading.value = true;
-	scale.value = 1;
+	scale.value = 100;
 	// Esperamos a que se actualice el valor de scale para evitar deformaciones
 	await new Promise((resolve) =>
 		setTimeout(async () => {

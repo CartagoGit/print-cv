@@ -151,7 +151,7 @@ export const COMPLEMENTARY_EDUCATION_DATA: IFieldCourse[] = [
 		place: places.ericsson,
 		date: 'Ene 2018',
 		description:
-			'Técnico de Prevención de Nivel Básico (Recurso Preventivo)',
+			'Técnico de Prevención de Riesgos Laborales de Nivel Básico (Recurso Preventivo)',
 		time: 60,
 	},
 	{

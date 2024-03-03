@@ -35,7 +35,6 @@
 
 <script setup lang="ts">
 import type { IFieldCourse } from '@/shared/interfaces/index.interfaces';
-import { defineProps } from 'vue';
 
 defineProps({
 	fields: Array as () => IFieldCourse[],
@@ -63,7 +62,7 @@ defineProps({
 		gap: 1px;
 		align-items: center;
 		grid-column: 2 / 3;
-		.badge{
+		.badge {
 			background-color: var(--primary);
 		}
 	}

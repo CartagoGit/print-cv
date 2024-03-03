@@ -1,0 +1,1 @@
+export const CURRICULUM_YEAR_DATA = 'Mar 2024';

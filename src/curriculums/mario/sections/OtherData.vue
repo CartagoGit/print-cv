@@ -2,9 +2,9 @@
 	<div class="other-data">
 		<h3 class="section-title">Otros datos de interés</h3>
 		<span
-			v-for="data of otherInterestData"
+			v-for="otherData of otherInterestData"
 			class="font-bold">
-			{{ data }}
+			{{ otherData }}
 		</span>
 	</div>
 	<div class="techs">

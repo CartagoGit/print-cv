@@ -9,4 +9,5 @@ import { PROFESIONAL_EXP_DATA } from '../data/profesional-experience.data';
 
 const fields = PROFESIONAL_EXP_DATA;
 </script>
-<style scoped></style>../data/profesional-experience.data
+<style scoped></style>
+

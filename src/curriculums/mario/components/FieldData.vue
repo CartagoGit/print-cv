@@ -16,7 +16,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="description">
+		<p class="description">
 			<span class="font-bold mr5">
 				{{ field.place }}
 			</span>
@@ -25,13 +25,12 @@
 				class="font-regular">
 				{{ field.description }}
 			</span>
-		</div>
+		</p>
 	</article>
 </template>
 
 <script setup lang="ts">
 import type { IFieldsData } from '@/shared/interfaces/index.interfaces';
-import { defineProps } from 'vue';
 
 defineProps({
 	fields: Array as () => IFieldsData[],
@@ -61,5 +60,9 @@ defineProps({
 			color: var(--primary);
 		}
 	}
+}
+.description {
+	text-wrap: pretty;
+	text-align: justify;
 }
 </style>
