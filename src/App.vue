@@ -69,7 +69,7 @@
 </template>
 
 <script setup lang="ts">
-import { onUpdated, watch } from 'vue';
+import { watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 import {
 	HomeIcon,
@@ -81,6 +81,7 @@ import {
 import { ref } from 'vue';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
+import { resolve } from 'path';
 
 const route = useRoute();
 
@@ -88,19 +89,12 @@ const curriculum = ref<HTMLElement | null>(null);
 const scale = ref(1);
 const isLoading = ref(false);
 const reRender = ref(0);
-console.log(curriculum);
+
 const routes = [
 	{ text: 'Mario', nameRoute: 'mario', name: 'Mario Cabrero Volarich' },
 ];
 
-watch(
-	route,
-	() => {
-		console.log(route);
-		scale.value = 1;
-	},
-	{ immediate: true }
-);
+watch(route, () => (scale.value = 1), { immediate: true });
 
 const zoomIn = () => {
 	if (scale.value >= 2.6 || !curriculum?.value) return;
@@ -117,21 +111,28 @@ const zoomOut = () => {
 const generatePDF = async () => {
 	if (!curriculum.value)
 		return console.error('No se encontró el currículum', curriculum);
-
 	isLoading.value = true;
-	const pages = curriculum.value.querySelectorAll('.page');
+	scale.value = 1;
+	// Esperamos a que se actualice el valor de scale para evitar deformaciones
+	await new Promise(() =>
+		setTimeout(async () => {
+			resolve();
+		}, 50)
+	);
+
+	const pages = curriculum!.value!.querySelectorAll('.page');
 	const doc = new jsPDF();
 	try {
 		for (let i = 0; i < pages.length; i++) {
 			const page = pages[i];
 			const canvas = await html2canvas(page as HTMLElement, {
-				scale: 3,
+				scale: 4,
 			});
-			const imgData = canvas.toDataURL('image/png');
+			const imgData = canvas.toDataURL('image/jpeg');
 			const imgProps = doc.getImageProperties(imgData);
 			const pdfWidth = doc.internal.pageSize.getWidth();
 			const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-			doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+			doc.addImage(imgData, 'JPG', 0, 0, pdfWidth, pdfHeight);
 			if (i < pages.length - 1) {
 				doc.addPage();
 			}
