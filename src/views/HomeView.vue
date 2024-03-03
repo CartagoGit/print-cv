@@ -2,7 +2,7 @@
 
 <template>
 	<h1>
-		App para crear curriculums con css y crear pdfs
+		{{ $t('HOME.TITLE') }}
 	</h1>
 </template>
 

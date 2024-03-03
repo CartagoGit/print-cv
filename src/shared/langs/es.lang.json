@@ -1,1 +1,8 @@
-{}
+{
+	"GENERAL": {
+		"LANG": "Español"
+	},
+	"HOME": {
+		"TITLE": "App para crear curriculums con css y crear pdfs"
+	}
+}

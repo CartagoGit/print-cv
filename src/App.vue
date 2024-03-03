@@ -7,10 +7,12 @@
 					@click="$router.push({ name: 'home' })" />
 			</section>
 			<section>
-				<span class="group-icons disabled">
-					<LangIcon class="icon icon--header" />
+				<span class="group-icons">
+					<LangIcon
+						class="icon icon--header"
+						@click="changeLang" />
 					<span class="float">
-						{{ lang === 'es' ? 'Español' : 'English' }}
+						{{ $t('GENERAL.LANG') }}
 					</span>
 				</span>
 			</section>
@@ -89,6 +91,9 @@ import { ref } from 'vue';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import { CURRICULUMS_ROUTES_DATA } from './shared/data/curriculums.data';
+import { useI18n } from 'vue-i18n';
+import router from './router/index.routes';
+const { locale: lang } = useI18n();
 
 const route = useRoute();
 
@@ -96,11 +101,14 @@ const curriculum = ref<HTMLElement | null>(null);
 const scale = ref(100);
 const isLoading = ref(false);
 const reRender = ref(0);
-const lang = ref('es');
 
 const routes = CURRICULUMS_ROUTES_DATA;
 
-watch(route, () => (scale.value = 100), { immediate: true });
+router.beforeEach((to, from, next) => {
+	scale.value = 100;
+	next();
+});
+// watch(route, () => (scale.value = 100), { immediate: true });
 
 const zoomIn = () => {
 	if (scale.value >= 260 || !curriculum?.value) return;
@@ -164,6 +172,8 @@ const generatePDF = async () => {
 		isLoading.value = false;
 	}
 };
+
+const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 </script>
 
 <style>

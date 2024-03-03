@@ -10,7 +10,8 @@ const app = createApp(App);
 const i18n = createI18n({
 	locale: 'es',
 	fallbackLocale: 'en',
-	messages: TRADUCTIONS,
+	messages: TRADUCTIONS.BASE,
+	legacy: false,
 });
 
 app.use(router);

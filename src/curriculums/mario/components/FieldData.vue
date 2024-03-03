@@ -46,7 +46,7 @@ defineProps({
 		white-space: pre;
 	}
 	.where-date {
-		margin-top: 3px;
+		margin-top: 1px;
 		display: grid;
 		grid-template-columns: auto 60%;
 		.where,
