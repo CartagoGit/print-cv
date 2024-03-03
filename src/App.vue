@@ -81,7 +81,6 @@ import {
 import { ref } from 'vue';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
-import { resolve } from 'path';
 
 const route = useRoute();
 
@@ -114,9 +113,9 @@ const generatePDF = async () => {
 	isLoading.value = true;
 	scale.value = 1;
 	// Esperamos a que se actualice el valor de scale para evitar deformaciones
-	await new Promise(() =>
+	await new Promise((resolve) =>
 		setTimeout(async () => {
-			resolve();
+			resolve(null);
 		}, 50)
 	);
 

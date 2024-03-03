@@ -13,7 +13,7 @@ import type {
 	IKindContact,
 } from '@/shared/interfaces/info-contact.interface';
 
-export const infoContact: IInfoContact[] = [
+export const CONTACT_DATA: IInfoContact[] = [
 	{
 		kind: 'phone',
 		icon: PhoneIcon,
@@ -64,8 +64,8 @@ export const infoContact: IInfoContact[] = [
 	},
 ] as const;
 
-export let infoContactObject = {} as Record<IKindContact, IInfoContact>;
+export let CONTACT_DATA_OBJ = {} as Record<IKindContact, IInfoContact>;
 
-infoContact.forEach((contact) => {
-	infoContactObject[contact.kind] = contact;
+CONTACT_DATA.forEach((contact) => {
+	CONTACT_DATA_OBJ[contact.kind] = contact;
 });

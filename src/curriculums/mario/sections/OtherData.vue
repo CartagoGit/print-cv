@@ -2,7 +2,7 @@
 	<div class="other-data">
 		<h3 class="section-title">Otros datos de interés</h3>
 		<span class="font-bold">Carnet V de conducir (2014)</span>
-		<span class="font-bold">Disponibilidad inmediata</span>
+		<!-- <span class="font-bold">Disponibilidad inmediata</span> -->
 	</div>
 	<div class="techs">
 		<h2 class="section-title">Conocimientos tecnológicos</h2>
@@ -48,9 +48,9 @@
 
 <script setup lang="ts">
 import Techs from '../components/Techs.vue';
-import { infoContactObject } from '../constants/info-contact.constant';
+import { CONTACT_DATA_OBJ } from '../data/contact.data';
 
-const { email, github, linkedin, phone } = infoContactObject;
+const { email, github, linkedin, phone } = CONTACT_DATA_OBJ;
 </script>
 
 <style scoped lang="scss">
@@ -94,4 +94,4 @@ const { email, github, linkedin, phone } = infoContactObject;
 	}
 	margin-bottom: 5px;
 }
-</style>
+</style>../constants/contact.constant../data/info-contact.constant

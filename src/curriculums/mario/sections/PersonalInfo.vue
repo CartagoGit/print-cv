@@ -21,9 +21,9 @@
 	</article>
 </template>
 <script setup lang="ts">
-import { infoContact } from '../constants/info-contact.constant';
+import { CONTACT_DATA } from '../data/contact.data';
 
-const fields = infoContact;
+const fields = CONTACT_DATA;
 </script>
 
 <style>
@@ -64,4 +64,3 @@ const fields = infoContact;
 	}
 }
 </style>
-../constants/info-contact.constant
