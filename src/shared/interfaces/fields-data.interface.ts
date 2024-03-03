@@ -4,10 +4,10 @@ import type { IDate } from './index.interfaces';
 export interface IFieldsData {
 	company: string | ComputedRef<string>;
 	subCompany?: string;
-	where: string | ComputedRef<string>;
+	where: ComputedRef<string>;
 	date: IDate;
-	place: string | ComputedRef<string>;
-	description?: string | ComputedRef<string>;
+	place: ComputedRef<string>;
+	description?: ComputedRef<string>;
 }
 
 export interface IFieldCourse {

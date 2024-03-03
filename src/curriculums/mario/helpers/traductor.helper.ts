@@ -30,5 +30,6 @@ export const tFieldsData = (data: {
 	const { cv, kind, key } = data;
 	const base = cv === 'BASE' ? '' : cv.toUpperCase();
 	const translatePoint = `${base}.PROFESIONAL_EXPERIENCE.DATA.${kind}.${key}`;
+
 	return computed(() => t(translatePoint));
 };

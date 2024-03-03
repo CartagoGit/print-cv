@@ -3,27 +3,33 @@
 		class="field-data"
 		v-for="field of fields">
 		<div class="info-place">
-			<div class="company font-bold">{{ field.company }}</div>
+			<div class="company font-bold">
+				{{
+					typeof field.company === 'string'
+						? field.company
+						: field.company.value
+				}}
+			</div>
 			<div
 				class="sub-company font-regular"
 				v-if="field.subCompany">
 				{{ field.subCompany }}
 			</div>
 			<div class="where-date">
-				<span class="where font-bold">({{ field.where }})</span>
+				<span class="where font-bold">({{ field.where.value }})</span>
 				<span class="date font-regular">
-					{{ field.date.start }} - {{ field.date.end }}
+					{{ field.date.start.value }} - {{ field.date.end.value }}
 				</span>
 			</div>
 		</div>
 		<p class="description">
 			<span class="font-bold mr5">
-				{{ field.place }}
+				{{ field.place.value }}
 			</span>
 			<span
 				v-if="field.description"
 				class="font-regular">
-				{{ field.description }}
+				{{ field.description.value }}
 			</span>
 		</p>
 	</article>
