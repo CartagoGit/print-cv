@@ -1,3 +1,7 @@
 {
-	
+	"CV": {
+		"TITLE": "Curriculum Vitae of {name}",
+        "PAGE1": "Page 1 - Information",
+        "PAGE2": "Page 2 - Courses and skills"
+	}
 }

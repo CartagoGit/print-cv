@@ -42,7 +42,7 @@
 		<nav>
 			<h3>Curriculums</h3>
 			<span
-				v-for="route in routes"
+				v-for="route in routesData"
 				@click="$router.push({ name: route.nameRoute })"
 				class="link btn">
 				{{ route.text }}
@@ -60,11 +60,11 @@
 				transform: `scale(${Math.round(scale) / 100})`,
 			}"
 			id="curriculum">
-			<h1>
-				Currículum vitae de
+			<h1 v-if="actualRoute">
 				{{
-					routes.find((route) => route.nameRoute === $route.name)
-						?.text ?? 'Error getting route'
+					$t(`${actualRoute.nameRoute.toUpperCase()}.CV.TITLE`, {
+						name: actualRoute.text,
+					})
 				}}
 			</h1>
 			<RouterView />
@@ -101,12 +101,21 @@ const curriculum = ref<HTMLElement | null>(null);
 const scale = ref(100);
 const isLoading = ref(false);
 const reRender = ref(0);
-
-const routes = CURRICULUMS_ROUTES_DATA;
+const routesData = CURRICULUMS_ROUTES_DATA;
+const actualRoute = ref(
+	routesData.find((routeData) => routeData.nameRoute === route.name)!
+);
 
 router.beforeEach((_to, _from, next) => {
 	scale.value = 100;
 	next();
+});
+
+watch(route, () => {
+	actualRoute.value = routesData.find(
+		(routeData) => routeData.nameRoute === route.name
+	)!;
+	console.log('route1', route, actualRoute.value);
 });
 
 const zoomIn = () => {
@@ -150,10 +159,7 @@ const generatePDF = async () => {
 				doc.addPage();
 			}
 		}
-		const nameCv = routes
-			.find((route) => route.nameRoute === route.nameRoute)
-			?.name.split(' ')
-			.join('_');
+		const nameCv = actualRoute.value?.name.split(' ').join('_');
 		if (!nameCv) throw new Error('No se encontró nombre de cv');
 		const nameDoc = `${nameCv}_${new Date().getFullYear()}_${(
 			new Date().getMonth() + 1

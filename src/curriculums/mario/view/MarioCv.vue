@@ -1,5 +1,5 @@
 <template>
-	<h3 class="num-pagina">Página 1 - Información</h3>
+	<h3 class="num-pagina">{{ $t('MARIO.CV.PAGE1')}}</h3>
 	<div class="page">
 		<div class="content">
 			<section class="personal">
@@ -14,7 +14,7 @@
 		</div>
 		<span class="cv-expedition">{{ cvDate }}</span>
 	</div>
-	<h3>Página 2 - Cursos y habilidades</h3>
+	<h3>{{ $t('MARIO.CV.PAGE2') }}</h3>
 	<div class="page">
 		<div class="content">
 			<section class="complementary-education lower-gap">
