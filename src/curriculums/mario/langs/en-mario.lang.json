@@ -128,5 +128,32 @@
 			"DESCRIPTION": "B2 - English",
 			"SUBDESCRIPTION": "APTIS. Common European Framework of Reference for Languages"
 		}
+	},
+	"OTHER_DATA": {
+		"OPEN_PROJECTS": {
+			"TITLE": "Open Projects",
+			"KEYER": {
+				"DESCRIPTION": "Library for encoding and decoding data into hashes and vice versa using a salt. With built-in CLI to enable processes from the command line terminal.",
+				"SHORT_DESCRIPTION": "Library with CLI for encoding and decoding data into hashes."
+			}
+		},
+		"TECH_SKILLS": {
+			"TITLE": "Technical Skills",
+			"ENVIRONMENTS": "Environments",
+			"IDES": "IDEs",
+			"LANGUAGES": "Languages",
+			"FRONTEND": "Frontend",
+			"BACKEND": "Backend",
+			"DEPENDENCIES": "Dependencies",
+			"REPOSITORIES": "Repositories",
+			"TERMINALS": "Terminals",
+			"OTHERS": "Others",
+			"DATABASES": "Databases",
+			"CLOUD": "Cloud"
+		},
+		"OTHER_INTEREST_DATA": {
+			"TITLE": "Other Interest Data",
+			"DRIVE": "Driving License (B) (2014)"
+		}
 	}
 }

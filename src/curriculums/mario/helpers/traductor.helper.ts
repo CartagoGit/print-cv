@@ -32,7 +32,7 @@ type ICourses =
 	| 'DOCKER'
 	| 'SOLID'
 	| 'RXJS'
-    | 'ANGULAR_BASIC'
+	| 'ANGULAR_BASIC'
 	| 'DAPPS_ETH'
 	| 'ADOBE'
 	| 'BOOTSTRAP'
@@ -51,8 +51,27 @@ type ICourses =
 	| 'COPPER'
 	| 'FTTH'
 	| 'FLASH';
-type ILanguages = 'ENGLISH' | 'SPANISH' 
-type ILanguagesFields = 'DESCRIPTION' | "SUBDESCRIPTION" 
+type ILanguages = 'ENGLISH' | 'SPANISH';
+type ILanguagesFields = 'DESCRIPTION' | 'SUBDESCRIPTION';
+
+type IOpenProjects = 'KEYER';
+type IOpenProjectsFields = 'DESCRIPTION' | 'SHORT_DESCRIPTION';
+
+type IOtherInteresData = 'DRIVE';
+
+type ITechSkillsFields =
+	| 'TITLE'
+	| 'ENVIRONMENTS'
+	| 'IDES'
+	| 'LANGUAGES'
+	| 'FRONTEND'
+	| 'BACKEND'
+	| 'DEPENDENCIES'
+	| 'REPOSITORIES'
+	| 'TERMINALS'
+	| 'OTHERS'
+	| 'CLOUD'
+	| 'DATABASES';
 
 export const tFieldsData = (data: {
 	cv: IKindTraductions;
@@ -81,8 +100,28 @@ export const tCourses = (course: ICourses) => {
 	return computed(() => t(`MARIO.COURSES.${course}`));
 };
 
+export const tLangGrade = (props: {
+	lang: ILanguages;
+	key: ILanguagesFields;
+}) => {
+	const { lang, key } = props;
+	return computed(() => t(`MARIO.LANGUAGES.${lang}.${key}`));
+};
 
-export const tLangGrade = (props: {lang: ILanguages, key: ILanguagesFields}) => {
-    const {lang, key} = props;
-    return computed(() => t(`MARIO.LANGUAGES.${lang}.${key}`));
-}
+export const tOpenProjects = (props: {
+	project: IOpenProjects;
+	key: IOpenProjectsFields;
+}) => {
+	const { project, key } = props;
+	return computed(() =>
+		t(`MARIO.OTHER_DATA.OPEN_PROJECTS.${project}.${key}`)
+	);
+};
+
+export const tOtherInteresData = (name: IOtherInteresData) => {
+	return computed(() => t(`MARIO.OTHER_DATA.OTHER_INTEREST_DATA.${name}`));
+};
+
+export const tTechSkills = (key: ITechSkillsFields) => {
+	return computed(() => t(`MARIO.OTHER_DATA.TECH_SKILLS.${key}`));
+};

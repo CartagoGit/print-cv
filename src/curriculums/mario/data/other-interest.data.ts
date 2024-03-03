@@ -1,6 +1,7 @@
 import { CarIcon } from '@/assets/icons/contact/contact.icons';
+import { tOtherInteresData } from '../helpers/traductor.helper';
 
 export const OTHER_INTEREST_DATA = [
-	{ name: 'Carnet B de conducir (2014)', icon: CarIcon },
+	{ name: tOtherInteresData('DRIVE'), icon: CarIcon },
 	// 'Disponibilidad inmediata',
 ];

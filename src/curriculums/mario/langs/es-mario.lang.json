@@ -112,5 +112,32 @@
 			"DESCRIPTION": "B2 - Inglés",
 			"SUBDESCRIPTION": "APTIS. Common European Framework of Reference for Languages"
 		}
+	},
+	"OTHER_DATA": {
+		"OPEN_PROJECTS": {
+			"TITLE": "Proyectos abiertos",
+			"KEYER": {
+				"DESCRIPTION": "Libreria para codificar y decodificar conviertiendo datos en hashes y viceversa usando un salt. Con cli incorporado para posibilitar los procesos desde la terminal de comandos",
+				"SHORT_DESCRIPTION": "Libreria con cli para codificar y decodificar datos en hashes."
+			}
+		},
+		"TECH_SKILLS": {
+			"TITLE": "Conocimientos tecnológicos",
+			"ENVIRONMENTS": "Entornos",
+			"IDES": "IDEs",
+			"LANGUAGES": "Lenguajes",
+			"FRONTEND": "Frontend",
+			"BACKEND": "Backend",
+			"DEPENDENCIES": "Dependencias",
+			"REPOSITORIES": "Repositorios",
+			"TERMINALS": "Terminales",
+			"OTHERS": "Otros",
+			"DATABASES": "Bases de datos",
+			"CLOUD": "Cloud"
+		},
+		"OTHER_INTEREST_DATA": {
+			"TITLE": "Otros datos de interés",
+			"DRIVE": "Carnet B de conducir (2014)"
+		}
 	}
 }

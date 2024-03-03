@@ -27,11 +27,12 @@ import {
 	ChatgptIcon,
 } from '@/assets/icons/techs/techs.icons';
 import type { IKindTech, ITech } from '@/shared/interfaces/index.interfaces';
+import { tTechSkills } from '../helpers/traductor.helper';
 
 export const TECHS_DATA: Record<IKindTech, ITech> = {
 	environments: {
 		kind: 'environments',
-		name: 'Entornos',
+		name: tTechSkills('ENVIRONMENTS'),
 		usual: [
 			{ name: 'Windows', icon: WindowsIcon },
 			{ name: 'Android', icon: AndroidIcon },
@@ -40,13 +41,13 @@ export const TECHS_DATA: Record<IKindTech, ITech> = {
 	},
 	ides: {
 		kind: 'ides',
-		name: 'IDEs',
+		name: tTechSkills('IDES'),
 		usual: [{ name: 'Visual Studio Code', icon: VisualStudioCodeIcon }],
 		used: ['Visual Studio', 'Android Studio'],
 	},
 	languages: {
 		kind: 'languages',
-		name: 'Lenguajes',
+		name: tTechSkills('LANGUAGES'),
 		usual: [
 			{ name: 'JavaScript', icon: JavascriptIcon },
 			{ name: 'TypeScript', icon: TypescriptIcon },
@@ -58,7 +59,7 @@ export const TECHS_DATA: Record<IKindTech, ITech> = {
 	},
 	frontend: {
 		kind: 'frontend',
-		name: 'Frontend',
+		name: tTechSkills('FRONTEND'),
 		usual: [
 			{ name: 'Angular', icon: AngularIcon },
 			{ name: 'Ionic', icon: IonicIcon },
@@ -77,7 +78,7 @@ export const TECHS_DATA: Record<IKindTech, ITech> = {
 	},
 	backend: {
 		kind: 'backend',
-		name: 'Backend',
+		name: tTechSkills('BACKEND'),
 		usual: [
 			{ name: 'Node.js', icon: NodeIcon },
 			{ name: 'Nest.js', icon: NestIcon },
@@ -86,7 +87,7 @@ export const TECHS_DATA: Record<IKindTech, ITech> = {
 	},
 	dependencies: {
 		kind: 'dependencies',
-		name: 'Dependencias',
+		name: tTechSkills('DEPENDENCIES'),
 		usual: [
 			{ name: 'Npm', icon: NpmIcon },
 			{ name: 'Bun.js', icon: BunIcon },
@@ -114,7 +115,7 @@ export const TECHS_DATA: Record<IKindTech, ITech> = {
 	},
 	repositories: {
 		kind: 'repositories',
-		name: 'Repositorios',
+		name: tTechSkills('REPOSITORIES'),
 		usual: [
 			{ name: 'Github', icon: GithubIcon },
 			{ name: 'Gitlab', icon: GitlabIcon },
@@ -123,7 +124,7 @@ export const TECHS_DATA: Record<IKindTech, ITech> = {
 	},
 	terminals: {
 		kind: 'terminals',
-		name: 'Terminales',
+		name: tTechSkills('TERMINALS'),
 		usual: [
 			{ name: 'Zsh', icon: TerminalIcon },
 			{ name: 'Git Bash', icon: GitIcon },
@@ -134,19 +135,19 @@ export const TECHS_DATA: Record<IKindTech, ITech> = {
 	},
 	databases: {
 		kind: 'databases',
-		name: 'Bases de datos',
+		name: tTechSkills('DATABASES'),
 		usual: [],
 		used: ['MongoDB', 'MySql', 'Postgres', 'MariaDB'],
 	},
 	cloud: {
 		kind: 'cloud',
-		name: 'Cloud',
+		name: tTechSkills('CLOUD'),
 		usual: [],
 		used: ['Netlify', 'Heroku', 'Railway'],
 	},
 	others: {
 		kind: 'others',
-		name: 'Otros',
+		name: tTechSkills('OTHERS'),
 		usual: [
 			{ name: 'Docker', icon: DockerIcon },
 			{ name: 'Postman', icon: PostmanIcon },

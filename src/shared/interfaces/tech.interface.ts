@@ -1,3 +1,5 @@
+import type { ComputedRef } from 'vue';
+
 export type IKindTech =
 	| 'environments'
 	| 'ides'
@@ -15,9 +17,10 @@ interface IUsualTech {
 	name: string;
 	icon: string;
 }
+
 export interface ITech {
 	kind: IKindTech;
-	name: string;
+	name: ComputedRef<string>;
 	usual: IUsualTech[];
 	used: string[];
 }

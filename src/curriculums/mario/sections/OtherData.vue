@@ -1,17 +1,23 @@
 <template>
 	<div class="aside">
 		<div class="open-projects">
-			<h3 class="section-title">Proyectos abiertos</h3>
+			<h3 class="section-title">
+				{{ $t('MARIO.OTHER_DATA.OPEN_PROJECTS.TITLE') }}
+			</h3>
 			<OpenProjects />
 		</div>
 		<div class="other-interest-data">
-			<h3 class="section-title">Otros datos de interés</h3>
+			<h3 class="section-title">
+				{{ $t('MARIO.OTHER_DATA.OTHER_INTEREST_DATA.TITLE') }}
+			</h3>
 			<OtherInterestData />
 		</div>
 	</div>
 	<div class="main">
 		<div class="techs">
-			<h2 class="section-title">Conocimientos tecnológicos</h2>
+			<h2 class="section-title">
+				{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.TITLE') }}
+			</h2>
 			<Techs />
 		</div>
 	</div>

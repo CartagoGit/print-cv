@@ -5,7 +5,7 @@
 		<component
 			:is="otherData.icon"
 			class="icon icon--info"></component>
-		<span>{{ otherData.name }}</span>
+		<span>{{ otherData.name.value }}</span>
 	</span>
 </template>
 

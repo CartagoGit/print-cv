@@ -1,7 +1,7 @@
 <template>
 	<div class="kind-tech usual">
 		<div class="field environments">
-			<span class="name font-bold">{{ techs.environments.name }}:</span>
+			<span class="name font-bold">{{ techs.environments.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.environments.usual"
@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div class="field ides">
-			<span class="name font-bold">{{ techs.ides.name }}:</span>
+			<span class="name font-bold">{{ techs.ides.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.ides.usual"
@@ -30,7 +30,7 @@
 		</div>
 
 		<div class="field languages">
-			<span class="name font-bold">{{ techs.languages.name }}:</span>
+			<span class="name font-bold">{{ techs.languages.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.languages.usual"
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="field frontend">
-			<span class="name font-bold">{{ techs.frontend.name }}:</span>
+			<span class="name font-bold">{{ techs.frontend.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.frontend.usual"
@@ -60,7 +60,7 @@
 		</div>
 
 		<div class="field backend">
-			<span class="name font-bold">{{ techs.backend.name }}:</span>
+			<span class="name font-bold">{{ techs.backend.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.backend.usual"
@@ -75,7 +75,7 @@
 		</div>
 
 		<div class="field dependencies">
-			<span class="name font-bold">{{ techs.dependencies.name }}:</span>
+			<span class="name font-bold">{{ techs.dependencies.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.dependencies.usual"
@@ -90,7 +90,7 @@
 		</div>
 
 		<div class="field repositories">
-			<span class="name font-bold">{{ techs.repositories.name }}:</span>
+			<span class="name font-bold">{{ techs.repositories.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.repositories.usual"
@@ -104,7 +104,7 @@
 			</div>
 		</div>
 		<div class="field terminals">
-			<span class="name font-bold">{{ techs.terminals.name }}:</span>
+			<span class="name font-bold">{{ techs.terminals.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.terminals.usual"
@@ -118,7 +118,7 @@
 			</div>
 		</div>
 		<div class="field others">
-			<span class="name font-bold">{{ techs.others.name }}:</span>
+			<span class="name font-bold">{{ techs.others.name.value }}:</span>
 			<div class="techs">
 				<span
 					v-for="tech in techs.others.usual"

@@ -2,7 +2,7 @@
 	<div v-for="project of openProjects">
 		<span class="font-bold mr5 title">{{ project.name }}</span>
 		<span class="font-bold dependency">{{ project.dependency }}</span>
-		<div class="short-description">{{ project.shortDescription }}</div>
+		<div class="short-description">{{ project.shortDescription.value }}</div>
 	</div>
 </template>
 <script setup lang="ts">
