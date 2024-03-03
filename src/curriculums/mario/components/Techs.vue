@@ -14,6 +14,20 @@
 				</span>
 			</div>
 		</div>
+		<div class="field ides">
+			<span class="name font-bold">{{ techs.ides.name }}:</span>
+			<div class="techs">
+				<span
+					v-for="tech in techs.ides.usual"
+					:key="tech.name"
+					class="tech">
+					<component
+						:is="tech.icon"
+						class="icon icon--tech" />
+					<span class="font-regular">{{ tech.name }}</span>
+				</span>
+			</div>
+		</div>
 
 		<div class="field languages">
 			<span class="name font-bold">{{ techs.languages.name }}:</span>
@@ -135,7 +149,6 @@ const techs = TECHS_DATA;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-	gap: 10px;
 }
 .group-fields {
 	display: grid;
