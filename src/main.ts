@@ -10,7 +10,7 @@ const app = createApp(App);
 const i18n = createI18n({
 	locale: 'es',
 	fallbackLocale: 'en',
-	messages: TRADUCTIONS.BASE,
+	messages: TRADUCTIONS,
 	legacy: false,
 });
 
