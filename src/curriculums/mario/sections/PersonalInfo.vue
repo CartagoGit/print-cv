@@ -44,7 +44,8 @@ const fields = infoContact;
 			object-position: 50% 50%;
 			width: 100%;
 			aspect-ratio: 1/1;
-			clip-path: circle(50%);
+			border-radius: 100%;
+			/* clip-path: circle(50%); */
 		}
 	}
 }

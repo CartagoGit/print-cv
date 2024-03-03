@@ -79,10 +79,9 @@ import html2canvas from 'html2canvas';
 const route = useRoute();
 const curriculum = ref(document.getElementById('curriculum'));
 const scale = ref(1);
-
+const isLoading = ref(false);
 
 const routes = [{ text: 'Mario', nameRoute: 'mario' }];
-
 
 watch(
 	route,
@@ -103,23 +102,26 @@ const zoomOut = () => {
 };
 const generatePDF = async () => {
 	if (!curriculum.value) return;
+	isLoading.value = true;
 	const pages = curriculum.value.querySelectorAll('.page');
 	const doc = new jsPDF();
-
-	// for (let i = 0; i < pages.length; i++) {
-	pages.forEach(async (page, index) => {
-		const canvas = await html2canvas(page as HTMLElement);
+	for (let i = 0; i < pages.length; i++) {
+		const page = pages[i];
+		const canvas = await html2canvas(page as HTMLElement, {
+			scale: 2,
+		});
 		const imgData = canvas.toDataURL('image/png');
 		const imgProps = doc.getImageProperties(imgData);
 		const pdfWidth = doc.internal.pageSize.getWidth();
 		const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
 		doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-		if (index < pages.length - 1) {
+		if (i < pages.length - 1) {
 			doc.addPage();
 		}
-	});
+	}
 
 	doc.save('documento.pdf');
+	isLoading.value = false;
 };
 </script>
 
