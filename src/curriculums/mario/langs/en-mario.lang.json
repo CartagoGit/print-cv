@@ -1,7 +1,72 @@
 {
 	"CV": {
 		"TITLE": "Curriculum Vitae of {name}",
-        "PAGE1": "Page 1 - Information",
-        "PAGE2": "Page 2 - Courses and skills"
+		"PAGE1": "Page 1 - Information",
+		"PAGE2": "Page 2 - Courses and skills"
+	},
+	"PLACES": {
+		"SEVILLE": "Seville"
+	},
+	"PROFESIONAL_EXPERIENCE": {
+		"DATA": {
+			"BEATEAM": {
+				"WHERE": "Seville",
+				"START": "Oct 2022",
+				"END": "Actual",
+				"PLACE": "Software Developer.",
+				"DESCRIPTION": "Functions: Development and maintenance of ERP for billing, sales, and automotive spare parts logistics management with Angular, Sass, and Rxjs. Development and maintenance of mobile application for Android with Ionic. Dockerization of environments compatible with Wsl2. Technical support and bug fixing in web and mobile applications. Deployment of applications in production using Gitlab jobs. User interface improvements in Angular and Vue applications. Bash and Node.js scripts for task automation. Use of git bash for repository management and Wsl2 terminal for ssh access."
+			},
+			"INDEPENDIENT2": {
+				"COMPANY": "Independent Professional",
+				"WHERE": "Seville",
+				"START": "Sept 2021",
+				"END": "Oct 2022",
+				"PLACE": "Software Developer.",
+				"DESCRIPTION": "Functions: Development in Solidity of smart contracts for the BEP-20 network of Binance Smart Chain (BSC) and for the Ethereum network (ERC-20) using Ganache/Truffle with OpenZeppelin. Web development in React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desktop application development with Electron + React; Git Repositories + GitHub control."
+			},
+			"EXCELLENCE": {
+				"WHERE": "Seville",
+				"START": "Oct 2016",
+				"END": "Feb 2019",
+				"PLACE": "Telecommunications Technician.",
+				"DESCRIPTION": "Functions: Maintenance/Installation Technician FTTH for Telefónica/Movistar's fiber optic."
+			},
+			"HISPATEL": {
+				"WHERE": "Seville",
+				"START": "May 2014",
+				"END": "Sep 2016",
+				"PLACE": "Telecommunications Technician.",
+				"DESCRIPTION": "Functions: Maintenance/Installation Technician FTTH for Telefónica/Movistar's fiber optic."
+			},
+			"INDEPENDIENT1": {
+				"COMPANY": "Independent Professional",
+				"WHERE": "Seville",
+				"START": "2006",
+				"END": "2014",
+				"PLACE": "Hardware Support.",
+				"DESCRIPTION": "Functions: Maintenance of computer systems and consoles, as well as other electronic devices for individuals."
+			},
+			"EVERTEL": {
+				"WHERE": "Seville",
+				"START": "Apr 2013",
+				"END": "Jun 2013",
+				"PLACE": "Software Developer.",
+				"DESCRIPTION": "Internship contract. Functions: Web development in intranet using SharePoint."
+			},
+			"GUADALTEL": {
+				"WHERE": "Seville",
+				"START": "Nov 2012",
+				"END": "Dec 2012",
+				"PLACE": "Software Developer.",
+				"DESCRIPTION": "Internship contract. Functions: Support in project developed in Java."
+			},
+			"PUBLIBICI": {
+				"WHERE": "Seville",
+				"START": "Dec 2006",
+				"END": "Mar 2007",
+				"PLACE": "Advertising Distributor.",
+				"DESCRIPTION": "Functions: Exposure to the public and distribution of advertising."
+			}
+		}
 	}
 }

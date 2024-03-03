@@ -1,95 +1,257 @@
-import type { IFieldsData } from "@/shared/interfaces/fields-data.interface";
+import type { IFieldsData } from '@/shared/interfaces/fields-data.interface';
+import { tFieldsData } from '../helpers/traductor.helper';
 
-export const PROFESIONAL_EXP_DATA : IFieldsData[] = [
+export const PROFESIONAL_EXP_DATA: IFieldsData[] = [
 	{
 		company: 'BEATEAM S.L.',
 		subCompany: '(AZUR GLOBAL BUSINESS S.L Group)',
-		where: 'Sevilla',
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'BEATEAM',
+			key: 'WHERE',
+		}),
 		date: {
-			start: 'Oct 2022',
-			end: 'Actual',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'BEATEAM',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'BEATEAM',
+				key: 'END',
+			}),
 		},
-		place: 'Desarrollador de software.',
-		description:
-			'Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos compatibles con Wsl2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Scripts bash y Node.js para automatización de tareas. Uso de git bash para manejo de repositorios y de terminal Wsl2 para acceso ssh.',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'BEATEAM',
+			key: 'PLACE',
+		}),
+
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'BEATEAM',
+			key: 'DESCRIPTION',
+		}),
 	},
 	{
-		company: 'Profesional Independiente',
-		where: 'Sevilla',
+		company: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT2',
+			key: 'COMPANY',
+		}),
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT2',
+			key: 'WHERE',
+		}),
 		date: {
-			start: 'Sept 2021',
-			end: 'Oct 2022',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'INDEPENDIENT2',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'INDEPENDIENT2',
+				key: 'END',
+			}),
 		},
-		place: 'Desarrollador de software.',
-		description:
-			'Funciones: Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; Control de Repositorios Git + GitHub.',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT2',
+			key: 'PLACE',
+		}),
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT2',
+			key: 'DESCRIPTION',
+		}),
 	},
 	{
 		company: 'EXCELLENCE FIELD FACTORY, S.L.',
 		subCompany: '(EZENTIS/ERICSSON/ABENTEL)',
-		where: 'Sevilla',
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'EXCELLENCE',
+			key: 'WHERE',
+		}),
 		date: {
-			start: 'Oct 2016',
-			end: 'Feb 2019',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'EXCELLENCE',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'EXCELLENCE',
+				key: 'END',
+			}),
 		},
-		place: 'Técnico de Telecomunicaciones.',
-		description:
-			'Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar.',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'EXCELLENCE',
+			key: 'PLACE',
+		}),
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'EXCELLENCE',
+			key: 'DESCRIPTION',
+		}),
 	},
 	{
 		company: 'HÍSPALIS INST. TELCOMUN., S.L.',
 		subCompany: '(HISPATEL)',
-		where: 'Sevilla',
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'HISPATEL',
+			key: 'WHERE',
+		}),
 		date: {
-			start: 'May 2014',
-			end: 'Sep 2016',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'HISPATEL',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'HISPATEL',
+				key: 'END',
+			}),
 		},
-		place: 'Técnico de Telecomunicaciones.',
-		description:
-			'Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar.',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'HISPATEL',
+			key: 'PLACE',
+		}),
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'HISPATEL',
+			key: 'DESCRIPTION',
+		}),
 	},
 	{
-		company: 'Profesional independiente',
-		where: 'Sevilla',
+		company: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT1',
+			key: 'COMPANY',
+		}),
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT1',
+			key: 'WHERE',
+		}),
 		date: {
-			start: '2006',
-			end: '2014',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'INDEPENDIENT1',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'INDEPENDIENT1',
+				key: 'END',
+			}),
 		},
-		place: 'Soporte de hardware.',
-		description:
-			'Funciones: Mantenimiento de computadoras informáticas y consolas, así como de otros dispositivos electrónicos para particulares. ',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT1',
+			key: 'PLACE',
+		}),
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'INDEPENDIENT1',
+			key: 'DESCRIPTION',
+		}),
 	},
 	{
 		company: 'S.A.C.E. EVERTEL, S.L.',
-		where: 'Sevilla',
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'EVERTEL',
+			key: 'WHERE',
+		}),
 		date: {
-			start: 'Abr 2013',
-			end: 'Jun 2013',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'EVERTEL',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'EVERTEL',
+				key: 'END',
+			}),
 		},
-		place: 'Desarrollador de software.',
-		description:
-			'Contrato de prácticas. Funciones: Desarrollo web en intranet empleando SharePoint.',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'EVERTEL',
+			key: 'PLACE',
+		}),
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'EVERTEL',
+			key: 'DESCRIPTION',
+		}),
 	},
 	{
 		company: 'GUADALTEL, S.A.',
-		where: 'Sevilla',
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'GUADALTEL',
+			key: 'WHERE',
+		}),
 		date: {
-			start: 'Nov 2012',
-			end: 'Dic 2012',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'GUADALTEL',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'GUADALTEL',
+				key: 'END',
+			}),
 		},
-		place: 'Desarrollador de software.',
-		description:
-			'Contrato de prácticas. Funciones: Apoyo en proyecto desarrollado en Java.',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'GUADALTEL',
+			key: 'PLACE',
+		}),
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'GUADALTEL',
+			key: 'DESCRIPTION',
+		}),
 	},
 	{
 		company: 'MUÑOZ Y DIEZMA, S.L. (Publibici)',
-		where: 'Sevilla',
+		where: tFieldsData({
+			cv: 'MARIO',
+			kind: 'PUBLIBICI',
+			key: 'WHERE',
+		}),
 		date: {
-			start: 'Dic 2006',
-			end: 'Mar 2007',
+			start: tFieldsData({
+				cv: 'MARIO',
+				kind: 'PUBLIBICI',
+				key: 'START',
+			}),
+			end: tFieldsData({
+				cv: 'MARIO',
+				kind: 'PUBLIBICI',
+				key: 'END',
+			}),
 		},
-		place: 'Repartidor de publicidad.',
-		description:
-			'Funciones: Exposición al público y reparto de publicidad.',
+		place: tFieldsData({
+			cv: 'MARIO',
+			kind: 'PUBLIBICI',
+			key: 'PLACE',
+		}),
+		description: tFieldsData({
+			cv: 'MARIO',
+			kind: 'PUBLIBICI',
+			key: 'DESCRIPTION',
+		}),
 	},
-]
+];

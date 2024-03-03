@@ -1,4 +1,6 @@
+import type { ComputedRef } from 'vue';
+
 export interface IDate {
-	start: string;
-	end: string | 'now' | undefined;
+	start: string | ComputedRef<string>;
+	end: string | 'now' | undefined | ComputedRef<string | 'now' | undefined>;
 }

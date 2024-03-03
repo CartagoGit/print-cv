@@ -2,6 +2,71 @@
 	"CV": {
 		"TITLE": "Currículum Vitae de {name}",
 		"PAGE1": "Página 1 - Información",
-        "PAGE2": "Página 2 - Cursos y habilidades"
+		"PAGE2": "Página 2 - Cursos y habilidades"
+	},
+	"PLACES": {
+		"SEVILLE": "Sevilla"
+	},
+	"PROFESIONAL_EXPERIENCE": {
+		"DATA": {
+			"BEATEAM": {
+				"WHERE": "Sevilla",
+				"START": "Oct 2022",
+				"END": "Actual",
+				"PLACE": "Desarrollador de software.",
+				"DESCRIPTION": "Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos compatibles con Wsl2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Scripts bash y Node.js para automatización de tareas. Uso de git bash para manejo de repositorios y de terminal Wsl2 para acceso ssh."
+			},
+			"INDEPENDIENT2": {
+				"COMPANY": "Profesional Independiente",
+				"WHERE": "Sevilla",
+				"START": "Sept 2021",
+				"END": "Oct 2022",
+				"PLACE": "Desarrollador de software.",
+				"DESCRIPTION": "Funciones: Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; Control de Repositorios Git + GitHub."
+			},
+			"EXCELLENCE": {
+				"WHERE": "Sevilla",
+				"START": "Oct 2016",
+				"END": "Feb 2019",
+				"PLACE": "Técnico de Telecomunicaciones.",
+				"DESCRIPTION": "Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar."
+			},
+			"HISPATEL": {
+				"WHERE": "Sevilla",
+				"START": "May 2014",
+				"END": "Sep 2016",
+				"PLACE": "Técnico de Telecomunicaciones.",
+				"DESCRIPTION": "Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar."
+			},
+			"INDEPENDIENT1": {
+				"COMPANY": "Profesional Independiente",
+				"WHERE": "Sevilla",
+				"START": "2006",
+				"END": "2014",
+				"PLACE": "Soporte de hardware.",
+				"DESCRIPTION": "Funciones: Mantenimiento de computadoras informáticas y consolas, así como de otros dispositivos electrónicos para particulares. "
+			},
+			"EVERTEL": {
+				"WHERE": "Sevilla",
+				"START": "Abr 2013",
+				"END": "Jun 2013",
+				"PLACE": "Desarrollador de software.",
+				"DESCRIPTION": "Contrato de prácticas. Funciones: Desarrollo web en intranet empleando SharePoint."
+			},
+			"GUADALTEL": {
+				"WHERE": "Sevilla",
+				"START": "Nov 2012",
+				"END": "Dic 2012",
+				"PLACE": "Desarrollador de software.",
+				"DESCRIPTION": "Contrato de prácticas. Funciones: Apoyo en proyecto desarrollado en Java."
+			},
+			"PUBLIBICI": {
+				"WHERE": "Sevilla",
+				"START": "Dic 2006",
+				"END": "Mar 2007",
+				"PLACE": "Repartidor de publicidad.",
+				"DESCRIPTION": "Funciones: Exposición al público y reparto de publicidad."
+			}
+		}
 	}
 }

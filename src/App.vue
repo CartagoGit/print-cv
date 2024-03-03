@@ -115,7 +115,6 @@ watch(route, () => {
 	actualRoute.value = routesData.find(
 		(routeData) => routeData.nameRoute === route.name
 	)!;
-	console.log('route1', route, actualRoute.value);
 });
 
 const zoomIn = () => {

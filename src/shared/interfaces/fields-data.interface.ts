@@ -1,12 +1,13 @@
+import type { ComputedRef } from 'vue';
 import type { IDate } from './index.interfaces';
 
 export interface IFieldsData {
-	company: string;
+	company: string | ComputedRef<string>;
 	subCompany?: string;
-	where: string;
+	where: string | ComputedRef<string>;
 	date: IDate;
-	place: string;
-	description?: string;
+	place: string | ComputedRef<string>;
+	description?: string | ComputedRef<string>;
 }
 
 export interface IFieldCourse {

@@ -45,7 +45,6 @@ const cvDate = CURRICULUM_YEAR_DATA;
 </script>
 
 <style scoped>
-/* TODO comentar los colores de los bordes */
 .content {
 	width: 100%;
 	height: 100%;
@@ -79,6 +78,5 @@ section {
 .other-data {
 	position: relative;
 	height: 100%;
-	/* grid-template-rows: 1fr auto; */
 }
 </style>
