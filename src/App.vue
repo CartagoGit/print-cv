@@ -93,7 +93,7 @@ import html2canvas from 'html2canvas';
 import { CURRICULUMS_ROUTES_DATA } from './shared/data/curriculums.data';
 import { useI18n } from 'vue-i18n';
 import router from './router/index.routes';
-const { locale: lang, setLocaleMessage } = useI18n();
+const { locale: lang, setLocaleMessage, t } = useI18n();
 
 const route = useRoute();
 
@@ -167,7 +167,7 @@ const generatePDF = async () => {
 			.padStart(2, '0')}_${new Date()
 			.getDate()
 			.toString()
-			.padStart(2, '0')}_cv.pdf`;
+			.padStart(2, '0')}_cv_${t('GENERAL.LANG')}.pdf`;
 
 		doc.save(nameDoc);
 	} catch (err) {

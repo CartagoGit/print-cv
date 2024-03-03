@@ -68,5 +68,24 @@
 				"DESCRIPTION": "Funciones: Exposición al público y reparto de publicidad."
 			}
 		}
+	},
+	"OFICIAL_EDUCATION": {
+		"DATA": {
+			"VELAZQUEZ": {
+				"WHERE": "Sevilla",
+				"PLACE": "Grado Superior : Técnico Superior en Desarrollo  de Aplicaciones Informáticas."
+			},
+			"US": {
+				"WHERE": "Sevilla",
+				"PLACE": "Cursado parcial: Ingeniería Técnica en Informática de Sistemas.",
+				"DESCRIPTION": "No finalizado por cambio en la orientación de los estudios."
+			},
+			"SANPABLO": {
+				"WHERE": "Sevilla",
+				"START": "2004",
+				"END": "2006",
+				"PLACE": "Bachillerato Tecnológico."
+			}
+		}
 	}
 }

@@ -68,5 +68,28 @@
 				"DESCRIPTION": "Functions: Exposure to the public and distribution of advertising."
 			}
 		}
+	},
+	"OFICIAL_EDUCATION": {
+		"DATA": {
+			"VELAZQUEZ": {
+				"WHERE": "Seville",
+				"START": "2010",
+				"END": "2013",
+				"PLACE": "Higher Degree: Higher Technician in Computer Application Development."
+			},
+			"US": {
+				"WHERE": "Seville",
+				"START": "2006",
+				"END": "2009",
+				"PLACE": "Partial Completion: Technical Engineering in Computer Systems.",
+				"DESCRIPTION": "Not completed due to change in study orientation."
+			},
+			"SANPABLO": {
+				"WHERE": "Seville",
+				"START": "2004",
+				"END": "2006",
+				"PLACE": "Technological Baccalaureate."
+			}
+		}
 	}
 }

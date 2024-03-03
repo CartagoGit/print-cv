@@ -18,7 +18,19 @@
 			<div class="where-date">
 				<span class="where font-bold">({{ field.where.value }})</span>
 				<span class="date font-regular">
-					{{ field.date.start.value }} - {{ field.date.end.value }}
+					{{
+						typeof field.date.start === 'string'
+							? field.date.start
+							: field.date.start.value
+					}}
+					{{ field.date.end ? '-' : '' }}
+					{{
+						typeof field.date.end === 'string'
+							? field.date.end
+							: field.date.end?.value
+							? field.date.end.value
+							: ''
+					}}
 				</span>
 			</div>
 		</div>

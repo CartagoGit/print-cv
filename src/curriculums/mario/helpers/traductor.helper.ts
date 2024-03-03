@@ -14,22 +14,27 @@ type IKindProfesionalExperience =
 	| 'GUADALTEL'
 	| 'PUBLIBICI';
 
-type IPropsProfesionalExperience =
-    | 'COMPANY' // Opcional
+type IKindOficialEducation = 'VELAZQUEZ' | 'US' | 'SANPABLO';
+
+type IPropsFieldsData =
+	| 'COMPANY' // Opcional
 	| 'WHERE'
 	| 'START'
 	| 'END'
 	| 'PLACE'
 	| 'DESCRIPTION';
 
+type ISection = 'PROFESIONAL_EXPERIENCE' | 'OFICIAL_EDUCATION';
+
 export const tFieldsData = (data: {
 	cv: IKindTraductions;
-	kind: IKindProfesionalExperience;
-	key: IPropsProfesionalExperience;
+	kind: IKindProfesionalExperience | IKindOficialEducation;
+	key: IPropsFieldsData;
+	section: ISection;
 }) => {
-	const { cv, kind, key } = data;
+	const { cv, kind, key, section } = data;
 	const base = cv === 'BASE' ? '' : cv.toUpperCase();
-	const translatePoint = `${base}.PROFESIONAL_EXPERIENCE.DATA.${kind}.${key}`;
+	const translatePoint = `${base}.${section}.DATA.${kind}.${key}`;
 
 	return computed(() => t(translatePoint));
 };
