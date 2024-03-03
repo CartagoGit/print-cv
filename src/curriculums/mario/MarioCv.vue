@@ -23,6 +23,9 @@
 			<section class="lang lower-gap">
 				<Lang />
 			</section>
+			<section class="other-data">
+				<OtherData />
+			</section>
 		</div>
 		<span class="cv-expedition">{{ cvDate }}</span>
 	</div>
@@ -34,6 +37,7 @@ import ProfesionalExperience from './sections/ProfesionalExperience.vue';
 import OficialEducation from './sections/OficialEducation.vue';
 import ComplementaryEducation from './sections/ComplementaryEducation.vue';
 import Lang from './sections/Lang.vue';
+import OtherData from './sections/OtherData.vue';
 import './styles/global.mario.scss';
 
 const cvDate = 'Feb 2024';
@@ -58,17 +62,22 @@ section {
 	outline: 1px solid purple;
 }
 
+.lower-gap {
+	row-gap: 5px;
+}
 .personal {
 	height: 50mm;
 }
 
-.lower-gap {
-	row-gap: 10px;
-}
 .cv-expedition {
 	position: absolute;
 	bottom: var(--page-padding);
 	right: var(--page-padding);
 	font-size: 10px;
+}
+.other-data {
+	position: relative;
+	height: 100%;
+	grid-template-rows: 1fr auto;
 }
 </style>

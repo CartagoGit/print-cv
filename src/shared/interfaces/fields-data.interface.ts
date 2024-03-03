@@ -14,7 +14,6 @@ export interface IFieldCourse {
 	date?: string;
 	description: string;
 	subDescription?: string;
-
 	time?: number;
 	isOnline?: boolean;
 }

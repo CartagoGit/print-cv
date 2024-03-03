@@ -21,51 +21,9 @@
 	</article>
 </template>
 <script setup lang="ts">
-import {
-	EmailIcon,
-	PhoneIcon,
-	GithubIcon,
-	LinkedinIcon,
-	BirthdayIcon,
-	NpmIcon,
-	WorldIcon,
-	CertificatesIcon,
-} from '@/assets/icons/contact/contact.icons.ts';
+import { infoContact } from '../constants/info-contact.constant';
 
-const fields = [
-	{
-		icon: PhoneIcon,
-		value: '627 63 39 20',
-	},
-	{
-		icon: GithubIcon,
-		value: 'github.com/CartagoGit',
-	},
-	{
-		icon: EmailIcon,
-		value: 'cv2mario@gmail.com',
-	},
-	{
-		icon: LinkedinIcon,
-		value: 'linkedin.com/in/mario-cabrero-volarich',
-	},
-	{
-		icon: WorldIcon,
-		value: '41007 - Sevilla ',
-	},
-	{
-		icon: NpmIcon,
-		value: 'npmjs.com/~cartago-git',
-	},
-	{
-		icon: BirthdayIcon,
-		value: '04/07/1988',
-	},
-	{
-		icon: CertificatesIcon,
-		value: 'github.com/CartagoGit/Certificados',
-	},
-];
+const fields = infoContact;
 </script>
 
 <style>
@@ -105,3 +63,4 @@ const fields = [
 	}
 }
 </style>
+../constants/info-contact.constant

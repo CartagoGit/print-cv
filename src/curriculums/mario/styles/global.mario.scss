@@ -58,11 +58,14 @@
 		column-gap: 10px;
 	}
 
-	h2.section-title {
-		grid-column: 2 / 3;
-		line-height: 22px;
-		&--lower-gap {
-			margin-bottom: 5px;
+	h2,
+	h3 {
+		&.section-title {
+			grid-column: 2 / 3;
+			line-height: 22px;
+			&--lower-gap {
+				margin-bottom: 5px;
+			}
 		}
 	}
 }
