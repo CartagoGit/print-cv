@@ -48,7 +48,7 @@ const cvDate = 'Feb 2024';
 .content {
 	width: 100%;
 	height: 100%;
-	outline: 1px solid aqua;
+	/* outline: 1px solid aqua; */
 	display: flex;
 	flex-direction: column;
 	gap: 26px;
@@ -59,7 +59,7 @@ section {
 	grid-template-columns: 220px 1fr;
 	row-gap: 15px;
 	column-gap: 10px;
-	outline: 1px solid purple;
+	/* outline: 1px solid purple; */
 }
 
 .lower-gap {

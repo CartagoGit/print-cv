@@ -41,7 +41,7 @@ export const infoContact: IInfoContact[] = [
 	{
 		kind: 'location',
 		icon: WorldIcon,
-		value: '41007 - Sevilla ',
+		value: '41008 - Sevilla ',
 		shortValue: 'Sevilla',
 	},
 	{
