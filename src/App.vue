@@ -93,7 +93,9 @@ import html2canvas from 'html2canvas';
 import { CURRICULUMS_ROUTES_DATA } from './shared/data/curriculums.data';
 import { useI18n } from 'vue-i18n';
 import router from './router/index.routes';
-const { locale: lang } = useI18n();
+import { getPackTraductions } from './shared/langs/index.langs';
+import type { IKindTraductions } from './shared/interfaces/traduction.interface';
+const { locale: lang, setLocaleMessage } = useI18n();
 
 const route = useRoute();
 
@@ -104,11 +106,23 @@ const reRender = ref(0);
 
 const routes = CURRICULUMS_ROUTES_DATA;
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
 	scale.value = 100;
+	if (!to?.name?.toString() || !to.path.includes('cv')) next();
+	const kindTraductions: Record<string, IKindTraductions> = {
+		mario: 'MARIO',
+	};
+	const kindTraduction = kindTraductions[to.name!.toString()] ?? undefined;
+	const newTraduction = getPackTraductions(kindTraduction);
+	for (const lang in newTraduction) {
+		setLocaleMessage(
+			lang,
+			newTraduction[lang as keyof typeof newTraduction]
+		);
+	}
+
 	next();
 });
-// watch(route, () => (scale.value = 100), { immediate: true });
 
 const zoomIn = () => {
 	if (scale.value >= 260 || !curriculum?.value) return;

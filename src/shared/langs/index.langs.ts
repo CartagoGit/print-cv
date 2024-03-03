@@ -11,7 +11,12 @@ export const TRADUCTIONS: Record<IKindTraductions, { es: {}; en: {} }> = {
 	MARIO: MARIO_TRADUCTIONS,
 };
 
-export const newPackTraductions = (kind: IKindTraductions) => {
+export const getPackTraductions = (
+	kind: IKindTraductions | undefined | null
+) => {
+	if (kind === 'BASE' || !kind) {
+		return TRADUCTIONS.BASE;
+	}
 	return {
 		...TRADUCTIONS.BASE,
 		...TRADUCTIONS[kind],
