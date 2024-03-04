@@ -73,6 +73,20 @@ type ITechSkillsFields =
 	| 'CLOUD'
 	| 'DATABASES';
 
+type IMonths =
+	| 'JANUARY'
+	| 'FEBRUARY'
+	| 'MARCH'
+	| 'APRIL'
+	| 'MAY'
+	| 'JUNE'
+	| 'JULY'
+	| 'AUGUST'
+	| 'SEPTEMBER'
+	| 'OCTOBER'
+	| 'NOVEMBER'
+	| 'DECEMBER';
+
 export const tFieldsData = (data: {
 	cv: IKindTraductions;
 	kind: IKindPROFESSIONALExperience | IKindOficialEducation;
@@ -90,10 +104,8 @@ export const tPlace = (
 	place: IPlace,
 	options?: { pre?: string; next?: string }
 ) => {
-	const { pre, next } = options || {};
-	return computed(
-		() => (pre ? pre : '') + t(`PLACES.${place}`) + (next ? next : '')
-	);
+	const { pre = '', next = '' } = options || {};
+	return computed(() => pre + t(`PLACES.${place}`) + next);
 };
 
 export const tCourses = (course: ICourses) => {
@@ -124,4 +136,19 @@ export const tOtherInteresData = (name: IOtherInteresData) => {
 
 export const tTechSkills = (key: ITechSkillsFields) => {
 	return computed(() => t(`MARIO.OTHER_DATA.TECH_SKILLS.${key}`));
+};
+
+export const tMonth = (
+	month: IMonths,
+	options?: { isShort?: boolean; pre?: string; next?: string }
+) => {
+	const { isShort = false, pre = '', next = '' } = options || {};
+	return computed(
+		() =>
+			pre +
+			(isShort
+				? t(`MONTHS.${month}`).slice(0, 3)
+				: t(`MONTHS.${month}`)) +
+			next
+	);
 };

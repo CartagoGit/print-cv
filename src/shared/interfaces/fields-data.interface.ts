@@ -12,7 +12,7 @@ export interface IFieldsData {
 
 export interface IFieldCourse {
 	place?: string;
-	date?: string;
+	date?: ComputedRef<string>;
 	description: ComputedRef<string>;
 	subDescription?: ComputedRef<string>;
 	time?: number;

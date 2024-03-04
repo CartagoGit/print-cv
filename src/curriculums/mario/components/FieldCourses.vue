@@ -17,7 +17,7 @@
 				</span>
 			</span>
 			<span class="date font-regular">
-				{{ field.date }}
+				{{ field.date?.value }}
 			</span>
 		</div>
 		<div class="description">

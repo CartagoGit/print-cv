@@ -1,5 +1,5 @@
 import type { IFieldCourse } from '@/shared/interfaces/index.interfaces';
-import { tLangGrade } from '../helpers/traductor.helper';
+import { tLangGrade, tMonth } from '../helpers/traductor.helper';
 
 export const LANGS_DATA: IFieldCourse[] = [
 	{
@@ -8,7 +8,7 @@ export const LANGS_DATA: IFieldCourse[] = [
 	},
 	{
 		place: 'BRITISH COUNCIL',
-		date: 'Jul 2020',
+		date: tMonth('JULY', { isShort: true, next: ' 2020' }),
 		description: tLangGrade({ lang: 'ENGLISH', key: 'DESCRIPTION' }),
 		subDescription: tLangGrade({ lang: 'ENGLISH', key: 'SUBDESCRIPTION' }),
 	},
