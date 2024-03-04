@@ -33,6 +33,7 @@ type ICourses =
 	| 'SOLID'
 	| 'RXJS'
 	| 'ANGULAR_BASIC'
+	| 'JAVASCRIPT_MASTER'
 	| 'DAPPS_ETH'
 	| 'ADOBE'
 	| 'BOOTSTRAP'

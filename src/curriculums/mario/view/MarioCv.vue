@@ -63,7 +63,7 @@ section {
 }
 
 .lower-gap {
-	row-gap: 7px;
+	row-gap: 6px;
 }
 .personal {
 	height: 50mm;

@@ -49,6 +49,13 @@ export const COMPLEMENTARY_EDUCATION_DATA: IFieldCourse[] = [
 		isOnline: true,
 	},
 	{
+		place: places.udemy,
+		date: tMonth('SEPTEMBER', { isShort: true, next: ' 2022' }),
+		description: tCourses('JAVASCRIPT_MASTER'),
+		time: 32,
+		isOnline: true,
+	},
+	{
 		place: places.loom,
 		date: tMonth('MAY', { isShort: true, next: ' 2022' }),
 		description: tCourses('DAPPS_ETH'),
