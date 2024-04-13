@@ -39,9 +39,9 @@ import ComplementaryEducation from '../sections/ComplementaryEducation.vue';
 import Lang from '../sections/Lang.vue';
 import OtherData from '../sections/OtherData.vue';
 import '../styles/global.mario.scss';
-import { CURRICULUM_YEAR_DATA } from '../data/curriculum.data';
+import { CURRICULUM_DATE } from '../data/curriculum.data';
 
-const cvDate = CURRICULUM_YEAR_DATA;
+const cvDate = CURRICULUM_DATE;
 </script>
 
 <style scoped>
