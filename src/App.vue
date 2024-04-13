@@ -40,7 +40,7 @@
 			</section>
 		</header>
 		<nav>
-			<h3>Curriculums</h3>
+			<h3>Cvs Vitae</h3>
 			<span
 				v-for="route in routesData"
 				@click="$router.push({ name: route.nameRoute })"
@@ -93,7 +93,7 @@ import html2canvas from 'html2canvas';
 import { CURRICULUMS_ROUTES_DATA } from './shared/data/curriculums.data';
 import { useI18n } from 'vue-i18n';
 import router from './router/index.routes';
-const { locale: lang, setLocaleMessage, t } = useI18n();
+const { locale: lang, t } = useI18n();
 
 const route = useRoute();
 
@@ -105,7 +105,6 @@ const routesData = CURRICULUMS_ROUTES_DATA;
 const actualRoute = ref(
 	routesData.find((routeData) => routeData.nameRoute === route.name)!
 );
-
 router.beforeEach((_to, _from, next) => {
 	scale.value = 100;
 	next();
