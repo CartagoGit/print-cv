@@ -180,13 +180,27 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 </script>
 
 <style>
-#app {
-	display: grid;
-	grid-template-columns: 300px 1fr;
-	background-color: var(--gray-200);
-	height: 100vh;
-	width: 100%;
-	overflow: hidden;
+@media screen and (max-width: 768px) {
+	#app {
+		grid-template-columns: 1fr;
+	
+	}
+	aside {
+		display: none;
+	}
+}
+@media screen and (min-width: 769px) {
+	#app {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		background-color: var(--gray-200);
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+	}
+	aside {
+		display: flex;
+	}
 }
 </style>
 <style scoped>
@@ -198,7 +212,6 @@ aside {
 }
 
 aside {
-	display: flex;
 	background-color: var(--gray-700);
 	color: var(--gray-100);
 	flex-direction: column;
