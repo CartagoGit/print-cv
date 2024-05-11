@@ -14,7 +14,7 @@ services:
         volumes:
             - .:${DOCKER_FOLDER}
         command: ['sh', '-c', 'bun i && bun run dev']
-        restart: always
+        # restart: always
         tty: true
         init: true
         ulimits:
