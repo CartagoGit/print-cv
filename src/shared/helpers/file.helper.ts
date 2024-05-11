@@ -4,9 +4,22 @@ import type { Ref } from 'vue';
 import { i18nInstance } from './traduction.helper';
 const { t } = i18nInstance.global;
 
-export const getFileName = (data: { name: string; kind: 'pdf' | 'jpg' }) => {};
+export const getFileName = (data: { nameCv: string | undefined ; kind: 'pdf' | 'jpg' }) => {
+    const { nameCv, kind } = data;
+    if (!nameCv) throw new Error('No se encontró nombre de cv');
+    const date = new Date();
+    const nameDoc = `${nameCv}_${date.getFullYear()}_${(
+        date.getMonth() + 1
+    )
+        .toString()
+        .padStart(2, '0')}_${date
+        .getDate()
+        .toString()
+        .padStart(2, '0')}_cv_${t('GENERAL.LANG')}.${kind}`;
+    return nameDoc;
+};
 
-const generatePDF = async (data: {
+export const generatePDF = async (data: {
 	curriculum: Ref<HTMLElement | null>;
 	isLoading: Ref<boolean>;
 	scale: Ref<number>;
@@ -45,17 +58,10 @@ const generatePDF = async (data: {
 				doc.addPage();
 			}
 		}
-		const nameCv = actualRoute.value?.name.split(' ').join('_');
-		if (!nameCv) throw new Error('No se encontró nombre de cv');
-		const nameDoc = `${nameCv}_${new Date().getFullYear()}_${(
-			new Date().getMonth() + 1
-		)
-			.toString()
-			.padStart(2, '0')}_${new Date()
-			.getDate()
-			.toString()
-			.padStart(2, '0')}_cv_${t('GENERAL.LANG')}.pdf`;
-
+		const nameDoc = getFileName({
+            nameCv: actualRoute.value?.name.split(' ').join('_'),
+            kind: 'pdf',
+        });
 		doc.save(nameDoc);
 	} catch (err) {
 		console.error(err);
