@@ -18,8 +18,8 @@ export const CONTACT_DATA: IInfoContact[] = [
 	{
 		kind: 'phone',
 		icon: PhoneIcon,
-		value: '627 63 39 20',
-		shortValue: '627633920',
+		value: '684 74 54 18',
+		shortValue: '684745418',
 	},
 	{
 		kind: 'github',
