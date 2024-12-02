@@ -15,7 +15,7 @@
 		"vue-router": "^4.3.0",
 		"jspdf": "2.5.1",
 		"html2canvas": "1.4.1",
-		"vue-i18n": "9.10.1"
+		"vue-i18n": "9.14.2"
 	},
 	"devDependencies": {
 		"@tsconfig/node20": "^20.1.2",
