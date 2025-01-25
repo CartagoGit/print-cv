@@ -98,7 +98,7 @@
 		"SOLID": "SOLID Principles and Clean Code",
 		"RXJS": "ReactiveX - RxJs - From zero to details",
 		"ANGULAR_BASIC": "Angular From 0 to Expert",
-        "JAVASCRIPT_MASTER": "JavaScript Master - Learn Js, jQuery, Angular, NodeJs",
+		"JAVASCRIPT_MASTER": "JavaScript Master - Learn Js, jQuery, Angular, NodeJs",
 		"DAPPS_ETH": "Learn to Program Ethereum DApps by building your own game",
 		"ADOBE": "Art for Video Games: Unity, Photoshop, Adobe Illustrator: from Zero to Advanced",
 		"BOOTSTRAP": "Bootstrap 5: The Complete, Practical, and From Scratch Course",
@@ -136,6 +136,10 @@
 			"KEYER": {
 				"DESCRIPTION": "Library for encoding and decoding data into hashes and vice versa using a salt. With built-in CLI to enable processes from the command line terminal.",
 				"SHORT_DESCRIPTION": "Library with CLI for encoding and decoding data into hashes."
+			},
+			"DOCKER_IMAGES": {
+				"DESCRIPTION": "Docker images for development and production environments. With Dockerfiles and documentation for easy deployment.",
+				"SHORT_DESCRIPTION": "Docker images for development and production environments."
 			}
 		},
 		"TECH_SKILLS": {

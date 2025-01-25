@@ -55,7 +55,7 @@ type ICourses =
 type ILanguages = 'ENGLISH' | 'SPANISH';
 type ILanguagesFields = 'DESCRIPTION' | 'SUBDESCRIPTION';
 
-type IOpenProjects = 'KEYER';
+type IOpenProjects = 'KEYER' | 'DOCKER_IMAGES';
 type IOpenProjectsFields = 'DESCRIPTION' | 'SHORT_DESCRIPTION';
 
 type IOtherInteresData = 'DRIVE';

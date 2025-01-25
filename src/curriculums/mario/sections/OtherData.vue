@@ -21,7 +21,7 @@
 			<Techs />
 		</div>
 	</div>
-	<div class="contact font-bold">
+	<div class="contact font-bold" v-if="false">
 		<span
 			v-for="contact of contactData"
 			class="contact-field">
@@ -48,10 +48,16 @@ const contactData = [linkedin, email, phone];
 	display: flex;
 }
 
+.aside{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .other-interest-data,
 .open-projects {
 	display: flex;
-	gap: 10px;
+	gap: 5px;
 	flex-direction: column;
 	h3 {
 		margin-bottom: 5px;
@@ -66,7 +72,6 @@ const contactData = [linkedin, email, phone];
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	margin-bottom: 5px;
 }
 
 .contact {

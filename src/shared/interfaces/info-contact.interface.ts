@@ -8,11 +8,13 @@ export type IKindContact =
 	| 'linkedin'
 	| 'location'
 	| 'birthday'
-	| 'certificates';
+	| 'certificates'
+	| 'dockerhub';
 
 export interface IInfoContact {
 	kind: IKindContact;
 	value: string | ComputedRef<string>;
 	shortValue: string | ComputedRef<string>;
 	icon: string;
+	position: 'left' | 'right';
 }

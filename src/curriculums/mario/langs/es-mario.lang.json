@@ -120,6 +120,10 @@
 			"KEYER": {
 				"DESCRIPTION": "Libreria para codificar y decodificar conviertiendo datos en hashes y viceversa usando un salt. Con cli incorporado para posibilitar los procesos desde la terminal de comandos",
 				"SHORT_DESCRIPTION": "Libreria con cli para codificar y decodificar datos en hashes."
+			},
+			"DOCKER_IMAGES": {
+				"DESCRIPCIÓN": "Imágenes Docker para entornos de desarrollo y producción. Con Dockerfiles y documentación para una fácil implementación.",
+				"SHORT_DESCRIPTION": "Imágenes de Docker para entornos de desarrollo y producción."
 			}
 		},
 		"TECH_SKILLS": {

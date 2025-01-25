@@ -40,7 +40,9 @@ import Lang from '../sections/Lang.vue';
 import OtherData from '../sections/OtherData.vue';
 import '../styles/global.mario.scss';
 import { CURRICULUM_DATE } from '../data/curriculum.data';
+import { CONTACT_DATA_OBJ } from '../data/contact.data';
 
+const { linkedin } = CONTACT_DATA_OBJ;
 const cvDate = CURRICULUM_DATE;
 </script>
 
@@ -78,5 +80,6 @@ section {
 .other-data {
 	position: relative;
 	height: 100%;
+	margin-bottom: 5px;
 }
 </style>../sections/ProfessionalExperience.vue
