@@ -1,6 +1,6 @@
 import { tMonth } from '../helpers/traductor.helper';
 
-export const CURRICULUM_DATE = tMonth('MAY', {
+export const CURRICULUM_DATE = tMonth('JANUARY', {
 	isShort: true,
-	next: ' 2024',
+	next: ' 2025',
 });
