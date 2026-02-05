@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import FieldCourses from '../components/FieldCourses.vue';
 import cvData from '../data/cv-data.json';
-import type { IFieldCourse } from '@/shared/interfaces/field-course.interface';
+import type { IFieldCourse } from '@/shared/interfaces/index.interfaces';
 
 const fields = cvData.complementaryEducation as unknown as IFieldCourse[];
 </script>

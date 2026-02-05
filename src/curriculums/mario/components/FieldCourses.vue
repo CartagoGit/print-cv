@@ -7,15 +7,15 @@
         <span v-if="field.isOnline" class="font-regular online badge"> online </span>
       </span>
       <span class="date font-regular">
-        {{ field.date?.value }}
+        {{ typeof field.date === 'string' ? field.date : field.date?.value }}
       </span>
     </div>
     <div class="description">
       <span class="font-bold mr5">
-        {{ field.description.value }}
+        {{ typeof field.description === 'string' ? field.description : field.description.value }}
       </span>
       <span v-if="field.subDescription" class="font-regular">
-        {{ field.subDescription.value }}
+        {{ typeof field.subDescription === 'string' ? field.subDescription : field.subDescription.value }}
       </span>
     </div>
   </article>

@@ -10,6 +10,6 @@ import FieldData from '../components/FieldData.vue';
 import cvData from '../data/cv-data.json';
 import type { IFieldsData } from '@/shared/interfaces/fields-data.interface';
 
-const fields = cvData.professionalExperience as unknown as IFieldsData[];
+const fields = cvData.professionalExperience as IFieldsData[];
 </script>
 <style scoped></style>

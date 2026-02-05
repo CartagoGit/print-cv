@@ -7,17 +7,13 @@
       >{{ project.dependency }}</span
     >
     <div class="short-description">
-      {{
-        typeof project.shortDescription === 'string'
-          ? project.shortDescription
-          : project.shortDescription.value
-      }}
+      {{ project.shortDescription }}
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { OPEN_PROJECTS_DATA } from '../data/open-projects.data';
-const openProjects = OPEN_PROJECTS_DATA;
+import cvData from '../data/cv-data.json';
+const openProjects = cvData.openProjects;
 </script>
 <style scoped lang="scss">
 .title {

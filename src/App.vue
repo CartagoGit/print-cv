@@ -1,77 +1,77 @@
 <template>
   <div class="app-wrapper" :class="{ 'print-mode': isPrintMode }">
-  <aside>
-    <header>
-      <section class="logo">
-        <HomeIcon class="icon icon--header icon--logo" @click="$router.push({ name: 'home' })" />
-      </section>
-      <section>
-        <span class="group-icons">
-          <LangIcon class="icon icon--header" @click="changeLang" />
-          <span class="float">
-            {{ $t('GENERAL.LANG') }}
+    <aside>
+      <header>
+        <section class="logo">
+          <HomeIcon class="icon icon--header icon--logo" @click="$router.push({ name: 'home' })" />
+        </section>
+        <section>
+          <span class="group-icons">
+            <LangIcon class="icon icon--header" @click="changeLang" />
+            <span class="float">
+              {{ $t('GENERAL.LANG') }}
+            </span>
           </span>
-        </span>
-      </section>
-      <section>
-        <span class="group-icons" :class="{ disabled: !curriculum }">
-          <ZoomOutIcon class="icon icon--header" @click="zoomOut" />
-          <ZoomInIcon class="icon icon--header" @click="zoomIn" />
-          <span class="float">{{ scale }}%</span>
-        </span>
-      </section>
-      <section>
-        <span class="group-icons" :class="{ disabled: !curriculum }">
-          <span 
-             @click="togglePrintMode" 
-             data-testid="preview-btn"
-             class="sidebar-preview-btn"
-             :class="isPrintMode ? 'opacity-100' : 'opacity-50'"
-          >
-             PREVIEW
+        </section>
+        <section>
+          <span class="group-icons" :class="{ disabled: !curriculum }">
+            <ZoomOutIcon class="icon icon--header" @click="zoomOut" />
+            <ZoomInIcon class="icon icon--header" @click="zoomIn" />
+            <span class="float">{{ scale }}%</span>
           </span>
+        </section>
+        <section>
+          <span class="group-icons" :class="{ disabled: !curriculum }">
+            <span
+              @click="togglePrintMode"
+              data-testid="preview-btn"
+              class="sidebar-preview-btn"
+              :class="isPrintMode ? 'opacity-100' : 'opacity-50'"
+            >
+              PREVIEW
+            </span>
+          </span>
+        </section>
+        <section>
+          <span class="group-icons" :class="{ disabled: !curriculum }">
+            <PdfIcon class="icon icon--header" @click="callGeneratePDF()" />
+          </span>
+        </section>
+      </header>
+      <nav>
+        <h3>Cvs Vitae</h3>
+        <span
+          v-for="(route, index) in routesData"
+          :key="index"
+          @click="$router.push({ name: route.nameRoute })"
+          class="link btn"
+        >
+          {{ route.text }}
         </span>
-      </section>
-      <section>
-        <span class="group-icons" :class="{ disabled: !curriculum }">
-          <PdfIcon class="icon icon--header" @click="callGeneratePDF()" />
-        </span>
-      </section>
-    </header>
-    <nav>
-      <h3>Cvs Vitae</h3>
-      <span
-        v-for="(route, index) in routesData"
-        :key="index"
-        @click="$router.push({ name: route.nameRoute })"
-        class="link btn"
+      </nav>
+    </aside>
+    <main :key="reRender">
+      <RouterView v-if="$route.name === 'home'" class="home" />
+      <div
+        ref="curriculum"
+        v-else
+        :style="{
+          transform: `scale(${Math.round(scale) / 100})`,
+          transformOrigin: 'top center',
+        }"
+        id="curriculum"
       >
-        {{ route.text }}
-      </span>
-    </nav>
-  </aside>
-  <main :key="reRender">
-    <RouterView v-if="$route.name === 'home'" class="home" />
-    <div
-      ref="curriculum"
-      v-else
-      :style="{
-        transform: `scale(${Math.round(scale) / 100})`,
-        transformOrigin: 'top center'
-      }"
-      id="curriculum"
-    >
-      <h1 v-if="actualRoute">
-        {{
-          $t(`${actualRoute.nameRoute.toUpperCase()}.CV.TITLE`, {
-            name: actualRoute.text,
-          })
-        }}
-      </h1>
-      <RouterView />
-    </div>
-  </main>
-  <div class="is-loading" v-if="isLoading">Cargando</div>
+        <h1 v-if="actualRoute">
+          {{
+            $t(`${actualRoute.nameRoute.toUpperCase()}.CV.TITLE`, {
+              name: actualRoute.text,
+            })
+          }}
+        </h1>
+        <RouterView />
+      </div>
+    </main>
+    <div class="is-loading" v-if="isLoading">Cargando</div>
   </div>
 </template>
 
@@ -130,7 +130,7 @@ const togglePrintMode = () => {
   // Adjust scale for A4 preview if needed, or keep user scale
   if (isPrintMode.value) {
     // Optional: Reset scale to fit screen or specific preview scale
-    // scale.value = 100; 
+    // scale.value = 100;
   }
 };
 
@@ -144,9 +144,9 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
     grid-template-columns: 1fr;
     height: 100vh;
     width: 100%;
-    
+
     &.print-mode {
-      display: block; // Override grid
+      display: block; /* Override grid */
       overflow-y: auto;
     }
   }
@@ -164,13 +164,13 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
     overflow: hidden;
 
     &.print-mode {
-      display: block; // Print mode is full page
+      display: block; /* Print mode is full page */
       aside {
         display: none;
       }
       main {
         padding: 40px;
-        background-color: var(--gray-700); // Dark background to contrast paper
+        background-color: var(--gray-700); /* Dark background to contrast paper */
         display: flex;
         justify-content: center;
         align-items: start;
@@ -186,25 +186,28 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 
 /* Print Styles & Simulation */
 @media print {
-  body, .app-wrapper {
+  body,
+  .app-wrapper {
     display: block !important;
     height: auto !important;
     overflow: visible !important;
     background: white !important;
   }
-  aside, header, .is-loading {
+  aside,
+  header,
+  .is-loading {
     display: none !important;
   }
   main {
     padding: 0 !important;
     margin: 0 !important;
-    width: 100% !important; 
-    height: auto !important; // Allow flow
+    width: 100% !important;
+    height: auto !important; /* Allow flow */
     overflow: visible !important;
     display: block !important;
   }
   #curriculum {
-    transform: none !important; // Disable zoom for print
+    transform: none !important; /* Disable zoom for print */
     width: 100% !important;
     max-width: 210mm !important;
     border: none !important;
@@ -217,16 +220,16 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 /* Simulation Class */
 .print-mode {
   #curriculum {
-     width: 210mm;
-     min-height: 297mm;
-     background: white;
-     box-shadow: 0 0 20px rgba(0,0,0,0.5);
-     margin: 0 auto;
-     transform: none !important; // Controlled by inline style usually, but force none here?
-     // Actually inline style `transform` is managed by isPrintMode state in template now.
-     
-     // Ensure sections break correctly
-     page-break-after: always;
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    transform: none !important; /* Controlled by inline style usually, but force none here? */
+    /* Actually inline style `transform` is managed by isPrintMode state in template now. */
+
+    /* Ensure sections break correctly */
+    page-break-after: always;
   }
 }
 

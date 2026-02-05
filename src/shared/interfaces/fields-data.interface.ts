@@ -4,17 +4,17 @@ import type { IDate } from './index.interfaces';
 export interface IFieldsData {
   company: string | ComputedRef<string>;
   subCompany?: string;
-  where: ComputedRef<string>;
-  date: IDate;
-  place: ComputedRef<string>;
-  description?: ComputedRef<string>;
+  where: string | ComputedRef<string>;
+  date: IDate | { start: string | ComputedRef<string>; end?: string | ComputedRef<string> };
+  place: string | ComputedRef<string>;
+  description?: string | ComputedRef<string>;
 }
 
 export interface IFieldCourse {
   place?: string;
-  date?: ComputedRef<string>;
-  description: ComputedRef<string>;
-  subDescription?: ComputedRef<string>;
+  date?: string | ComputedRef<string>;
+  description: string | ComputedRef<string>;
+  subDescription?: string | ComputedRef<string>;
   time?: number;
   isOnline?: boolean;
 }
