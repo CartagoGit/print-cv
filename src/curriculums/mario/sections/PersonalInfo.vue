@@ -21,9 +21,7 @@
         >
           <component :is="field.icon" class="icon icon--info" />
           <span class="font-bold">
-            {{
-              typeof field.value === "string" ? field.value : field.value.value
-            }}
+            {{ typeof field.value === 'string' ? field.value : field.value.value }}
           </span>
         </span>
       </div>
@@ -31,12 +29,12 @@
   </article>
 </template>
 <script setup lang="ts">
-import type { IInfoContact } from "@/shared/interfaces/index.interfaces";
-import { CONTACT_DATA } from "../data/contact.data";
+import type { IInfoContact } from '@/shared/interfaces/index.interfaces';
+import { CONTACT_DATA } from '../data/contact.data';
 
 const fields = CONTACT_DATA;
-const leftFields = fields.filter((field) => field.position === "left");
-const rightFields = fields.filter((field) => field.position === "right");
+const leftFields = fields.filter((field) => field.position === 'left');
+const rightFields = fields.filter((field) => field.position === 'right');
 const fieldsPosition: Record<string, IInfoContact[]> = {
   left: leftFields,
   right: rightFields,

@@ -1,164 +1,164 @@
 {
-	"CV": {
-		"TITLE": "Curriculum Vitae of {name}",
-		"PAGE1": "Page 1 - Information",
-		"PAGE2": "Page 2 - Courses and skills"
-	},
-	"PROFESSIONAL_EXPERIENCE": {
-		"TITLE": "Professional Experience",
-		"DATA": {
-			"BEATEAM": {
-				"WHERE": "Seville",
-				"START": "Oct 2022",
-				"END": "Actual",
-				"PLACE": "Software Developer.",
-				"DESCRIPTION": "Functions: Development and maintenance of ERP for billing, sales, and automotive spare parts logistics management with Angular, Sass, and Rxjs. Development and maintenance of mobile application for Android with Ionic. Dockerization of environments compatible with Wsl2. Technical support and bug fixing in web and mobile applications. Deployment of applications in production using Gitlab jobs. User interface improvements in Angular and Vue applications. Bash and Node.js scripts for task automation. Use of git bash for repository management and Wsl2 terminal for ssh access."
-			},
-			"INDEPENDIENT2": {
-				"COMPANY": "Independent Professional",
-				"WHERE": "Seville",
-				"START": "Sept 2021",
-				"END": "Oct 2022",
-				"PLACE": "Software Developer.",
-				"DESCRIPTION": "Functions: Development in Solidity of smart contracts for the BEP-20 network of Binance Smart Chain (BSC) and for the Ethereum network (ERC-20) using Ganache/Truffle with OpenZeppelin. Web development in React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desktop application development with Electron + React; Git Repositories + GitHub control."
-			},
-			"EXCELLENCE": {
-				"WHERE": "Seville",
-				"START": "Oct 2016",
-				"END": "Feb 2019",
-				"PLACE": "Telecommunications Technician.",
-				"DESCRIPTION": "Functions: Maintenance/Installation Technician FTTH for Telefónica/Movistar's fiber optic."
-			},
-			"HISPATEL": {
-				"WHERE": "Seville",
-				"START": "May 2014",
-				"END": "Sep 2016",
-				"PLACE": "Telecommunications Technician.",
-				"DESCRIPTION": "Functions: Maintenance/Installation Technician FTTH for Telefónica/Movistar's fiber optic."
-			},
-			"INDEPENDIENT1": {
-				"COMPANY": "Independent Professional",
-				"WHERE": "Seville",
-				"START": "2006",
-				"END": "2014",
-				"PLACE": "Hardware Support.",
-				"DESCRIPTION": "Functions: Maintenance of computer systems and consoles, as well as other electronic devices for individuals."
-			},
-			"EVERTEL": {
-				"WHERE": "Seville",
-				"START": "Apr 2013",
-				"END": "Jun 2013",
-				"PLACE": "Software Developer.",
-				"DESCRIPTION": "Internship contract. Functions: Web development in intranet using SharePoint."
-			},
-			"GUADALTEL": {
-				"WHERE": "Seville",
-				"START": "Nov 2012",
-				"END": "Dec 2012",
-				"PLACE": "Software Developer.",
-				"DESCRIPTION": "Internship contract. Functions: Support in project developed in Java."
-			},
-			"PUBLIBICI": {
-				"WHERE": "Seville",
-				"START": "Dec 2006",
-				"END": "Mar 2007",
-				"PLACE": "Advertising Distributor.",
-				"DESCRIPTION": "Functions: Exposure to the public and distribution of advertising."
-			}
-		}
-	},
-	"OFICIAL_EDUCATION": {
-		"TITLE": "Formal Education",
-		"DATA": {
-			"VELAZQUEZ": {
-				"WHERE": "Seville",
-				"START": "2010",
-				"END": "2013",
-				"PLACE": "Higher Degree: Higher Technician in Computer Application Development."
-			},
-			"US": {
-				"WHERE": "Seville",
-				"START": "2006",
-				"END": "2009",
-				"PLACE": "Partial Completion: Technical Engineering in Computer Systems.",
-				"DESCRIPTION": "Not completed due to change in study orientation."
-			},
-			"SANPABLO": {
-				"WHERE": "Seville",
-				"START": "2004",
-				"END": "2006",
-				"PLACE": "Technological Baccalaureate."
-			}
-		}
-	},
-	"COURSES": {
-		"TITLE": "Complementary Training",
-		"ANGULAR_ADVANCED": "Advanced Angular: Take your basics to the next level - MEAN",
-		"DOCKER": "Docker - Practical usage guide for developers",
-		"SOLID": "SOLID Principles and Clean Code",
-		"RXJS": "ReactiveX - RxJs - From zero to details",
-		"ANGULAR_BASIC": "Angular From 0 to Expert",
-		"JAVASCRIPT_MASTER": "JavaScript Master - Learn Js, jQuery, Angular, NodeJs",
-		"DAPPS_ETH": "Learn to Program Ethereum DApps by building your own game",
-		"ADOBE": "Art for Video Games: Unity, Photoshop, Adobe Illustrator: from Zero to Advanced",
-		"BOOTSTRAP": "Bootstrap 5: The Complete, Practical, and From Scratch Course",
-		"NOTION": "Learn everything about Notion: 3 courses in 1",
-		"JAVASCRIPT_MODERN": "Modern JavaScript: Guide to mastering the language",
-		"REACT_BASIC": "React: From Zero to Expert (Hooks and MERN)",
-		"BLOCKCHAIN": "Complete Blockchain Course from zero to expert",
-		"SOLIDITY": "Smart Contracts and Blockchain with Solidity from A to Z",
-		"GIT": "GIT+GitHub: A complete version control system from scratch",
-		"MOBILE_APPS": "Mobile Apps Development",
-		"CSS": "Mastering CSS: Responsive, SASS, Flexbox, Grid, and Bootstrap",
-		"INTRO_DEV_WEB_2": "Introduction to Web Development II",
-		"INTRO_DEV_WEB_1": "Introduction to Web Development I",
-		"VPM_COMPANIES": "Movistar VPN Companies Configurator Course",
-		"PREVENTIVE_RESOURCE": "Basic Level Occupational Risk Prevention Technician (Preventive Resource)",
-		"COPPER": "Copper faithful friend of communication",
-		"FTTH": "Connecting the future with Fiber Optics (4th Edition)",
-		"FLASH": "Development of Flash applications on Android and iOS"
-	},
+  "CV": {
+    "TITLE": "Curriculum Vitae of {name}",
+    "PAGE1": "Page 1 - Information",
+    "PAGE2": "Page 2 - Courses and skills"
+  },
+  "PROFESSIONAL_EXPERIENCE": {
+    "TITLE": "Professional Experience",
+    "DATA": {
+      "BEATEAM": {
+        "WHERE": "Seville",
+        "START": "Oct 2022",
+        "END": "Actual",
+        "PLACE": "Software Developer.",
+        "DESCRIPTION": "Functions: Development and maintenance of ERP for billing, sales, and automotive spare parts logistics management with Angular, Sass, and Rxjs. Development and maintenance of mobile application for Android with Ionic. Dockerization of environments compatible with Wsl2. Technical support and bug fixing in web and mobile applications. Deployment of applications in production using Gitlab jobs. User interface improvements in Angular and Vue applications. Bash and Node.js scripts for task automation. Use of git bash for repository management and Wsl2 terminal for ssh access."
+      },
+      "INDEPENDIENT2": {
+        "COMPANY": "Independent Professional",
+        "WHERE": "Seville",
+        "START": "Sept 2021",
+        "END": "Oct 2022",
+        "PLACE": "Software Developer.",
+        "DESCRIPTION": "Functions: Development in Solidity of smart contracts for the BEP-20 network of Binance Smart Chain (BSC) and for the Ethereum network (ERC-20) using Ganache/Truffle with OpenZeppelin. Web development in React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desktop application development with Electron + React; Git Repositories + GitHub control."
+      },
+      "EXCELLENCE": {
+        "WHERE": "Seville",
+        "START": "Oct 2016",
+        "END": "Feb 2019",
+        "PLACE": "Telecommunications Technician.",
+        "DESCRIPTION": "Functions: Maintenance/Installation Technician FTTH for Telefónica/Movistar's fiber optic."
+      },
+      "HISPATEL": {
+        "WHERE": "Seville",
+        "START": "May 2014",
+        "END": "Sep 2016",
+        "PLACE": "Telecommunications Technician.",
+        "DESCRIPTION": "Functions: Maintenance/Installation Technician FTTH for Telefónica/Movistar's fiber optic."
+      },
+      "INDEPENDIENT1": {
+        "COMPANY": "Independent Professional",
+        "WHERE": "Seville",
+        "START": "2006",
+        "END": "2014",
+        "PLACE": "Hardware Support.",
+        "DESCRIPTION": "Functions: Maintenance of computer systems and consoles, as well as other electronic devices for individuals."
+      },
+      "EVERTEL": {
+        "WHERE": "Seville",
+        "START": "Apr 2013",
+        "END": "Jun 2013",
+        "PLACE": "Software Developer.",
+        "DESCRIPTION": "Internship contract. Functions: Web development in intranet using SharePoint."
+      },
+      "GUADALTEL": {
+        "WHERE": "Seville",
+        "START": "Nov 2012",
+        "END": "Dec 2012",
+        "PLACE": "Software Developer.",
+        "DESCRIPTION": "Internship contract. Functions: Support in project developed in Java."
+      },
+      "PUBLIBICI": {
+        "WHERE": "Seville",
+        "START": "Dec 2006",
+        "END": "Mar 2007",
+        "PLACE": "Advertising Distributor.",
+        "DESCRIPTION": "Functions: Exposure to the public and distribution of advertising."
+      }
+    }
+  },
+  "OFICIAL_EDUCATION": {
+    "TITLE": "Formal Education",
+    "DATA": {
+      "VELAZQUEZ": {
+        "WHERE": "Seville",
+        "START": "2010",
+        "END": "2013",
+        "PLACE": "Higher Degree: Higher Technician in Computer Application Development."
+      },
+      "US": {
+        "WHERE": "Seville",
+        "START": "2006",
+        "END": "2009",
+        "PLACE": "Partial Completion: Technical Engineering in Computer Systems.",
+        "DESCRIPTION": "Not completed due to change in study orientation."
+      },
+      "SANPABLO": {
+        "WHERE": "Seville",
+        "START": "2004",
+        "END": "2006",
+        "PLACE": "Technological Baccalaureate."
+      }
+    }
+  },
+  "COURSES": {
+    "TITLE": "Complementary Training",
+    "ANGULAR_ADVANCED": "Advanced Angular: Take your basics to the next level - MEAN",
+    "DOCKER": "Docker - Practical usage guide for developers",
+    "SOLID": "SOLID Principles and Clean Code",
+    "RXJS": "ReactiveX - RxJs - From zero to details",
+    "ANGULAR_BASIC": "Angular From 0 to Expert",
+    "JAVASCRIPT_MASTER": "JavaScript Master - Learn Js, jQuery, Angular, NodeJs",
+    "DAPPS_ETH": "Learn to Program Ethereum DApps by building your own game",
+    "ADOBE": "Art for Video Games: Unity, Photoshop, Adobe Illustrator: from Zero to Advanced",
+    "BOOTSTRAP": "Bootstrap 5: The Complete, Practical, and From Scratch Course",
+    "NOTION": "Learn everything about Notion: 3 courses in 1",
+    "JAVASCRIPT_MODERN": "Modern JavaScript: Guide to mastering the language",
+    "REACT_BASIC": "React: From Zero to Expert (Hooks and MERN)",
+    "BLOCKCHAIN": "Complete Blockchain Course from zero to expert",
+    "SOLIDITY": "Smart Contracts and Blockchain with Solidity from A to Z",
+    "GIT": "GIT+GitHub: A complete version control system from scratch",
+    "MOBILE_APPS": "Mobile Apps Development",
+    "CSS": "Mastering CSS: Responsive, SASS, Flexbox, Grid, and Bootstrap",
+    "INTRO_DEV_WEB_2": "Introduction to Web Development II",
+    "INTRO_DEV_WEB_1": "Introduction to Web Development I",
+    "VPM_COMPANIES": "Movistar VPN Companies Configurator Course",
+    "PREVENTIVE_RESOURCE": "Basic Level Occupational Risk Prevention Technician (Preventive Resource)",
+    "COPPER": "Copper faithful friend of communication",
+    "FTTH": "Connecting the future with Fiber Optics (4th Edition)",
+    "FLASH": "Development of Flash applications on Android and iOS"
+  },
 
-	"LANGUAGES": {
-		"TITLE": "Languages",
-		"SPANISH": {
-			"DESCRIPTION": "C2 - Spanish",
-			"SUBDESCRIPTION": "Native proficiency"
-		},
-		"ENGLISH": {
-			"DESCRIPTION": "B2 - English",
-			"SUBDESCRIPTION": "APTIS. Common European Framework of Reference for Languages"
-		}
-	},
-	"OTHER_DATA": {
-		"OPEN_PROJECTS": {
-			"TITLE": "Open Projects",
-			"KEYER": {
-				"DESCRIPTION": "Library for encoding and decoding data into hashes and vice versa using a salt. With built-in CLI to enable processes from the command line terminal.",
-				"SHORT_DESCRIPTION": "Library with CLI for encoding and decoding data into hashes."
-			},
-			"DOCKER_IMAGES": {
-				"DESCRIPTION": "Docker images for development and production environments. With Dockerfiles and documentation for easy deployment.",
-				"SHORT_DESCRIPTION": "Docker images for development and production environments."
-			}
-		},
-		"TECH_SKILLS": {
-			"TITLE": "Technical Skills",
-			"ENVIRONMENTS": "Environments",
-			"IDES": "IDEs",
-			"LANGUAGES": "Languages",
-			"FRONTEND": "Frontend",
-			"BACKEND": "Backend",
-			"DEPENDENCIES": "Dependencies",
-			"REPOSITORIES": "Repositories",
-			"TERMINALS": "Terminals",
-			"OTHERS": "Others",
-			"DATABASES": "Databases",
-			"CLOUD": "Cloud"
-		},
-		"OTHER_INTEREST_DATA": {
-			"TITLE": "Other Interest Data",
-			"DRIVE": "Driving License (B) (2014)"
-		}
-	}
+  "LANGUAGES": {
+    "TITLE": "Languages",
+    "SPANISH": {
+      "DESCRIPTION": "C2 - Spanish",
+      "SUBDESCRIPTION": "Native proficiency"
+    },
+    "ENGLISH": {
+      "DESCRIPTION": "B2 - English",
+      "SUBDESCRIPTION": "APTIS. Common European Framework of Reference for Languages"
+    }
+  },
+  "OTHER_DATA": {
+    "OPEN_PROJECTS": {
+      "TITLE": "Open Projects",
+      "KEYER": {
+        "DESCRIPTION": "Library for encoding and decoding data into hashes and vice versa using a salt. With built-in CLI to enable processes from the command line terminal.",
+        "SHORT_DESCRIPTION": "Library with CLI for encoding and decoding data into hashes."
+      },
+      "DOCKER_IMAGES": {
+        "DESCRIPTION": "Docker images for development and production environments. With Dockerfiles and documentation for easy deployment.",
+        "SHORT_DESCRIPTION": "Docker images for development and production environments."
+      }
+    },
+    "TECH_SKILLS": {
+      "TITLE": "Technical Skills",
+      "ENVIRONMENTS": "Environments",
+      "IDES": "IDEs",
+      "LANGUAGES": "Languages",
+      "FRONTEND": "Frontend",
+      "BACKEND": "Backend",
+      "DEPENDENCIES": "Dependencies",
+      "REPOSITORIES": "Repositories",
+      "TERMINALS": "Terminals",
+      "OTHERS": "Others",
+      "DATABASES": "Databases",
+      "CLOUD": "Cloud"
+    },
+    "OTHER_INTEREST_DATA": {
+      "TITLE": "Other Interest Data",
+      "DRIVE": "Driving License (B) (2014)"
+    }
+  }
 }

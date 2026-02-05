@@ -9,13 +9,13 @@ import CertificatesIcon from './certificates.icon.svg';
 import CarIcon from './car.icon.svg';
 
 export {
-	EmailIcon,
-	PhoneIcon,
-	GithubIcon,
-	LinkedinIcon,
-	BirthdayIcon,
-	NpmIcon,
-	WorldIcon,
-	CertificatesIcon,
-	CarIcon,
+  EmailIcon,
+  PhoneIcon,
+  GithubIcon,
+  LinkedinIcon,
+  BirthdayIcon,
+  NpmIcon,
+  WorldIcon,
+  CertificatesIcon,
+  CarIcon,
 };

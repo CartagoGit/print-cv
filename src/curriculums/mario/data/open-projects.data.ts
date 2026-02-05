@@ -1,5 +1,5 @@
-import type { ComputedRef } from "vue";
-import { tOpenProjects } from "../helpers/traductor.helper";
+import type { ComputedRef } from 'vue';
+import { tOpenProjects } from '../helpers/traductor.helper';
 
 interface IOpenProjectsData {
   name: string;
@@ -13,28 +13,28 @@ interface IOpenProjectsData {
 
 export const OPEN_PROJECTS_DATA: IOpenProjectsData[] = [
   {
-    name: "Keyer",
-    repository: "https://github.com/CartagoGit/Keyer/",
-    npm: "https://www.npmjs.com/package/@cartago-git/keyer",
-    dependency: "@cartago-git/keyer",
-    install: "npm i @cartago-git/keyer",
-    description: tOpenProjects({ key: "DESCRIPTION", project: "KEYER" }),
+    name: 'Keyer',
+    repository: 'https://github.com/CartagoGit/Keyer/',
+    npm: 'https://www.npmjs.com/package/@cartago-git/keyer',
+    dependency: '@cartago-git/keyer',
+    install: 'npm i @cartago-git/keyer',
+    description: tOpenProjects({ key: 'DESCRIPTION', project: 'KEYER' }),
     shortDescription: tOpenProjects({
-      key: "SHORT_DESCRIPTION",
-      project: "KEYER",
+      key: 'SHORT_DESCRIPTION',
+      project: 'KEYER',
     }),
   },
   {
-    name: "Docker images",
-    repository: "https://hub.docker.com/u/cartagodocker",
-    dependency: "hub.docker.com/u/cartagodocker",
+    name: 'Docker images',
+    repository: 'https://hub.docker.com/u/cartagodocker',
+    dependency: 'hub.docker.com/u/cartagodocker',
     description: tOpenProjects({
-      key: "DESCRIPTION",
-      project: "DOCKER_IMAGES",
+      key: 'DESCRIPTION',
+      project: 'DOCKER_IMAGES',
     }),
     shortDescription: tOpenProjects({
-      key: "SHORT_DESCRIPTION",
-      project: "DOCKER_IMAGES",
+      key: 'SHORT_DESCRIPTION',
+      project: 'DOCKER_IMAGES',
     }),
   },
 ];

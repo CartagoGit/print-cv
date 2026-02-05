@@ -1,25 +1,25 @@
 {
-	"GENERAL": {
-		"LANG": "Español"
-	},
-	"HOME": {
-		"TITLE": "App para crear curriculums con css y crear pdfs"
-	},
-	"PLACES": {
-		"SEVILLE": "Sevilla"
-	},
-	"MONTHS": {
-		"JANUARY": "Enero",
-		"FEBRUARY": "Febrero",
-		"MARCH": "Marzo",
-		"APRIL": "Abril",
-		"MAY": "Mayo",
-		"JUNE": "Junio",
-		"JULY": "Julio",
-		"AUGUST": "Agosto",
-		"SEPTEMBER": "Septiembre",
-		"OCTOBER": "Octubre",
-		"NOVEMBER": "Noviembre",
-		"DECEMBER": "Diciembre"
-	}
+  "GENERAL": {
+    "LANG": "Español"
+  },
+  "HOME": {
+    "TITLE": "App para crear curriculums con css y crear pdfs"
+  },
+  "PLACES": {
+    "SEVILLE": "Sevilla"
+  },
+  "MONTHS": {
+    "JANUARY": "Enero",
+    "FEBRUARY": "Febrero",
+    "MARCH": "Marzo",
+    "APRIL": "Abril",
+    "MAY": "Mayo",
+    "JUNE": "Junio",
+    "JULY": "Julio",
+    "AUGUST": "Agosto",
+    "SEPTEMBER": "Septiembre",
+    "OCTOBER": "Octubre",
+    "NOVEMBER": "Noviembre",
+    "DECEMBER": "Diciembre"
+  }
 }

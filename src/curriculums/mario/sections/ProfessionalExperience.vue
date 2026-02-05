@@ -1,8 +1,8 @@
 <template>
-	<h2 class="section-title">
-		{{ $t('MARIO.PROFESSIONAL_EXPERIENCE.TITLE') }}
-	</h2>
-	<FieldData :fields="fields" />
+  <h2 class="section-title">
+    {{ $t('MARIO.PROFESSIONAL_EXPERIENCE.TITLE') }}
+  </h2>
+  <FieldData :fields="fields" />
 </template>
 
 <script setup lang="ts">

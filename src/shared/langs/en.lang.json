@@ -1,25 +1,25 @@
 {
-	"GENERAL": {
-		"LANG": "English"
-	},
-	"HOME": {
-		"TITLE": "An app to create curriculum vitae with CSS and generate PDFs."
-	},
-	"PLACES": {
-		"SEVILLE": "Seville"
-	},
-	"MONTHS": {
-		"JANUARY": "January",
-		"FEBRUARY": "February",
-		"MARCH": "March",
-		"APRIL": "April",
-		"MAY": "May",
-		"JUNE": "June",
-		"JULY": "July",
-		"AUGUST": "August",
-		"SEPTEMBER": "September",
-		"OCTOBER": "October",
-		"NOVEMBER": "November",
-		"DECEMBER": "December"
-	}
+  "GENERAL": {
+    "LANG": "English"
+  },
+  "HOME": {
+    "TITLE": "An app to create curriculum vitae with CSS and generate PDFs."
+  },
+  "PLACES": {
+    "SEVILLE": "Seville"
+  },
+  "MONTHS": {
+    "JANUARY": "January",
+    "FEBRUARY": "February",
+    "MARCH": "March",
+    "APRIL": "April",
+    "MAY": "May",
+    "JUNE": "June",
+    "JULY": "July",
+    "AUGUST": "August",
+    "SEPTEMBER": "September",
+    "OCTOBER": "October",
+    "NOVEMBER": "November",
+    "DECEMBER": "December"
+  }
 }

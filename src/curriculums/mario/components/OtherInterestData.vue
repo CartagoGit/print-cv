@@ -1,12 +1,8 @@
 <template>
-	<span
-		v-for="otherData of otherInterestData"
-		class="other font-bold">
-		<component
-			:is="otherData.icon"
-			class="icon icon--info"></component>
-		<span>{{ otherData.name.value }}</span>
-	</span>
+  <span v-for="(otherData, index) of otherInterestData" :key="index" class="other font-bold">
+    <component :is="otherData.icon" class="icon icon--info"></component>
+    <span>{{ otherData.name.value }}</span>
+  </span>
 </template>
 
 <script setup lang="ts">
@@ -16,8 +12,8 @@ const otherInterestData = OTHER_INTEREST_DATA;
 
 <style scoped>
 .other {
-	display: flex;
-	gap: 5px;
-	align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 </style>

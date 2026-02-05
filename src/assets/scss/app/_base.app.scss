@@ -1,73 +1,72 @@
 html,
 body {
-	min-height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 
-	// Estilos para Chrome y Safari
-	::-webkit-scrollbar {
-		width: 8px; // Ancho del scrollbar
-		height: 8px; // Alto del scrollbar
-		transition: 300ms ease all;
-	}
-	::-webkit-scrollbar-track {
-		transition: 300ms ease all;
+  // Estilos para Chrome y Safari
+  ::-webkit-scrollbar {
+    width: 8px; // Ancho del scrollbar
+    height: 8px; // Alto del scrollbar
+    transition: 300ms ease all;
+  }
+  ::-webkit-scrollbar-track {
+    transition: 300ms ease all;
 
-		background: var(--gray-600); // Color de fondo del track
-	}
-	::-webkit-scrollbar-thumb {
-		transition: 300ms ease all;
-		border-radius: 20px;
-		background: var(--gray-400); // Color del thumb
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: var(--gray-500); // Color del thumb al pasar el mouse
-	}
+    background: var(--gray-600); // Color de fondo del track
+  }
+  ::-webkit-scrollbar-thumb {
+    transition: 300ms ease all;
+    border-radius: 20px;
+    background: var(--gray-400); // Color del thumb
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500); // Color del thumb al pasar el mouse
+  }
 
-	// Asegurarse de que los estilos de Firefox no se apliquen wn otros
-	@supports not (scrollbar-width: thin) {
-		// Estilos para Firefox
-		// Estilos específicos para Firefox
-		scrollbar-width: thin; // Ancho del scrollbar
-		scrollbar-color: var(--gray-400) var(--gray-600); // Color del thumb y del track
-	}
+  // Asegurarse de que los estilos de Firefox no se apliquen wn otros
+  @supports not (scrollbar-width: thin) {
+    // Estilos para Firefox
+    // Estilos específicos para Firefox
+    scrollbar-width: thin; // Ancho del scrollbar
+    scrollbar-color: var(--gray-400) var(--gray-600); // Color del thumb y del track
+  }
 }
 
 *:disabled,
 .disabled {
-	pointer-events: none !important;
-	opacity: 0.2 !important;
+  pointer-events: none !important;
+  opacity: 0.2 !important;
 }
 
 .page {
-	margin: 20px 0px 50px 0px;
-	padding: var(--page-padding);
-	padding-bottom: calc(var(--page-padding) + 12px);
-	background-color: var(--white);
-	box-shadow: 0 0 50px 0px var(--gray-400);
-	border-radius: 5px;
-	/* Size A4 */
-	width: 210mm;
-	height: 297mm;
-	aspect-ratio: 1.414;
+  margin: 20px 0px 50px 0px;
+  padding: var(--page-padding);
+  padding-bottom: calc(var(--page-padding) + 12px);
+  background-color: var(--white);
+  box-shadow: 0 0 50px 0px var(--gray-400);
+  border-radius: 5px;
+  /* Size A4 */
+  width: 210mm;
+  height: 297mm;
+  aspect-ratio: 1.414;
 }
 
-h2{
-	font-size: 32px;
+h2 {
+  font-size: 32px;
 }
 h3 {
-	font-size: 26px;
-
+  font-size: 26px;
 }
 
-.mr5{
-	margin-right: 5px;
+.mr5 {
+  margin-right: 5px;
 }

@@ -1,8 +1,8 @@
 <template>
-	<h2 class="section-title section-title--lower-gap">
-		{{ $t('MARIO.COURSES.TITLE') }}
-	</h2>
-	<FieldCourses :fields="fields" />
+  <h2 class="section-title section-title--lower-gap">
+    {{ $t('MARIO.COURSES.TITLE') }}
+  </h2>
+  <FieldCourses :fields="fields" />
 </template>
 
 <script setup lang="ts">

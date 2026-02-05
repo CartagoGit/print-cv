@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Myriad Pro Bold Condensed";
-  src: url("@/assets/fonts/MyriadPro-BoldCond.ttf") format("truetype");
+  font-family: 'Myriad Pro Bold Condensed';
+  src: url('@/assets/fonts/MyriadPro-BoldCond.ttf') format('truetype');
   font-weight: regular;
   font-style: normal;
 }
 @font-face {
-  font-family: "Myriad Pro";
-  src: url("@/assets/fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-family: 'Myriad Pro';
+  src: url('@/assets/fonts/MyriadPro-Regular.ttf') format('truetype');
   font-weight: regular;
   font-style: normal;
 }
@@ -14,8 +14,8 @@
   --primary: #3cb878;
   --secondary: #626c70;
   --tertiary: #80888c;
-  --bold-font: "Myriad Pro Bold Condensed";
-  --regular-font: "Myriad Pro";
+  --bold-font: 'Myriad Pro Bold Condensed';
+  --regular-font: 'Myriad Pro';
 }
 .page {
   display: grid;
