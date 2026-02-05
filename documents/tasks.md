@@ -32,3 +32,14 @@
 - [ ] **Agent Readability (SEO for AI)** <!-- id: 6 -->
     - [ ] Implementar JSON-LD (`Schema.org/Person` + `CV`).
     - [ ] Usar etiquetas semánticas HTML5 precisas (`<article>`, `<time>`).
+    - [ ] **Privacy Shield**: Ocultar teléfono/email según `VITE_PUBLIC_MODE`.
+- [ ] **Enhancements** <!-- id: 7 -->
+    - [ ] **QR Codes**: Generar QRs para impresión (links a repos/demos).
+    - [ ] **Data Validation**: Validar JSONs con **Zod** en los tests.
+    - [ ] **CI/CD**: Workflow de GitHub Actions para deploy a GitHub Pages (versión censurada).
+    - [ ] **Smart Web**:
+        -   **Open Graph**: Meta tags para que el link se vea profesional en LinkedIn/WhatsApp.
+        -   **Dynamic Title**: Cambiar `document.title` según perfil para que "Guardar como PDF" sugiera el nombre correcto (`CV_Mario_Frontend.pdf`).
+    - [ ] **Extra Polish**:
+        -   **Live NPM Stats**: Componente que obtenga descargas de `quickmodel` en tiempo real (API NPM).
+        -   **Lighthouse**: Auditar para conseguir 100/100 en Accesibilidad y SEO.

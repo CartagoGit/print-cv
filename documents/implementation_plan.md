@@ -5,6 +5,8 @@
 > 2.  **Código, Variables y JSDoc**: SIEMPRE en **INGLÉS**.
 > 3.  **Nombres de Archivos**: SIEMPRE en **INGLÉS**.
 > 4.  **Prioridad**: User > Tests > Code.
+> 5.  **Privacidad**: NUNCA exponer datos personales (teléfono) en builds públicas.
+
 
 
 Este documento detalla la estrategia técnica para modernizar `print-cv`.
@@ -32,7 +34,7 @@ Este documento detalla la estrategia técnica para modernizar `print-cv`.
     -   Ajustar márgenes y colores para ahorro de tinta (opcional, aunque es un CV digital principalmente).
 -   **Visualización (Zoom & Preview)**:
     -   **Simulación**: Crear una clase CSS `.print-preview` que fuerce los estilos de impresión en la vista web.
-    -   **Zoom Engine**: Asegurar que el zoom (transform: scale) no deforme el layout y permita ver la "hoja A4" completa con fidelidad absoluta al resultado final.
+    -   **Zoom Engine (Fixed A4)**: El contenedor del CV tendrá dimensiones fijas (A4: 210mm x 297mm). El zoom será puramente visual (`transform: scale()`), escalando "la hoja" entera sin alterar su maquetación interna (no reflow), garantizando que lo que ves es exactamente lo que se imprime.
 
 ## 4. Refactor: Responsive/Fluid Layout
 **Objetivo**: Eliminar la deuda técnica de "Página 1 / Página 2".
@@ -61,6 +63,21 @@ Este documento detalla la estrategia técnica para modernizar `print-cv`.
 **Objetivo**: Que agentes de recruiting (o IAs) parseen el CV perfectamente.
 -   **Estrategia**:
     -   **JSON-LD**: Incluir un bloque `<script type="application/ld+json">` con el Resume estructurado según Schema.org.
-    -   **Hidden Raw Data**: Exponer el JSON crudo en un atributo `data-cv-source` o similar para fácil extracción.
+    -   **Hidden Raw Data**: Exponer el JSON crudo en un atributo `data-cv-source` o similar.
+    -   **Privacy Shield (Anti-Spam)**:
+        -   Usar variables de entorno (`VITE_PUBLIC_MODE=true`).
+        -   Si es público: Reemplazar teléfono/email por enlace a LinkedIn o Formulario.
+        -   JSON-LD no incluirá `telephone` en modo público.
+
+## 8. Final Enhancements
+**Objetivo**: Calidad Premium y Automatización.
+-   **QR Codes (Print Only)**: Componente que genera QRs junto a enlaces importantes, visible solo con `@media print`.
+-   **Data Validation**: Schemas de **Zod** para asegurar que el JSON del CV es válido (no rompe la build si falta un campo).
+-   **CI/CD**: Deploy automático a GitHub Pages (en modo `VITE_PUBLIC_MODE=true`).
+-   **Web Polish**:
+    -   **Open Graph**: Imagen de previsualización y descripción para compartir en redes.
+    -   **Filename Strategy**: `document.title = "Mario_Cabrero_CV.pdf"` al entrar en modo impresión implícitamente ayuda al navegador a nombrar el archivo.
+    -   **Live Social Proof**: Fetch de descargas NPM para `quickmodel` (si la API falla, fallback a static).
+    -   **A11y Audit**: Pasar Lighthouse para asegurar que es accesible (screen readers = recruiter bots).
 
 
