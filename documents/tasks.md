@@ -12,9 +12,9 @@
   - [x] Ejecutar `npm audit`.
   - [x] Revisar/Merge Dependabot alerts (ej: `vue-i18n`).
   - [x] Actualizar dependencias críticas.
-- [ ] **Setup Test Infrastructure (Vitest)** <!-- id: 5 -->
-  - [ ] Configurar Vitest.
-  - [ ] Asegurar que `npm run test` funciona correctamente.
+- [x] **Setup Test Infrastructure (Vitest)** <!-- id: 5 -->
+  - [x] Configurar Vitest.
+  - [x] Asegurar que `npm run test` funciona correctamente.
 - [ ] **Refactor: PDF Generation** <!-- id: 1 -->
   - [ ] **TDD**: Crear test unitario/mock del generador antes de implementar modulos.
   - [ ] **WYSIWYG Preview**: Implementar modo "Simulación de Impresión" en pantalla (clase `.print-mode`).
