@@ -423,5 +423,71 @@
       "shortDescription": "Imágenes de Docker para entornos de desarrollo y producción."
     }
   ],
-  "otherInterest": [{ "name": "Carnet B de conducir (2014)", "icon": "CarIcon" }]
+  "otherInterest": [{ "name": "Carnet B de conducir (2014)", "icon": "CarIcon" }],
+  "contact": [
+    {
+      "kind": "phone",
+      "icon": "PhoneIcon",
+      "value": "684 74 54 18",
+      "shortValue": "684745418",
+      "position": "left"
+    },
+    {
+      "kind": "github",
+      "icon": "GithubIcon",
+      "value": "github.com/CartagoGit",
+      "shortValue": "CartagoGit",
+      "position": "right"
+    },
+    {
+      "kind": "email",
+      "icon": "EmailIcon",
+      "value": "cv2mario@gmail.com",
+      "shortValue": "cv2mario@gmail.com",
+      "position": "left"
+    },
+    {
+      "kind": "linkedin",
+      "icon": "LinkedinIcon",
+      "value": "linkedin.com/in/mario-cabrero-volarich",
+      "shortValue": "Mario Cabrero Volarich",
+      "position": "right"
+    },
+    {
+      "kind": "location",
+      "icon": "WorldIcon",
+      "value": "SEVILLE",
+      "shortValue": "SEVILLE",
+      "position": "left",
+      "isPlace": true
+    },
+    {
+      "kind": "npm",
+      "icon": "NpmIcon",
+      "value": "npmjs.com/~cartago-git",
+      "shortValue": "cartago-git",
+      "position": "right"
+    },
+    {
+      "kind": "birthday",
+      "icon": "BirthdayIcon",
+      "value": "04/07/1988",
+      "shortValue": "04/07/1988",
+      "position": "left"
+    },
+    {
+      "kind": "certificates",
+      "icon": "CertificatesIcon",
+      "value": "github.com/CartagoGit/Certificados",
+      "shortValue": "Certificados",
+      "position": "right"
+    },
+    {
+      "kind": "dockerhub",
+      "icon": "DockerIcon",
+      "value": "hub.docker.com/u/cartagodocker",
+      "shortValue": "cartagodocker",
+      "position": "right"
+    }
+  ]
 }

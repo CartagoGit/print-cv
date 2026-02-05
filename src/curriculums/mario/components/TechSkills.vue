@@ -1,92 +1,110 @@
 <template>
-  <div class="kind-tech usual">
+  <dl class="kind-tech usual">
     <div class="field environments">
-      <span class="name font-bold">{{ techs.environments.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.environments.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.environments.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.environments.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
     <div class="field ides">
-      <span class="name font-bold">{{ techs.ides.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.ides.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.ides.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.ides.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
 
     <div class="field languages">
-      <span class="name font-bold">{{ techs.languages.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.languages.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.languages.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.languages.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
 
     <div class="field frontend">
-      <span class="name font-bold">{{ techs.frontend.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.frontend.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.frontend.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.frontend.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
 
     <div class="field backend">
-      <span class="name font-bold">{{ techs.backend.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.backend.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.backend.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.backend.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
 
     <div class="field dependencies">
-      <span class="name font-bold">{{ techs.dependencies.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.dependencies.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.dependencies.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.dependencies.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
 
     <div class="field repositories">
-      <span class="name font-bold">{{ techs.repositories.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.repositories.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.repositories.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.repositories.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
     <div class="field terminals">
-      <span class="name font-bold">{{ techs.terminals.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.terminals.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.terminals.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.terminals.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
     <div class="field others">
-      <span class="name font-bold">{{ techs.others.name }}:</span>
-      <div class="techs">
-        <span v-for="tech in techs.others.usual" :key="tech.name" class="tech">
-          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
-          <span class="font-regular">{{ tech.name }}</span>
-        </span>
-      </div>
+      <dt class="name font-bold">{{ techs.others.name }}:</dt>
+      <dd class="techs">
+        <ul class="tech-list">
+          <li v-for="tech in techs.others.usual" :key="tech.name" class="tech">
+            <component :is="iconMap[tech.icon]" class="icon icon--tech" />
+            <span class="font-regular">{{ tech.name }}</span>
+          </li>
+        </ul>
+      </dd>
     </div>
-  </div>
+  </dl>
 </template>
 
 <script lang="ts" setup>
@@ -179,9 +197,16 @@ const iconMap: Record<string, any> = {
   gap: 8px;
 }
 .techs {
-  display: fleX;
+  display: flex;
   gap: 10px;
   width: 100%;
+}
+.tech-list {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 .tech {
   flex-grow: 0;

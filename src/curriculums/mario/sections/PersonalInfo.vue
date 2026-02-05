@@ -1,9 +1,9 @@
 <template>
-  <article class="cv-photo">
+  <figure class="cv-photo">
     <div class="wrapper-img">
       <img src="@/assets/img/mario.png" alt="Photo" />
     </div>
-  </article>
+  </figure>
   <article class="info">
     <h1>Mario Cabrero Volarich</h1>
     <div class="fields--wrapper">
@@ -19,7 +19,7 @@
           class="field"
           :class="'field--' + field.kind"
         >
-          <component :is="field.icon" class="icon icon--info" />
+          <component :is="iconMap[field.icon]" class="icon icon--info" />
           <span class="font-bold">
             {{ typeof field.value === 'string' ? field.value : field.value.value }}
           </span>
@@ -29,16 +29,69 @@
   </article>
 </template>
 <script setup lang="ts">
+import { computed } from 'vue';
+import cvData from '../data/cv-data.json';
+import {
+  EmailIcon,
+  PhoneIcon,
+  GithubIcon,
+  LinkedinIcon,
+  BirthdayIcon,
+  NpmIcon,
+  WorldIcon,
+  CertificatesIcon,
+} from '@/assets/icons/contact/contact.icons';
+import { DockerIcon } from '@/assets/icons/techs/techs.icons';
+import { tPlace } from '../helpers/traductor.helper';
 import type { IInfoContact } from '@/shared/interfaces/index.interfaces';
-import { CONTACT_DATA } from '../data/contact.data';
 
-const fields = CONTACT_DATA;
-const leftFields = fields.filter((field) => field.position === 'left');
-const rightFields = fields.filter((field) => field.position === 'right');
-const fieldsPosition: Record<string, IInfoContact[]> = {
-  left: leftFields,
-  right: rightFields,
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const iconMap: Record<string, any> = {
+  EmailIcon,
+  PhoneIcon,
+  GithubIcon,
+  LinkedinIcon,
+  BirthdayIcon,
+  NpmIcon,
+  WorldIcon,
+  CertificatesIcon,
+  DockerIcon,
 };
+
+const isPublicMode = import.meta.env.VITE_PUBLIC_MODE === 'true';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const contactData = (cvData as any).contact as (IInfoContact & { isPlace?: boolean })[];
+
+const fields = computed(() => {
+  return contactData.map((item) => {
+    let value = item.value;
+    // Check if value is a string before passing to tPlace to satisfy types if needed,
+    // though IInfoContact.value can be Ref. JSON data is string.
+    if (item.isPlace && typeof item.value === 'string') {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      value = tPlace(item.value as any, { pre: '41008 - ' }).value;
+    }
+
+    if (isPublicMode) {
+      if (item.kind === 'phone') value = '*** ** ** **';
+      if (item.kind === 'email') value = '*******@gmail.com';
+    }
+
+    return {
+      ...item,
+      value,
+    };
+  });
+});
+
+const leftFields = computed(() => fields.value.filter((field) => field.position === 'left'));
+const rightFields = computed(() => fields.value.filter((field) => field.position === 'right'));
+
+const fieldsPosition = computed<Record<string, IInfoContact[]>>(() => ({
+  left: leftFields.value,
+  right: rightFields.value,
+}));
 </script>
 
 <style scoped lang="scss">

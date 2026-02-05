@@ -21,22 +21,12 @@
       <TechSkills />
     </div>
   </div>
-  <div class="contact font-bold" v-if="false">
-    <span v-for="(contact, index) of contactData" :key="index" class="contact-field">
-      <component :is="contact.icon" class="icon icon--info" />
-      <span>{{ contact.shortValue }}</span>
-    </span>
-  </div>
 </template>
 
 <script setup lang="ts">
 import OpenProjects from '../components/OpenProjects.vue';
 import OtherInterestData from '../components/OtherInterestData.vue';
 import TechSkills from '../components/TechSkills.vue';
-import { CONTACT_DATA_OBJ } from '../data/contact.data';
-
-const { email, linkedin, phone } = CONTACT_DATA_OBJ;
-const contactData = [linkedin, email, phone];
 </script>
 
 <style scoped lang="scss">

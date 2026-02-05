@@ -23,6 +23,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, onUnmounted } from 'vue';
 import PersonalInfo from '../sections/PersonalInfo.vue';
 import ProfessionalExperience from '../sections/ProfessionalExperience.vue';
 import OficialEducation from '../sections/OficialEducation.vue';
@@ -31,9 +32,40 @@ import LanguageSection from '../sections/LanguageSection.vue';
 import OtherData from '../sections/OtherData.vue';
 import '../styles/global.mario.scss';
 import { CURRICULUM_DATE } from '../data/curriculum.data';
-
+import cvData from '../data/cv-data.json';
 
 const cvDate = CURRICULUM_DATE;
+
+onMounted(() => {
+  const jobTitle = cvData.professionalExperience[0]?.place || 'Software Developer';
+  // Attempt to find location and email/phone from contact if available
+  // Since cvData.contact is typed as explicit generic in usage, we access safely or use defaults
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Mario Cabrero Volarich',
+    jobTitle: jobTitle,
+    url: window.location.href,
+    sameAs: ['https://github.com/CartagoGit', 'https://linkedin.com/in/mario-cabrero-volarich'],
+    knowsAbout: [
+      ...cvData.techs.languages.usual.map((t) => t.name),
+      ...cvData.techs.frontend.usual.map((t) => t.name),
+      ...cvData.techs.backend.usual.map((t) => t.name),
+    ],
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.id = 'cv-json-ld';
+  script.text = JSON.stringify(schema);
+  document.head.appendChild(script);
+});
+
+onUnmounted(() => {
+  const script = document.getElementById('cv-json-ld');
+  if (script) script.remove();
+});
 </script>
 
 <style scoped>
