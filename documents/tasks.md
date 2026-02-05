@@ -8,6 +8,10 @@
     - [ ] Instalar ESLint y Prettier.
     - [ ] Configurar reglas.
     - [ ] Ejecutar fix automático.
+- [ ] **Security Audit** <!-- id: 8 -->
+    - [ ] Ejecutar `npm audit`.
+    - [ ] Revisar/Merge Dependabot alerts (ej: `vue-i18n`).
+    - [ ] Actualizar dependencias críticas.
 - [ ] **Setup Test Infrastructure (Vitest)** <!-- id: 5 -->
     - [ ] Configurar Vitest.
     - [ ] Asegurar que `npm run test` funciona correctamente.

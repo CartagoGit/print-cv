@@ -16,6 +16,10 @@ Este documento detalla la estrategia técnica para modernizar `print-cv`.
 -   **Acción**: Instalar `eslint-plugin-vue`, `@vue/eslint-config-typescript`.
 -   **Config**: Asegurar que no haya conflictos con Prettier.
 -   **Naming Convention**: Forzar camelCase para variables y PascalCase para componentes.
+-   **Security Audit**:
+    -   Atender alertas de Dependabot (vistas en el grafo de GitHub).
+    -   Actualizar liberías core (`vue`, `vite`, `vue-i18n`) a versiones seguras.
+    -   Validar con `npm audit`.
 
 ## 2. Test Infrastructure & TDD Setup
 **Objetivo**: Preparar el terreno para Test Driven Development.
