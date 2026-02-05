@@ -139,7 +139,9 @@
       },
       "place": "Desarrollador de software.",
       "description": "Funciones: Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; Control de Repositorios Git + GitHub."
-    },
+    }
+  ],
+  "otherExperience": [
     {
       "company": "EXCELLENCE FIELD FACTORY, S.L.",
       "subCompany": "(EZENTIS/ERICSSON/ABENTEL)",
@@ -148,8 +150,7 @@
         "start": "OCT 2016",
         "end": "FEB 2019"
       },
-      "place": "Técnico de Telecomunicaciones.",
-      "description": "Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar."
+      "place": "Técnico de Telecomunicaciones."
     },
     {
       "company": "HÍSPALIS INST. TELCOMUN., S.L.",
@@ -159,8 +160,7 @@
         "start": "MAY 2014",
         "end": "SEP 2016"
       },
-      "place": "Técnico de Telecomunicaciones.",
-      "description": "Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar."
+      "place": "Técnico de Telecomunicaciones."
     },
     {
       "company": "Profesional Independiente",
@@ -169,8 +169,7 @@
         "start": "2006",
         "end": "2014"
       },
-      "place": "Soporte de hardware.",
-      "description": "Funciones: Mantenimiento de computadoras informáticas y consolas, así como de otros dispositivos electrónicos para particulares."
+      "place": "Soporte de hardware."
     },
     {
       "company": "S.A.C.E. EVERTEL, S.L.",
@@ -179,8 +178,7 @@
         "start": "ABR 2013",
         "end": "JUN 2013"
       },
-      "place": "Desarrollador de software.",
-      "description": "Contrato de prácticas. Funciones: Desarrollo web en intranet empleando SharePoint."
+      "place": "Desarrollador de software."
     },
     {
       "company": "GUADALTEL, S.A.",
@@ -189,8 +187,7 @@
         "start": "NOV 2012",
         "end": "DIC 2012"
       },
-      "place": "Desarrollador de software.",
-      "description": "Contrato de prácticas. Funciones: Apoyo en proyecto desarrollado en Java."
+      "place": "Desarrollador de software."
     },
     {
       "company": "MUÑOZ Y DIEZMA, S.L. (Publibici)",
@@ -199,8 +196,7 @@
         "start": "DIC 2006",
         "end": "MAR 2007"
       },
-      "place": "Repartidor de publicidad.",
-      "description": "Funciones: Exposición al público y reparto de publicidad."
+      "place": "Repartidor de publicidad."
     }
   ],
   "oficialEducation": [
@@ -401,6 +397,16 @@
   ],
   "openProjects": [
     {
+      "name": "QuickModel",
+      "repository": "https://github.com/CartagoGit/quickmodel",
+      "npm": "https://www.npmjs.com/package/quickmodel",
+      "dependency": "quickmodel",
+      "install": "npm i quickmodel",
+      "description": "Librería avanzada para creación de modelos de datos seguros y tipados en TypeScript. Ofrece validación en tiempo de ejecución, decoradores intuitivos para definición de esquemas, y transformación automática de datos JSON a instancias de clase. Diseñada para garantizar la integridad de datos en arquitecturas hexagonales y DDD.",
+      "shortDescription": "Librería para modelado y validación de datos en TypeScript.",
+      "highlight": true
+    },
+    {
       "name": "Keyer",
       "repository": "https://github.com/CartagoGit/Keyer/",
       "npm": "https://www.npmjs.com/package/@cartago-git/keyer",
@@ -417,7 +423,5 @@
       "shortDescription": "Imágenes de Docker para entornos de desarrollo y producción."
     }
   ],
-  "otherInterest": [
-    { "name": "Carnet B de conducir (2014)", "icon": "CarIcon" }
-  ]
+  "otherInterest": [{ "name": "Carnet B de conducir (2014)", "icon": "CarIcon" }]
 }

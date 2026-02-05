@@ -30,11 +30,11 @@
   - [x] Migrate Professional Experience <!-- id: 6 -->
   - [x] Migrate Tech Skills <!-- id: 7 -->
   - [x] Migrate Education, Languages, Projects <!-- id: 8 -->
-  - [ ] **TDD**: Crear test de carga de JSON.
-  - [ ] Mover datos a JSON.
+  - [x] **TDD**: Crear test de carga de JSON.
+  - [x] Mover datos a JSON.
 - [ ] **Content Update** <!-- id: 5 -->
-  - [ ] **Highlight**: Destacar `quickmodel` al inicio de la sección "Librerías/Proyectos" con descripción detallada.
-  - [ ] **Refactor Experience**: Dividir en "Experiencia Principal" (Detallada) y "Otros Trabajos" (Resumida).
+  - [x] **Highlight**: Destacar `quickmodel` al inicio de la sección "Librerías/Proyectos" con descripción detallada.
+  - [x] **Refactor Experience**: Dividir en "Experiencia Principal" (Detallada) y "Otros Trabajos" (Resumida).
   - [ ] **Data Entry**: Digitalizar info de las capturas (Beateam, Ezentis, Hispatel).
   - [ ] **Cleanup**: Evaluar y eliminar apartados obsoletos tras el rediseño.
 - [ ] **Agent Readability (SEO for AI)** <!-- id: 6 -->
@@ -51,3 +51,5 @@
   - [ ] **Extra Polish**:
     - **Live NPM Stats**: Componente que obtenga descargas de `quickmodel` en tiempo real (API NPM).
     - **Lighthouse**: Auditar para conseguir 100/100 en Accesibilidad y SEO.
+- [ ] **Translation Completeness** <!-- id: 8 -->
+  - [ ] Ensure all CV data (one by one) has keys for both English and Spanish to allow full dual-language printing.

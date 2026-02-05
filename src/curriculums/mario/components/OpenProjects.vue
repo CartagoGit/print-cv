@@ -6,8 +6,8 @@
       :class="{ 'new-line': (project.dependency?.length ?? 0) > 26 }"
       >{{ project.dependency }}</span
     >
-    <div class="short-description">
-      {{ project.shortDescription }}
+    <div class="short-description" :class="{ 'highlighted-description': project.highlight }">
+      {{ project.highlight ? project.description : project.shortDescription }}
     </div>
   </div>
 </template>
@@ -21,5 +21,10 @@ const openProjects = cvData.openProjects;
 }
 .short-description {
   margin-top: 5px;
+}
+.highlighted-description {
+  color: var(--gray-600);
+  font-style: italic;
+  margin-bottom: 10px;
 }
 </style>
