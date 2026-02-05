@@ -70,6 +70,9 @@
         </h1>
         <RouterView />
       </div>
+      <button v-if="isPrintMode" @click="togglePrintMode" class="exit-preview-btn">
+        EXIT PREVIEW
+      </button>
     </main>
     <div class="is-loading" v-if="isLoading">Cargando</div>
   </div>
@@ -232,6 +235,24 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
     page-break-after: always;
   }
 }
+
+.exit-preview-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--red-500);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.exit-preview-btn:hover {
+  transform: scale(1.05);
+}
 </style>
 <style scoped>
 main,
@@ -300,15 +321,25 @@ main {
     margin-bottom: 20px;
   }
 
-  .home,
-  #curriculum {
+  .home {
     overflow-y: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-    transform-origin: top left;
+  }
+
+  #curriculum {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    padding: 0;
+    transform-origin: top center;
+    /* Ensure it doesn't overflow horizontally weirdly without scroll */
+    flex-shrink: 0;
   }
 }
 
