@@ -60,7 +60,6 @@
   <div class="is-loading" v-if="isLoading">Cargando</div>
 </template>
 
-<script setup lang="ts">
 import { watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 import {
@@ -85,6 +84,8 @@ const isLoading = ref(false);
 const reRender = ref(0);
 const routesData = CURRICULUMS_ROUTES_DATA;
 const actualRoute = ref(routesData.find((routeData) => routeData.nameRoute === route.name)!);
+const isPrintMode = ref(false);
+
 router.beforeEach((_to, _from, next) => {
   scale.value = 100;
   next();
@@ -114,6 +115,15 @@ const callGeneratePDF = async () =>
     actualRoute,
   });
 
+const togglePrintMode = () => {
+  isPrintMode.value = !isPrintMode.value;
+  // Adjust scale for A4 preview if needed, or keep user scale
+  if (isPrintMode.value) {
+    // Optional: Reset scale to fit screen or specific preview scale
+    // scale.value = 100; 
+  }
+};
+
 const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 </script>
 
@@ -121,6 +131,9 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 @media screen and (max-width: 768px) {
   #app {
     grid-template-columns: 1fr;
+    &.print-mode {
+      display: block; // Override grid
+    }
   }
   aside {
     display: none;
@@ -134,9 +147,72 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
     height: 100vh;
     width: 100%;
     overflow: hidden;
+
+    &.print-mode {
+      display: block; // Print mode is full page
+      grid-template-columns: 1fr;
+      aside {
+        display: none;
+      }
+      main {
+        padding: 0;
+        background-color: white; // Simulate paper background environment
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
   }
   aside {
     display: flex;
+  }
+}
+
+/* Print Styles & Simulation */
+@media print {
+  #app {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+  }
+  aside, header, .is-loading {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 210mm !important; // A4 width
+    height: auto !important; // Allow flow
+    overflow: visible !important;
+  }
+  #curriculum {
+    transform: none !important; // Disable zoom for print
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Simulation Class */
+.print-mode {
+  #curriculum {
+     // A4 Aspect Ratio Simulation if needed, or just let CSS print rules take over via shared class?
+     // Actually, we want to simulate EXACTLY what @media print does but on screen.
+     // So we mimic the @media print rules here.
+     
+     // Note: #curriculum already handles content.
+     
+     // We need to ensure the container feels like a paper.
+     width: 210mm;
+     min-height: 297mm;
+     background: white;
+     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+     margin: 20px auto;
   }
 }
 </style>
