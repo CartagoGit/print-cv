@@ -123,7 +123,7 @@ const zoomOut = () => {
   scale.value = Math.round(scale.value);
   reRender.value++;
 };
-const callGeneratePDF = async () => generatePDF();
+const callGeneratePDF = async () => generatePDF(actualRoute.value?.text || 'CV');
 
 const togglePrintMode = () => {
   isPrintMode.value = !isPrintMode.value;

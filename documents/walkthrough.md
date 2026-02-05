@@ -24,6 +24,11 @@ Implemented a **"Simulation Mode"** in `App.vue`:
 - **Validation Pipeline**: Added `npm run validate` script (Lint + TypeCheck + Test) and updated Agent Rules to enforce its usage.
 - All tests are passing.
 
+### 5. Final Polish (Solid & Smooth UX)
+- **Filename**: Restored dynamic filename generation. `window.print()` uses `document.title` temporarily so "Save as PDF" suggests `[Name]_[Date]_cv_es.pdf` instead of generic names.
+- **Backgrounds**: Forced `print-color-adjust: exact` in CSS to ensure background colors (e.g., sidebar) are always printed.
+- **Page Breaks**: Added `break-inside: avoid` to prevent sections from being cut off.
+
 ## Verification Results
 
 ### Automated Tests

@@ -14,6 +14,15 @@ export const getFileName = (data: { nameCv: string | undefined; kind: 'pdf' | 'j
   return nameDoc;
 };
 
-export const generatePDF = async () => {
+export const generatePDF = (cvName: string) => {
+  const originalTitle = document.title;
+  const fileName = getFileName({ nameCv: cvName.replace(/\s+/g, '_'), kind: 'pdf' });
+  
+  document.title = fileName;
   window.print();
+  
+  // Restore title after print dialog closes (or reasonably immediately, browsers handle this differently)
+  // setTimeout(() => { document.title = originalTitle; }, 1000); 
+  // Actually, leaving it is fine or restoring it. Restoring it is safer for SPA.
+  setTimeout(() => { document.title = originalTitle; }, 500);
 };
