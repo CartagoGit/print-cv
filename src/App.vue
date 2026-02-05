@@ -25,7 +25,7 @@
             <span
               @click="togglePrintMode"
               data-testid="preview-btn"
-              class="sidebar-preview-btn"
+              class="sidebar-preview-btn icon--header"
               :class="isPrintMode ? 'opacity-100' : 'opacity-50'"
             >
               PREVIEW
@@ -234,7 +234,7 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 }
 
 .sidebar-preview-btn {
-  @apply icon--header cursor-pointer text-[10px] font-bold text-white transition-opacity duration-200;
+  @apply cursor-pointer text-[10px] font-bold text-white transition-opacity duration-200;
 }
 </style>
 <style scoped>
