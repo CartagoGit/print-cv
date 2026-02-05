@@ -52,22 +52,22 @@
     </aside>
     <main :key="reRender">
       <RouterView v-if="$route.name === 'home'" class="home" />
+      <h1 v-if="actualRoute">
+        {{
+          $t(`${actualRoute.nameRoute.toUpperCase()}.CV.TITLE`, {
+            name: actualRoute.text,
+          })
+        }}
+      </h1>
       <div
         ref="curriculum"
-        v-else
+        v-if="$route.name !== 'home'"
         :style="{
           transform: `scale(${Math.round(scale) / 100})`,
           transformOrigin: 'top center',
         }"
         id="curriculum"
       >
-        <h1 v-if="actualRoute">
-          {{
-            $t(`${actualRoute.nameRoute.toUpperCase()}.CV.TITLE`, {
-              name: actualRoute.text,
-            })
-          }}
-        </h1>
         <RouterView />
       </div>
       <button v-if="isPrintMode" @click="togglePrintMode" class="exit-preview-btn">
@@ -198,7 +198,9 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
   }
   aside,
   header,
-  .is-loading {
+  .is-loading,
+  .exit-preview-btn,
+  h1 {
     display: none !important;
   }
   main {
@@ -216,7 +218,7 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
     border: none !important;
     box-shadow: none !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 40px !important; /* Maintain side padding in print */
   }
 }
 
@@ -336,7 +338,7 @@ main {
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin: 20px auto;
-    padding: 0;
+    padding: 40px;
     transform-origin: top center;
     /* Ensure it doesn't overflow horizontally weirdly without scroll */
     flex-shrink: 0;
