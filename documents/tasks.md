@@ -25,7 +25,7 @@
   - [x] **Tests**: Verificar snapshots o estructura antes de cambios mayores.
   - [x] Convertir layout a fluido.
   - [x] Ajustar `break-inside`.
-- [ ] **Refactor: Data Layer** <!-- id: 3 -->
+- [/] **Refactor: Data Layer** <!-- id: 3 -->
   - [ ] **TDD**: Crear test de carga de JSON.
   - [ ] Mover datos a JSON.
 - [ ] **Content Update** <!-- id: 5 -->
