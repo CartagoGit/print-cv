@@ -7,7 +7,10 @@ import { createI18n } from 'vue-i18n';
 // Mocks
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{ path: '/', name: 'home', component: { template: '<div>Home</div>' } }]
+  routes: [
+    { path: '/', name: 'home', component: { template: '<div>Home</div>' } },
+    { path: '/mario', name: 'mario-cv', component: { template: '<div class="page">CV Content</div>' } }
+  ]
 });
 
 const i18n = createI18n({
@@ -41,17 +44,14 @@ describe('App Print Mode', () => {
     // Verify initial state
     expect(wrapper.classes()).not.toContain('print-mode');
 
-    // Trigger toggle (we will need to add a way to trigger this, 
-    // for now we expect a method or button, let's assume we expose a method or add a button)
-    // Since we adhere to TDD, we are defining the requirement: 
-    // "There should be a way to enter print simulation mode"
+    // Navigate to CV route to enable controls
+    await router.push({ name: 'mario-cv' });
+    await wrapper.vm.$nextTick();
     
-    // For this test, let's assume we will add a new button or simulate the state change
-    // We'll modify App.vue to expose this state or handling logic.
-    // For now, let's simulate calling a method that we WILL implement.
-    
-    // wrapper.vm.togglePrintMode(); 
-    // expect(wrapper.classes()).toContain('print-mode');
+    // Find the Preview trigger
+    const previewBtn = wrapper.find('[data-testid="preview-btn"]');
+    await previewBtn.trigger('click');
+    expect(wrapper.get('.app-wrapper').classes()).toContain('print-mode');
   });
 
   it('should call window.print when PDF button is clicked in native mode', async () => {
@@ -70,13 +70,10 @@ describe('App Print Mode', () => {
       }
     });
     
-    // Find the PDF icon/button (assuming it's the one calling callGeneratePDF)
-    // We need to update the implementation to call window.print instead of generatePDF helper
-    const pdfBtn = wrapper.findComponent({ name: 'PdfIcon' }); // Or find by class
+    const pdfBtn = wrapper.findComponent({ name: 'PdfIcon' });
     if (pdfBtn.exists()) {
         await pdfBtn.trigger('click');
-        // verification will be added after implementation change
-        // expect(printMock).toHaveBeenCalled();
+        expect(printMock).toHaveBeenCalled();
     }
   });
 });

@@ -16,11 +16,11 @@
   - [x] Configurar Vitest.
   - [x] Asegurar que `npm run test` funciona correctamente.
 - [ ] **Refactor: PDF Generation** <!-- id: 1 -->
-  - [ ] **TDD**: Crear test unitario/mock del generador antes de implementar modulos.
-  - [ ] **WYSIWYG Preview**: Implementar modo "Simulación de Impresión" en pantalla (clase `.print-mode`).
+  - [x] **TDD**: Crear test unitario/mock del generador antes de implementar modulos.
+  - [x] **WYSIWYG Preview**: Implementar modo "Simulación de Impresión" en pantalla (clase `.print-mode`).
   - [ ] **Zoom**: Mejorar lógica de escalado para inspección detallada (pixel-perfect).
-  - [ ] Implementar CSS `@media print`.
-  - [ ] Eliminar dependencias innecesarias.
+  - [x] Implementar CSS `@media print`.
+  - [x] Eliminar dependencias innecesarias.
 - [ ] **Refactor: Layout** <!-- id: 2 -->
   - [ ] **Tests**: Verificar snapshots o estructura antes de cambios mayores.
   - [ ] Convertir layout a fluido.

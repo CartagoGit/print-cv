@@ -1,4 +1,5 @@
 <template>
+  <div class="app-wrapper" :class="{ 'print-mode': isPrintMode }">
   <aside>
     <header>
       <section class="logo">
@@ -17,6 +18,18 @@
           <ZoomOutIcon class="icon icon--header" @click="zoomOut" />
           <ZoomInIcon class="icon icon--header" @click="zoomIn" />
           <span class="float">{{ scale }}%</span>
+        </span>
+      </section>
+      <section>
+        <span class="group-icons" :class="{ disabled: !curriculum }">
+          <span 
+             @click="togglePrintMode" 
+             data-testid="preview-btn"
+             class="sidebar-preview-btn"
+             :class="isPrintMode ? 'opacity-100' : 'opacity-50'"
+          >
+             PREVIEW
+          </span>
         </span>
       </section>
       <section>
@@ -43,7 +56,7 @@
       ref="curriculum"
       v-else
       :style="{
-        transform: `scale(${Math.round(scale) / 100})`,
+        transform: isPrintMode ? 'none' : `scale(${Math.round(scale) / 100})`,
       }"
       id="curriculum"
     >
@@ -58,8 +71,10 @@
     </div>
   </main>
   <div class="is-loading" v-if="isLoading">Cargando</div>
+  </div>
 </template>
 
+<script setup lang="ts">
 import { watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 import {
@@ -129,10 +144,15 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 
 <style>
 @media screen and (max-width: 768px) {
-  #app {
+  .app-wrapper {
+    display: grid;
     grid-template-columns: 1fr;
+    height: 100vh;
+    width: 100%;
+    
     &.print-mode {
       display: block; // Override grid
+      overflow-y: auto;
     }
   }
   aside {
@@ -140,7 +160,7 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
   }
 }
 @media screen and (min-width: 769px) {
-  #app {
+  .app-wrapper {
     display: grid;
     grid-template-columns: 300px 1fr;
     background-color: var(--gray-200);
@@ -150,13 +170,12 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 
     &.print-mode {
       display: block; // Print mode is full page
-      grid-template-columns: 1fr;
       aside {
         display: none;
       }
       main {
-        padding: 0;
-        background-color: white; // Simulate paper background environment
+        padding: 40px;
+        background-color: var(--gray-700); // Dark background to contrast paper
         display: flex;
         justify-content: center;
         align-items: start;
@@ -172,7 +191,7 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 
 /* Print Styles & Simulation */
 @media print {
-  #app {
+  body, .app-wrapper {
     display: block !important;
     height: auto !important;
     overflow: visible !important;
@@ -184,13 +203,15 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
   main {
     padding: 0 !important;
     margin: 0 !important;
-    width: 210mm !important; // A4 width
+    width: 100% !important; 
     height: auto !important; // Allow flow
     overflow: visible !important;
+    display: block !important;
   }
   #curriculum {
     transform: none !important; // Disable zoom for print
     width: 100% !important;
+    max-width: 210mm !important;
     border: none !important;
     box-shadow: none !important;
     margin: 0 !important;
@@ -201,19 +222,21 @@ const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
 /* Simulation Class */
 .print-mode {
   #curriculum {
-     // A4 Aspect Ratio Simulation if needed, or just let CSS print rules take over via shared class?
-     // Actually, we want to simulate EXACTLY what @media print does but on screen.
-     // So we mimic the @media print rules here.
-     
-     // Note: #curriculum already handles content.
-     
-     // We need to ensure the container feels like a paper.
      width: 210mm;
      min-height: 297mm;
      background: white;
-     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-     margin: 20px auto;
+     box-shadow: 0 0 20px rgba(0,0,0,0.5);
+     margin: 0 auto;
+     transform: none !important; // Controlled by inline style usually, but force none here?
+     // Actually inline style `transform` is managed by isPrintMode state in template now.
+     
+     // Ensure sections break correctly
+     page-break-after: always;
   }
+}
+
+.sidebar-preview-btn {
+  @apply icon--header cursor-pointer text-[10px] font-bold text-white transition-opacity duration-200;
 }
 </style>
 <style scoped>
