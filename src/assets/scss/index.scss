@@ -1,8 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @forward 'variables/index.variables';
 @forward 'themes/index.themes';
 @forward 'components/index.components';
 @forward 'app/index.app';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

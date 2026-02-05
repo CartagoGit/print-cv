@@ -5,9 +5,10 @@
 
 <script setup lang="ts">
 import FieldData from '../components/FieldData.vue';
-import { OFICIAL_EDUCATION_DATA } from '../data/oficial-education.data';
+import cvData from '../data/cv-data.json';
+import type { IFieldsData } from '@/shared/interfaces/fields-data.interface';
 
-const fields = OFICIAL_EDUCATION_DATA;
+const fields = cvData.oficialEducation as unknown as IFieldsData[];
 </script>
 
 <style scoped></style>

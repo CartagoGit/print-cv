@@ -1,87 +1,87 @@
 <template>
   <div class="kind-tech usual">
     <div class="field environments">
-      <span class="name font-bold">{{ techs.environments.name.value }}:</span>
+      <span class="name font-bold">{{ techs.environments.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.environments.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
     <div class="field ides">
-      <span class="name font-bold">{{ techs.ides.name.value }}:</span>
+      <span class="name font-bold">{{ techs.ides.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.ides.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
 
     <div class="field languages">
-      <span class="name font-bold">{{ techs.languages.name.value }}:</span>
+      <span class="name font-bold">{{ techs.languages.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.languages.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
 
     <div class="field frontend">
-      <span class="name font-bold">{{ techs.frontend.name.value }}:</span>
+      <span class="name font-bold">{{ techs.frontend.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.frontend.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
 
     <div class="field backend">
-      <span class="name font-bold">{{ techs.backend.name.value }}:</span>
+      <span class="name font-bold">{{ techs.backend.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.backend.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
 
     <div class="field dependencies">
-      <span class="name font-bold">{{ techs.dependencies.name.value }}:</span>
+      <span class="name font-bold">{{ techs.dependencies.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.dependencies.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
 
     <div class="field repositories">
-      <span class="name font-bold">{{ techs.repositories.name.value }}:</span>
+      <span class="name font-bold">{{ techs.repositories.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.repositories.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
     <div class="field terminals">
-      <span class="name font-bold">{{ techs.terminals.name.value }}:</span>
+      <span class="name font-bold">{{ techs.terminals.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.terminals.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
     </div>
     <div class="field others">
-      <span class="name font-bold">{{ techs.others.name.value }}:</span>
+      <span class="name font-bold">{{ techs.others.name }}:</span>
       <div class="techs">
         <span v-for="tech in techs.others.usual" :key="tech.name" class="tech">
-          <component :is="tech.icon" class="icon icon--tech" />
+          <component :is="iconMap[tech.icon]" class="icon icon--tech" />
           <span class="font-regular">{{ tech.name }}</span>
         </span>
       </div>
@@ -90,8 +90,69 @@
 </template>
 
 <script lang="ts" setup>
-import { TECHS_DATA } from '../data/techs.data';
-const techs = TECHS_DATA;
+import cvData from '../data/cv-data.json';
+import { NpmIcon, GithubIcon } from '@/assets/icons/contact/contact.icons';
+import {
+  WindowsIcon,
+  AndroidIcon,
+  VisualStudioCodeIcon,
+  JavascriptIcon,
+  TypescriptIcon,
+  HtmlIcon,
+  CssIcon,
+  SassIcon,
+  AngularIcon,
+  IonicIcon,
+  ReactIcon,
+  VueIcon,
+  NodeIcon,
+  NestIcon,
+  BunIcon,
+  RxjsIcon,
+  PrettierIcon,
+  GitlabIcon,
+  TerminalIcon,
+  GitIcon,
+  WslIcon,
+  CmdIcon,
+  DockerIcon,
+  PostmanIcon,
+  ChatgptIcon,
+} from '@/assets/icons/techs/techs.icons';
+
+const techs = cvData.techs;
+
+// iconMap needs strict types but SVGs currently infer as string. Disabling any check.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const iconMap: Record<string, any> = {
+  NpmIcon,
+  GithubIcon,
+  WindowsIcon,
+  AndroidIcon,
+  VisualStudioCodeIcon,
+  JavascriptIcon,
+  TypescriptIcon,
+  HtmlIcon,
+  CssIcon,
+  SassIcon,
+  AngularIcon,
+  IonicIcon,
+  ReactIcon,
+  VueIcon,
+  NodeIcon,
+  NestIcon,
+  BunIcon,
+  RxjsIcon,
+  PrettierIcon,
+  GitlabIcon,
+  TerminalIcon,
+  GitIcon,
+  WslIcon,
+  CmdIcon,
+  DockerIcon,
+  PostmanIcon,
+  ChatgptIcon,
+};
 </script>
 
 <style scoped>

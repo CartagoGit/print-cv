@@ -7,8 +7,9 @@
 
 <script setup lang="ts">
 import FieldData from '../components/FieldData.vue';
-import { PROFESSIONAL_EXP_DATA } from '../data/professional-experience.data';
+import cvData from '../data/cv-data.json';
+import type { IFieldsData } from '@/shared/interfaces/fields-data.interface';
 
-const fields = PROFESSIONAL_EXP_DATA;
+const fields = cvData.professionalExperience as unknown as IFieldsData[];
 </script>
 <style scoped></style>

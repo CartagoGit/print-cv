@@ -8,7 +8,9 @@
         {{ field.subCompany }}
       </div>
       <div class="where-date">
-        <span class="where font-bold">({{ field.where.value }})</span>
+        <span class="where font-bold">
+          ({{ typeof field.where === 'string' ? field.where : field.where.value }})
+        </span>
         <span class="date font-regular">
           {{ typeof field.date.start === 'string' ? field.date.start : field.date.start.value }}
           {{ field.date.end ? '-' : '' }}
@@ -24,10 +26,10 @@
     </div>
     <p class="description">
       <span class="font-bold mr5">
-        {{ field.place.value }}
+        {{ typeof field.place === 'string' ? field.place : field.place.value }}
       </span>
       <span v-if="field.description" class="font-regular">
-        {{ field.description.value }}
+        {{ typeof field.description === 'string' ? field.description : field.description.value }}
       </span>
     </p>
   </article>

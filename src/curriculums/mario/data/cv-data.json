@@ -1,0 +1,423 @@
+{
+  "techs": {
+    "environments": {
+      "kind": "environments",
+      "name": "Entornos",
+      "usual": [
+        { "name": "Windows", "icon": "WindowsIcon" },
+        { "name": "Android", "icon": "AndroidIcon" }
+      ],
+      "used": ["Linux", "Ubuntu"]
+    },
+    "ides": {
+      "kind": "ides",
+      "name": "IDEs",
+      "usual": [{ "name": "Visual Studio Code", "icon": "VisualStudioCodeIcon" }],
+      "used": ["Visual Studio", "Android Studio"]
+    },
+    "languages": {
+      "kind": "languages",
+      "name": "Lenguajes",
+      "usual": [
+        { "name": "JavaScript", "icon": "JavascriptIcon" },
+        { "name": "TypeScript", "icon": "TypescriptIcon" },
+        { "name": "HTML", "icon": "HtmlIcon" },
+        { "name": "CSS", "icon": "CssIcon" },
+        { "name": "Sass", "icon": "SassIcon" }
+      ],
+      "used": ["C#", "Dart", "Solidity", "PHP", "Yaml", "Shell script"]
+    },
+    "frontend": {
+      "kind": "frontend",
+      "name": "Frontend",
+      "usual": [
+        { "name": "Angular", "icon": "AngularIcon" },
+        { "name": "Ionic", "icon": "IonicIcon" },
+        { "name": "ReactJs", "icon": "ReactIcon" },
+        { "name": "VueJs", "icon": "VueIcon" }
+      ],
+      "used": ["Flutter", "JQuery", "Vite", "Svelte", "Livewire", "Tailwind", "Bootstrap"]
+    },
+    "backend": {
+      "kind": "backend",
+      "name": "Backend",
+      "usual": [
+        { "name": "Node.js", "icon": "NodeIcon" },
+        { "name": "Nest.js", "icon": "NestIcon" }
+      ],
+      "used": ["Laravel"]
+    },
+    "dependencies": {
+      "kind": "dependencies",
+      "name": "Dependencias",
+      "usual": [
+        { "name": "Npm", "icon": "NpmIcon" },
+        { "name": "Bun.js", "icon": "BunIcon" },
+        { "name": "Rxjs", "icon": "RxjsIcon" },
+        { "name": "Prettier", "icon": "PrettierIcon" }
+      ],
+      "used": [
+        "Yarn",
+        "Express.js",
+        "Chart.js",
+        "Redux",
+        "Web3",
+        "Electron",
+        "Nodemon",
+        "ts-node",
+        "tsx",
+        "nx",
+        "quasar",
+        "gradle",
+        "jest",
+        ".env",
+        "cordova",
+        "storybook"
+      ]
+    },
+    "repositories": {
+      "kind": "repositories",
+      "name": "Repositorios",
+      "usual": [
+        { "name": "Github", "icon": "GithubIcon" },
+        { "name": "Gitlab", "icon": "GitlabIcon" }
+      ],
+      "used": []
+    },
+    "terminals": {
+      "kind": "terminals",
+      "name": "Terminales",
+      "usual": [
+        { "name": "Zsh", "icon": "TerminalIcon" },
+        { "name": "Git Bash", "icon": "GitIcon" },
+        { "name": "Wsl2", "icon": "WslIcon" },
+        { "name": "Cmd", "icon": "CmdIcon" }
+      ],
+      "used": ["Powershell", "Bash"]
+    },
+    "databases": {
+      "kind": "databases",
+      "name": "Bases de datos",
+      "usual": [],
+      "used": ["MongoDB", "MySql", "Postgres", "MariaDB"]
+    },
+    "cloud": {
+      "kind": "cloud",
+      "name": "Cloud",
+      "usual": [],
+      "used": ["Netlify", "Heroku", "Railway"]
+    },
+    "others": {
+      "kind": "others",
+      "name": "Otros",
+      "usual": [
+        { "name": "Docker", "icon": "DockerIcon" },
+        { "name": "Postman", "icon": "PostmanIcon" },
+        { "name": "ChatGpt", "icon": "ChatgptIcon" }
+      ],
+      "used": ["Markdown", "Office", "LibreOffice", "Tor", "Unity", "Slack", "Discord"]
+    }
+  },
+  "professionalExperience": [
+    {
+      "company": "BEATEAM S.L.",
+      "subCompany": "(AZUR GLOBAL BUSINESS S.L Group)",
+      "where": "SEVILLE",
+      "date": {
+        "start": "OCT 2022",
+        "end": "MAY 2024"
+      },
+      "place": "Desarrollador de software.",
+      "description": "Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos compatibles con Wsl2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Scripts bash y Node.js para automatización de tareas. Uso de git bash para manejo de repositorios y de terminal Wsl2 para acceso ssh."
+    },
+    {
+      "company": "Profesional Independiente",
+      "where": "SEVILLE",
+      "date": {
+        "start": "SEP 2021",
+        "end": "OCT 2022"
+      },
+      "place": "Desarrollador de software.",
+      "description": "Funciones: Desarrollo en Solidity de smart contracts para la red BEP-20 de Binance Smart Chain (BSC) y para la red Ethereum (ERC-20) usando Ganache/Truffle con OpenZeppelin. Desarrollo web en React / JSX, Angular, Css/Sass / Javascript (ES6) / Typescript / jQuery, Redux. Desarrollo de aplicaciones de escritorio con Electron + React; Control de Repositorios Git + GitHub."
+    },
+    {
+      "company": "EXCELLENCE FIELD FACTORY, S.L.",
+      "subCompany": "(EZENTIS/ERICSSON/ABENTEL)",
+      "where": "SEVILLE",
+      "date": {
+        "start": "OCT 2016",
+        "end": "FEB 2019"
+      },
+      "place": "Técnico de Telecomunicaciones.",
+      "description": "Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar."
+    },
+    {
+      "company": "HÍSPALIS INST. TELCOMUN., S.L.",
+      "subCompany": "(HISPATEL)",
+      "where": "SEVILLE",
+      "date": {
+        "start": "MAY 2014",
+        "end": "SEP 2016"
+      },
+      "place": "Técnico de Telecomunicaciones.",
+      "description": "Funciones: Técnico mantenimiento/instalación FTTH para la fibra óptica de Telefónica/Movistar."
+    },
+    {
+      "company": "Profesional Independiente",
+      "where": "SEVILLE",
+      "date": {
+        "start": "2006",
+        "end": "2014"
+      },
+      "place": "Soporte de hardware.",
+      "description": "Funciones: Mantenimiento de computadoras informáticas y consolas, así como de otros dispositivos electrónicos para particulares."
+    },
+    {
+      "company": "S.A.C.E. EVERTEL, S.L.",
+      "where": "SEVILLE",
+      "date": {
+        "start": "ABR 2013",
+        "end": "JUN 2013"
+      },
+      "place": "Desarrollador de software.",
+      "description": "Contrato de prácticas. Funciones: Desarrollo web en intranet empleando SharePoint."
+    },
+    {
+      "company": "GUADALTEL, S.A.",
+      "where": "SEVILLE",
+      "date": {
+        "start": "NOV 2012",
+        "end": "DIC 2012"
+      },
+      "place": "Desarrollador de software.",
+      "description": "Contrato de prácticas. Funciones: Apoyo en proyecto desarrollado en Java."
+    },
+    {
+      "company": "MUÑOZ Y DIEZMA, S.L. (Publibici)",
+      "where": "SEVILLE",
+      "date": {
+        "start": "DIC 2006",
+        "end": "MAR 2007"
+      },
+      "place": "Repartidor de publicidad.",
+      "description": "Funciones: Exposición al público y reparto de publicidad."
+    }
+  ],
+  "oficialEducation": [
+    {
+      "company": "I.E.S. VELÁZQUEZ",
+      "where": "SEVILLE",
+      "date": { "start": "2010", "end": "2013" },
+      "place": "Grado Superior : Técnico Superior en Desarrollo de Aplicaciones Informáticas."
+    },
+    {
+      "company": "Universidad de Sevilla",
+      "where": "SEVILLE",
+      "date": { "start": "2006", "end": "2009" },
+      "place": "Cursado parcial: Ingeniería Técnica en Informática de Sistemas.",
+      "description": "No finalizado por cambio en la orientación de los estudios."
+    },
+    {
+      "company": "I.E.S. SAN PABLO",
+      "where": "SEVILLE",
+      "date": { "start": "2004", "end": "2006" },
+      "place": "Bachillerato Tecnológico."
+    }
+  ],
+  "complementaryEducation": [
+    {
+      "place": "UDEMY, Inc.",
+      "date": "JUN 2023",
+      "description": "Angular Avanzado: Lleva tus bases al siguiente nivel - MEAN",
+      "time": 32,
+      "isOnline": true
+    },
+    {
+      "place": "DEVTALLES",
+      "date": "JUN 2023",
+      "description": "Docker - Guía práctica de uso para desarrolladores",
+      "time": 14,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "ENE 2023",
+      "description": "Principios SOLID y Clean Code",
+      "time": 6.5,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "OCT 2022",
+      "description": "ReactiveX - RxJs - De cero hasta los detalles",
+      "time": 9.5,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "SEP 2022",
+      "description": "Angular de 0 a Experto",
+      "time": 44,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "SEP 2022",
+      "description": "Master de JavaScript - Aprender Js, jQuery, Angular, NodeJs",
+      "time": 32,
+      "isOnline": true
+    },
+    {
+      "place": "LOOM NETWORK",
+      "date": "MAY 2022",
+      "description": "Aprende a Programar Etherum DApps construyendo tu propio juego",
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "FEB 2022",
+      "description": "Arte para Videojuegos: Unity, Photoshop, Adobe Illustrator: de Cero a Avanzado",
+      "time": 18,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "FEB 2022",
+      "description": "Bootstrap 5: El Curso Completo, Práctico y Desde Cero",
+      "time": 34,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "ENE 2022",
+      "description": "Aprende todo sobre Notion: 3 cursos en 1",
+      "time": 5,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "ENE 2022",
+      "description": "JavaScript Moderno: Guía para dominar el lenguaje",
+      "time": 17,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "DIC 2021",
+      "description": "React: De cero a experto ( Hooks y MERN )",
+      "time": 49,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "NOV 2021",
+      "description": "Curso Completo de Blockchain de cero a experto",
+      "time": 12,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "NOV 2021",
+      "description": "Smart Contracts y Blockchain con Solidity de la A a la Z",
+      "time": 27,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "OCT 2021",
+      "description": "GIT+GitHub: Todo un sistema de control de versiones de cero",
+      "time": 12,
+      "isOnline": true
+    },
+    {
+      "place": "GOOGLE ACTÍVATE",
+      "date": "JUN 2021",
+      "description": "Desarrollo de Apps Móviles",
+      "time": 40,
+      "isOnline": true
+    },
+    {
+      "place": "UDEMY, Inc.",
+      "date": "JUN 2020",
+      "description": "Master en CSS: Responsive, SASS, Flexbox, Grid y Bootstrap",
+      "time": 20,
+      "isOnline": true
+    },
+    {
+      "place": "GOOGLE ACTÍVATE",
+      "date": "MAY 2020",
+      "description": "Introducción al Desarrollo Web II",
+      "time": 40,
+      "isOnline": true
+    },
+    {
+      "place": "GOOGLE ACTÍVATE",
+      "date": "MAY 2020",
+      "description": "Introducción al Desarrollo Web I",
+      "time": 40,
+      "isOnline": true
+    },
+    {
+      "place": "EZENTIS",
+      "date": "ENE 2019",
+      "description": "Curso configurador Movistar VPN empresas"
+    },
+    {
+      "place": "ERICSSON",
+      "date": "ENE 2018",
+      "description": "Técnico de Prevención de Riesgos Laborales de Nivel Básico (Recurso Preventivo)",
+      "time": 60
+    },
+    {
+      "place": "MIRÍADAX",
+      "date": "MAY 2017",
+      "description": "Cobre fiel amigo de la comunicación",
+      "time": 30
+    },
+    {
+      "place": "MIRÍADAX",
+      "date": "MAY 2017",
+      "description": "Conectando el futuro con Fibra Óptica (4º Edición)",
+      "time": 30
+    },
+    {
+      "place": "CRYSTAL E-LEARNING",
+      "date": "ENE 2013",
+      "description": "Desarrollo de aplicaciones Flash en Android e iOS",
+      "isOnline": true
+    }
+  ],
+  "languages": [
+    {
+      "description": "C2 - Español",
+      "subDescription": "Competencia nativa"
+    },
+    {
+      "place": "BRITISH COUNCIL",
+      "date": "JUL 2020",
+      "description": "B2 - Inglés",
+      "subDescription": "APTIS. Common European Framework of Reference for Languages"
+    }
+  ],
+  "openProjects": [
+    {
+      "name": "Keyer",
+      "repository": "https://github.com/CartagoGit/Keyer/",
+      "npm": "https://www.npmjs.com/package/@cartago-git/keyer",
+      "dependency": "@cartago-git/keyer",
+      "install": "npm i @cartago-git/keyer",
+      "description": "Libreria para codificar y decodificar conviertiendo datos en hashes y viceversa usando un salt. Con cli incorporado para posibilitar los procesos desde la terminal de comandos",
+      "shortDescription": "Libreria con cli para codificar y decodificar datos en hashes."
+    },
+    {
+      "name": "Docker images",
+      "repository": "https://hub.docker.com/u/cartagodocker",
+      "dependency": "hub.docker.com/u/cartagodocker",
+      "description": "Imágenes Docker para entornos de desarrollo y producción. Con Dockerfiles y documentación para una fácil implementación.",
+      "shortDescription": "Imágenes de Docker para entornos de desarrollo y producción."
+    }
+  ],
+  "otherInterest": [
+    { "name": "Carnet B de conducir (2014)", "icon": "CarIcon" }
+  ]
+}

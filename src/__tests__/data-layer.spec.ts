@@ -1,6 +1,6 @@
 
 import { describe, it, expect } from 'vitest';
-// @ts-ignore
+
 import cvData from '@/curriculums/mario/data/cv-data.json';
 
 describe('Data Layer Refactor', () => {
