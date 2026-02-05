@@ -36,11 +36,11 @@
   - [x] **Highlight**: Destacar `quickmodel` al inicio de la sección "Librerías/Proyectos" con descripción detallada.
   - [x] **Refactor Experience**: Dividir en "Experiencia Principal" (Detallada) y "Otros Trabajos" (Resumida).
   - [ ] **Data Entry**: Digitalizar info de las capturas (Beateam, Ezentis, Hispatel).
-  - [ ] **Cleanup**: Evaluar y eliminar apartados obsoletos tras el rediseño.
-- [ ] **Agent Readability (SEO for AI)** <!-- id: 6 -->
-  - [ ] Implementar JSON-LD (`Schema.org/Person` + `CV`).
-  - [ ] Usar etiquetas semánticas HTML5 precisas (`<article>`, `<time>`).
-  - [ ] **Privacy Shield**: Ocultar teléfono/email según `VITE_PUBLIC_MODE`.
+  - [x] **Cleanup**: Evaluar y eliminar apartados obsoletos tras el rediseño.
+- [x] **Agent Readability (SEO for AI)** <!-- id: 6 -->
+  - [x] **JSON-LD**: Generar script `application/ld+json` con Schema.org/Person y datos del CV.
+  - [x] **Semantic HTML**: Usar etiquetas semánticas HTML5 precisas (`<article>`, `<time>`).
+  - [x] **Privacy Shield**: Ocultar teléfono/email según `VITE_PUBLIC_MODE`.
 - [ ] **Enhancements** <!-- id: 7 -->
   - [ ] **QR Codes**: Generar QRs para impresión (links a repos/demos).
   - [ ] **Data Validation**: Validar JSONs con **Zod** en los tests.

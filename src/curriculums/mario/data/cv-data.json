@@ -120,6 +120,7 @@
   },
   "professionalExperience": [
     {
+      "kind": "BEATEAM",
       "company": "BEATEAM S.L.",
       "subCompany": "(AZUR GLOBAL BUSINESS S.L Group)",
       "where": "SEVILLE",
@@ -131,6 +132,7 @@
       "description": "Funciones: Desarrollo y mantenimiento de ERP para gestión de facturación, ventas y logística de recambios de automoción con Angular, Sass y Rxjs. Desarrollo y mantenimiento de aplicación móvil para Android con Ionic. Dockerización de entornos compatibles con Wsl2. Soporte técnico y corrección de errores en aplicaciones web y móviles. Despliegue de aplicaciones en producción usando jobs de Gitlab. Mejoras en interfaz de usuario en aplicaciones Angular y Vue. Scripts bash y Node.js para automatización de tareas. Uso de git bash para manejo de repositorios y de terminal Wsl2 para acceso ssh."
     },
     {
+      "kind": "INDEPENDIENT2",
       "company": "Profesional Independiente",
       "where": "SEVILLE",
       "date": {
@@ -143,6 +145,7 @@
   ],
   "otherExperience": [
     {
+      "kind": "EXCELLENCE",
       "company": "EXCELLENCE FIELD FACTORY, S.L.",
       "subCompany": "(EZENTIS/ERICSSON/ABENTEL)",
       "where": "SEVILLE",
@@ -153,6 +156,7 @@
       "place": "Técnico de Telecomunicaciones."
     },
     {
+      "kind": "HISPATEL",
       "company": "HÍSPALIS INST. TELCOMUN., S.L.",
       "subCompany": "(HISPATEL)",
       "where": "SEVILLE",
@@ -163,6 +167,7 @@
       "place": "Técnico de Telecomunicaciones."
     },
     {
+      "kind": "INDEPENDIENT1",
       "company": "Profesional Independiente",
       "where": "SEVILLE",
       "date": {
@@ -172,6 +177,7 @@
       "place": "Soporte de hardware."
     },
     {
+      "kind": "EVERTEL",
       "company": "S.A.C.E. EVERTEL, S.L.",
       "where": "SEVILLE",
       "date": {
@@ -181,6 +187,7 @@
       "place": "Desarrollador de software."
     },
     {
+      "kind": "GUADALTEL",
       "company": "GUADALTEL, S.A.",
       "where": "SEVILLE",
       "date": {
@@ -190,6 +197,7 @@
       "place": "Desarrollador de software."
     },
     {
+      "kind": "PUBLIBICI",
       "company": "MUÑOZ Y DIEZMA, S.L. (Publibici)",
       "where": "SEVILLE",
       "date": {
@@ -201,12 +209,14 @@
   ],
   "oficialEducation": [
     {
+      "kind": "VELAZQUEZ",
       "company": "I.E.S. VELÁZQUEZ",
       "where": "SEVILLE",
       "date": { "start": "2010", "end": "2013" },
       "place": "Grado Superior : Técnico Superior en Desarrollo de Aplicaciones Informáticas."
     },
     {
+      "kind": "US",
       "company": "Universidad de Sevilla",
       "where": "SEVILLE",
       "date": { "start": "2006", "end": "2009" },
@@ -214,6 +224,7 @@
       "description": "No finalizado por cambio en la orientación de los estudios."
     },
     {
+      "kind": "SANPABLO",
       "company": "I.E.S. SAN PABLO",
       "where": "SEVILLE",
       "date": { "start": "2004", "end": "2006" },
@@ -222,6 +233,7 @@
   ],
   "complementaryEducation": [
     {
+      "kind": "ANGULAR_ADVANCED",
       "place": "UDEMY, Inc.",
       "date": "JUN 2023",
       "description": "Angular Avanzado: Lleva tus bases al siguiente nivel - MEAN",
@@ -229,6 +241,7 @@
       "isOnline": true
     },
     {
+      "kind": "DOCKER",
       "place": "DEVTALLES",
       "date": "JUN 2023",
       "description": "Docker - Guía práctica de uso para desarrolladores",
@@ -236,6 +249,7 @@
       "isOnline": true
     },
     {
+      "kind": "SOLID",
       "place": "UDEMY, Inc.",
       "date": "ENE 2023",
       "description": "Principios SOLID y Clean Code",
@@ -243,6 +257,7 @@
       "isOnline": true
     },
     {
+      "kind": "RXJS",
       "place": "UDEMY, Inc.",
       "date": "OCT 2022",
       "description": "ReactiveX - RxJs - De cero hasta los detalles",
@@ -250,6 +265,7 @@
       "isOnline": true
     },
     {
+      "kind": "ANGULAR_BASIC",
       "place": "UDEMY, Inc.",
       "date": "SEP 2022",
       "description": "Angular de 0 a Experto",
@@ -257,6 +273,7 @@
       "isOnline": true
     },
     {
+      "kind": "JAVASCRIPT_MASTER",
       "place": "UDEMY, Inc.",
       "date": "SEP 2022",
       "description": "Master de JavaScript - Aprender Js, jQuery, Angular, NodeJs",
@@ -264,12 +281,14 @@
       "isOnline": true
     },
     {
+      "kind": "DAPPS_ETH",
       "place": "LOOM NETWORK",
       "date": "MAY 2022",
       "description": "Aprende a Programar Etherum DApps construyendo tu propio juego",
       "isOnline": true
     },
     {
+      "kind": "ADOBE",
       "place": "UDEMY, Inc.",
       "date": "FEB 2022",
       "description": "Arte para Videojuegos: Unity, Photoshop, Adobe Illustrator: de Cero a Avanzado",
@@ -277,6 +296,7 @@
       "isOnline": true
     },
     {
+      "kind": "BOOTSTRAP",
       "place": "UDEMY, Inc.",
       "date": "FEB 2022",
       "description": "Bootstrap 5: El Curso Completo, Práctico y Desde Cero",
@@ -284,6 +304,7 @@
       "isOnline": true
     },
     {
+      "kind": "NOTION",
       "place": "UDEMY, Inc.",
       "date": "ENE 2022",
       "description": "Aprende todo sobre Notion: 3 cursos en 1",
@@ -291,6 +312,7 @@
       "isOnline": true
     },
     {
+      "kind": "JAVASCRIPT_MODERN",
       "place": "UDEMY, Inc.",
       "date": "ENE 2022",
       "description": "JavaScript Moderno: Guía para dominar el lenguaje",
@@ -298,6 +320,7 @@
       "isOnline": true
     },
     {
+      "kind": "REACT_BASIC",
       "place": "UDEMY, Inc.",
       "date": "DIC 2021",
       "description": "React: De cero a experto ( Hooks y MERN )",
@@ -305,6 +328,7 @@
       "isOnline": true
     },
     {
+      "kind": "BLOCKCHAIN",
       "place": "UDEMY, Inc.",
       "date": "NOV 2021",
       "description": "Curso Completo de Blockchain de cero a experto",
@@ -312,6 +336,7 @@
       "isOnline": true
     },
     {
+      "kind": "SOLIDITY",
       "place": "UDEMY, Inc.",
       "date": "NOV 2021",
       "description": "Smart Contracts y Blockchain con Solidity de la A a la Z",
@@ -319,6 +344,7 @@
       "isOnline": true
     },
     {
+      "kind": "GIT",
       "place": "UDEMY, Inc.",
       "date": "OCT 2021",
       "description": "GIT+GitHub: Todo un sistema de control de versiones de cero",
@@ -326,6 +352,7 @@
       "isOnline": true
     },
     {
+      "kind": "MOBILE_APPS",
       "place": "GOOGLE ACTÍVATE",
       "date": "JUN 2021",
       "description": "Desarrollo de Apps Móviles",
@@ -333,6 +360,7 @@
       "isOnline": true
     },
     {
+      "kind": "CSS",
       "place": "UDEMY, Inc.",
       "date": "JUN 2020",
       "description": "Master en CSS: Responsive, SASS, Flexbox, Grid y Bootstrap",
@@ -340,6 +368,7 @@
       "isOnline": true
     },
     {
+      "kind": "INTRO_DEV_WEB_2",
       "place": "GOOGLE ACTÍVATE",
       "date": "MAY 2020",
       "description": "Introducción al Desarrollo Web II",
@@ -347,6 +376,7 @@
       "isOnline": true
     },
     {
+      "kind": "INTRO_DEV_WEB_1",
       "place": "GOOGLE ACTÍVATE",
       "date": "MAY 2020",
       "description": "Introducción al Desarrollo Web I",
@@ -354,29 +384,34 @@
       "isOnline": true
     },
     {
+      "kind": "VPM_COMPANIES",
       "place": "EZENTIS",
       "date": "ENE 2019",
       "description": "Curso configurador Movistar VPN empresas"
     },
     {
+      "kind": "PREVENTIVE_RESOURCE",
       "place": "ERICSSON",
       "date": "ENE 2018",
       "description": "Técnico de Prevención de Riesgos Laborales de Nivel Básico (Recurso Preventivo)",
       "time": 60
     },
     {
+      "kind": "COPPER",
       "place": "MIRÍADAX",
       "date": "MAY 2017",
       "description": "Cobre fiel amigo de la comunicación",
       "time": 30
     },
     {
+      "kind": "FTTH",
       "place": "MIRÍADAX",
       "date": "MAY 2017",
       "description": "Conectando el futuro con Fibra Óptica (4º Edición)",
       "time": 30
     },
     {
+      "kind": "FLASH",
       "place": "CRYSTAL E-LEARNING",
       "date": "ENE 2013",
       "description": "Desarrollo de aplicaciones Flash en Android e iOS",
@@ -385,10 +420,12 @@
   ],
   "languages": [
     {
+      "kind": "SPANISH",
       "description": "C2 - Español",
       "subDescription": "Competencia nativa"
     },
     {
+      "kind": "ENGLISH",
       "place": "BRITISH COUNCIL",
       "date": "JUL 2020",
       "description": "B2 - Inglés",
@@ -397,6 +434,7 @@
   ],
   "openProjects": [
     {
+      "kind": "QUICKMODEL",
       "name": "QuickModel",
       "repository": "https://github.com/CartagoGit/quickmodel",
       "npm": "https://www.npmjs.com/package/quickmodel",
@@ -407,6 +445,7 @@
       "highlight": true
     },
     {
+      "kind": "KEYER",
       "name": "Keyer",
       "repository": "https://github.com/CartagoGit/Keyer/",
       "npm": "https://www.npmjs.com/package/@cartago-git/keyer",
@@ -416,6 +455,7 @@
       "shortDescription": "Libreria con cli para codificar y decodificar datos en hashes."
     },
     {
+      "kind": "DOCKER_IMAGES",
       "name": "Docker images",
       "repository": "https://hub.docker.com/u/cartagodocker",
       "dependency": "hub.docker.com/u/cartagodocker",

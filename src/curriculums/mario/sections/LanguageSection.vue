@@ -6,11 +6,19 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import FieldCourses from '../components/FieldCourses.vue';
 import cvData from '../data/cv-data.json';
-import type { IFieldCourse } from '@/shared/interfaces/index.interfaces';
+import { tLangGrade } from '../helpers/traductor.helper';
 
-const fields = cvData.languages as unknown as IFieldCourse[];
+const fields = computed(() =>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (cvData.languages as any[]).map((item) => ({
+    ...item,
+    description: tLangGrade({ lang: item.kind, key: 'DESCRIPTION' }),
+    subDescription: tLangGrade({ lang: item.kind, key: 'SUBDESCRIPTION' }),
+  })),
+);
 </script>
 
 <style scoped></style>

@@ -7,13 +7,23 @@
       >{{ project.dependency }}</span
     >
     <div class="short-description" :class="{ 'highlighted-description': project.highlight }">
-      {{ project.highlight ? project.description : project.shortDescription }}
+      {{ project.highlight ? project.description.value : project.shortDescription.value }}
     </div>
   </article>
 </template>
 <script setup lang="ts">
+import { computed } from 'vue';
 import cvData from '../data/cv-data.json';
-const openProjects = cvData.openProjects;
+import { tOpenProjects } from '../helpers/traductor.helper';
+
+const openProjects = computed(() =>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (cvData.openProjects as any[]).map((p) => ({
+    ...p,
+    description: tOpenProjects({ project: p.kind, key: 'DESCRIPTION' }),
+    shortDescription: tOpenProjects({ project: p.kind, key: 'SHORT_DESCRIPTION' }),
+  })),
+);
 </script>
 <style scoped lang="scss">
 .title {

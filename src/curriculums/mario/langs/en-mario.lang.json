@@ -4,6 +4,25 @@
     "PAGE1": "Page 1 - Information",
     "PAGE2": "Page 2 - Courses and skills"
   },
+  "DATES": {
+    "MONTHS": {
+      "JAN": "JAN",
+      "FEB": "FEB",
+      "MAR": "MAR",
+      "APR": "APR",
+      "MAY": "MAY",
+      "JUN": "JUN",
+      "JUL": "JUL",
+      "AUG": "AUG",
+      "SEP": "SEP",
+      "OCT": "OCT",
+      "NOV": "NOV",
+      "DEC": "DEC"
+    },
+    "STATUS": {
+      "ACTUAL": "Present"
+    }
+  },
   "PROFESSIONAL_EXPERIENCE": {
     "TITLE": "Professional Experience",
     "DATA": {
@@ -133,6 +152,10 @@
   "OTHER_DATA": {
     "OPEN_PROJECTS": {
       "TITLE": "Open Projects",
+      "QUICKMODEL": {
+        "DESCRIPTION": "Advanced library for creating secure and typed data models in TypeScript. Offers runtime validation, intuitive decorators for schema definition, and automatic transformation from JSON data to class instances. Designed to ensure data integrity in hexagonal architectures and DDD.",
+        "SHORT_DESCRIPTION": "Library for data modeling and validation in TypeScript."
+      },
       "KEYER": {
         "DESCRIPTION": "Library for encoding and decoding data into hashes and vice versa using a salt. With built-in CLI to enable processes from the command line terminal.",
         "SHORT_DESCRIPTION": "Library with CLI for encoding and decoding data into hashes."

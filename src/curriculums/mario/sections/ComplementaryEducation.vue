@@ -6,9 +6,16 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import FieldCourses from '../components/FieldCourses.vue';
 import cvData from '../data/cv-data.json';
-import type { IFieldCourse } from '@/shared/interfaces/index.interfaces';
+import { tCourses } from '../helpers/traductor.helper';
 
-const fields = cvData.complementaryEducation as unknown as IFieldCourse[];
+const fields = computed(() =>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (cvData.complementaryEducation as any[]).map((item) => ({
+    ...item,
+    description: tCourses(item.kind),
+  })),
+);
 </script>

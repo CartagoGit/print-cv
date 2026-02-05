@@ -1,7 +1,7 @@
 <template>
   <dl class="kind-tech usual">
     <div class="field environments">
-      <dt class="name font-bold">{{ techs.environments.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.ENVIRONMENTS') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.environments.usual" :key="tech.name" class="tech">
@@ -12,7 +12,7 @@
       </dd>
     </div>
     <div class="field ides">
-      <dt class="name font-bold">{{ techs.ides.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.IDES') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.ides.usual" :key="tech.name" class="tech">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="field languages">
-      <dt class="name font-bold">{{ techs.languages.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.LANGUAGES') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.languages.usual" :key="tech.name" class="tech">
@@ -36,7 +36,7 @@
     </div>
 
     <div class="field frontend">
-      <dt class="name font-bold">{{ techs.frontend.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.FRONTEND') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.frontend.usual" :key="tech.name" class="tech">
@@ -48,7 +48,7 @@
     </div>
 
     <div class="field backend">
-      <dt class="name font-bold">{{ techs.backend.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.BACKEND') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.backend.usual" :key="tech.name" class="tech">
@@ -60,7 +60,7 @@
     </div>
 
     <div class="field dependencies">
-      <dt class="name font-bold">{{ techs.dependencies.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.DEPENDENCIES') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.dependencies.usual" :key="tech.name" class="tech">
@@ -72,7 +72,7 @@
     </div>
 
     <div class="field repositories">
-      <dt class="name font-bold">{{ techs.repositories.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.REPOSITORIES') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.repositories.usual" :key="tech.name" class="tech">
@@ -83,7 +83,7 @@
       </dd>
     </div>
     <div class="field terminals">
-      <dt class="name font-bold">{{ techs.terminals.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.TERMINALS') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.terminals.usual" :key="tech.name" class="tech">
@@ -94,7 +94,7 @@
       </dd>
     </div>
     <div class="field others">
-      <dt class="name font-bold">{{ techs.others.name }}:</dt>
+      <dt class="name font-bold">{{ $t('MARIO.OTHER_DATA.TECH_SKILLS.OTHERS') }}:</dt>
       <dd class="techs">
         <ul class="tech-list">
           <li v-for="tech in techs.others.usual" :key="tech.name" class="tech">

@@ -4,6 +4,25 @@
     "PAGE1": "Página 1 - Información",
     "PAGE2": "Página 2 - Cursos y habilidades"
   },
+  "DATES": {
+    "MONTHS": {
+      "JAN": "ENE",
+      "FEB": "FEB",
+      "MAR": "MAR",
+      "APR": "ABR",
+      "MAY": "MAY",
+      "JUN": "JUN",
+      "JUL": "JUL",
+      "AUG": "AGO",
+      "SEP": "SEP",
+      "OCT": "OCT",
+      "NOV": "NOV",
+      "DEC": "DIC"
+    },
+    "STATUS": {
+      "ACTUAL": "Actual"
+    }
+  },
   "PROFESSIONAL_EXPERIENCE": {
     "TITLE": "Experiencia profesional",
     "DATA": {
@@ -117,6 +136,10 @@
   "OTHER_DATA": {
     "OPEN_PROJECTS": {
       "TITLE": "Proyectos abiertos",
+      "QUICKMODEL": {
+        "DESCRIPTION": "Librería avanzada para creación de modelos de datos seguros y tipados en TypeScript. Ofrece validación en tiempo de ejecución, decoradores intuitivos para definición de esquemas, y transformación automática de datos JSON a instancias de clase. Diseñada para garantizar la integridad de datos en arquitecturas hexagonales y DDD.",
+        "SHORT_DESCRIPTION": "Librería para modelado y validación de datos en TypeScript."
+      },
       "KEYER": {
         "DESCRIPTION": "Libreria para codificar y decodificar conviertiendo datos en hashes y viceversa usando un salt. Con cli incorporado para posibilitar los procesos desde la terminal de comandos",
         "SHORT_DESCRIPTION": "Libreria con cli para codificar y decodificar datos en hashes."
