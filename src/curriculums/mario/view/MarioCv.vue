@@ -1,32 +1,23 @@
 <template>
-  <h3 class="num-pagina">{{ $t('MARIO.CV.PAGE1') }}</h3>
-  <div class="page">
-    <div class="content">
-      <section class="personal">
-        <PersonalInfo />
-      </section>
-      <section class="professional-experience">
-        <ProfessionalExperience />
-      </section>
-      <section class="oficial-education">
-        <OficialEducation />
-      </section>
-    </div>
-    <span class="cv-expedition">{{ cvDate }}</span>
-  </div>
-  <h3>{{ $t('MARIO.CV.PAGE2') }}</h3>
-  <div class="page">
-    <div class="content">
-      <section class="complementary-education lower-gap">
-        <ComplementaryEducation />
-      </section>
-      <section class="lang lower-gap">
-        <LanguageSection />
-      </section>
-      <section class="other-data">
-        <OtherData />
-      </section>
-    </div>
+  <div class="cv-container">
+    <section class="personal">
+      <PersonalInfo />
+    </section>
+    <section class="professional-experience">
+      <ProfessionalExperience />
+    </section>
+    <section class="oficial-education">
+      <OficialEducation />
+    </section>
+    <section class="complementary-education lower-gap">
+      <ComplementaryEducation />
+    </section>
+    <section class="lang lower-gap">
+      <LanguageSection />
+    </section>
+    <section class="other-data">
+      <OtherData />
+    </section>
     <span class="cv-expedition">{{ cvDate }}</span>
   </div>
 </template>
@@ -46,13 +37,12 @@ const cvDate = CURRICULUM_DATE;
 </script>
 
 <style scoped>
-.content {
+.cv-container {
   width: 100%;
-  height: 100%;
-  /* outline: 1px solid aqua; */
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
+  /* Ensure padding or margins are handled by the parent or global styles */
 }
 
 section {
@@ -60,25 +50,27 @@ section {
   grid-template-columns: 220px 1fr;
   row-gap: 15px;
   column-gap: 10px;
-  /* outline: 1px solid purple; */
 }
 
 .lower-gap {
   row-gap: 6px;
 }
+
 .personal {
-  height: 50mm;
+  /* height: 50mm; Remove fixed height to allow fluidity if content changes */
+  min-height: 50mm;
 }
 
 .cv-expedition {
-  position: absolute;
-  bottom: var(--page-padding);
-  right: var(--page-padding);
+  text-align: right;
   font-size: 10px;
+  margin-top: 20px;
+  color: var(--tertiary);
 }
+
 .other-data {
   position: relative;
-  height: 100%;
+  /* height: 100%; Remove fixed height */
   margin-bottom: 5px;
 }
 </style>

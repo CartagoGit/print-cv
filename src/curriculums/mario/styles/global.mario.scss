@@ -17,9 +17,9 @@
   --bold-font: 'Myriad Pro Bold Condensed';
   --regular-font: 'Myriad Pro';
 }
-.page {
-  display: grid;
-  position: relative;
+.cv-container {
+  /* display: grid; Removed for fluid layout */
+  /* position: relative; */
   font-family: var(--regular-font);
   color: var(--secondary);
   font-size: 14px;
