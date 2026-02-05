@@ -18,6 +18,7 @@ Es la regla más importante:
 1.  **Leer**: Antes de empezar, leer `documents/implementation_plan.md` y `documents/tasks.md`.
 2.  **Actualizar**: Si completas una tarea, marca el checkbox en `tasks.md`.
 3.  **Validar**: No asumas que el código funciona. Verifica tipos (TypeScript) y linting.
+4.  **PIPELINE DE SEGURIDAD**: Al finalizar cualquier tarea, EJECUTA `npm run validate`. Este script corre Linter, Typecheck y Tests. Si falla, **ARREGLALO** antes de seguir. No entregues código roto.
 
 ## 3. Stack Tecnológico
 

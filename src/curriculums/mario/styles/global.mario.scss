@@ -78,3 +78,9 @@
     display: block;
   }
 }
+@media print {
+  section, article, .field-data, .tech-skills, .language-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

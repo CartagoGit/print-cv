@@ -56,7 +56,8 @@
       ref="curriculum"
       v-else
       :style="{
-        transform: isPrintMode ? 'none' : `scale(${Math.round(scale) / 100})`,
+        transform: `scale(${Math.round(scale) / 100})`,
+        transformOrigin: 'top center'
       }"
       id="curriculum"
     >
@@ -122,13 +123,7 @@ const zoomOut = () => {
   scale.value = Math.round(scale.value);
   reRender.value++;
 };
-const callGeneratePDF = async () =>
-  generatePDF({
-    curriculum,
-    isLoading,
-    scale,
-    actualRoute,
-  });
+const callGeneratePDF = async () => generatePDF();
 
 const togglePrintMode = () => {
   isPrintMode.value = !isPrintMode.value;

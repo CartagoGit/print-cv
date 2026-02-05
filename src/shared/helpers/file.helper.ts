@@ -1,4 +1,3 @@
-import type { Ref } from 'vue';
 import { i18nInstance } from './traduction.helper';
 const { t } = i18nInstance.global;
 
@@ -15,15 +14,6 @@ export const getFileName = (data: { nameCv: string | undefined; kind: 'pdf' | 'j
   return nameDoc;
 };
 
-export const generatePDF = async (_data: {
-  curriculum: Ref<HTMLElement | null>;
-  isLoading: Ref<boolean>;
-  scale: Ref<number>;
-  actualRoute: Ref<{
-    text: string;
-    nameRoute: string;
-    name: string;
-  }>;
-}) => {
+export const generatePDF = async () => {
   window.print();
 };
