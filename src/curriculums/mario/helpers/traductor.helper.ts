@@ -4,7 +4,7 @@ import { computed } from 'vue';
 import { i18nInstance } from '@/shared/helpers/traduction.helper';
 const { t } = i18nInstance.global;
 
-type IKindPROFESSIONALExperience =
+export type IKindPROFESSIONALExperience =
   | 'BEATEAM'
   | 'INDEPENDIENT2'
   | 'EXCELLENCE'
@@ -14,7 +14,7 @@ type IKindPROFESSIONALExperience =
   | 'GUADALTEL'
   | 'PUBLIBICI';
 
-type IKindOficialEducation = 'VELAZQUEZ' | 'US' | 'SANPABLO';
+export type IKindOficialEducation = 'VELAZQUEZ' | 'US' | 'SANPABLO';
 
 type IPropsFieldsData =
   | 'COMPANY' // Opcional

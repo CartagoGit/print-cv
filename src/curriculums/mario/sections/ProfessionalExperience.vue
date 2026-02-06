@@ -12,21 +12,24 @@
 import { computed } from 'vue';
 import FieldData from '../components/FieldData.vue';
 import cvData from '../data/cv-data.json';
-import { tDate, tFieldsData } from '../helpers/traductor.helper';
+import { tDate, tFieldsData, type IKindPROFESSIONALExperience } from '../helpers/traductor.helper';
+
+import type { CvData } from '../data/cv-schema';
+
+const typedCvData = cvData as unknown as CvData;
 
 const fields = computed(() =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (cvData.professionalExperience as any[]).map((item) => ({
+  typedCvData.professionalExperience.map((item) => ({
     ...item,
     description: tFieldsData({
       cv: 'MARIO',
-      kind: item.kind,
+      kind: item.kind as IKindPROFESSIONALExperience,
       key: 'DESCRIPTION',
       section: 'PROFESSIONAL_EXPERIENCE',
     }),
     place: tFieldsData({
       cv: 'MARIO',
-      kind: item.kind,
+      kind: item.kind as IKindPROFESSIONALExperience,
       key: 'PLACE',
       section: 'PROFESSIONAL_EXPERIENCE',
     }),
@@ -38,12 +41,11 @@ const fields = computed(() =>
 );
 
 const otherFields = computed(() =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (cvData.otherExperience as any[]).map((item) => ({
+  typedCvData.otherExperience.map((item) => ({
     ...item,
     place: tFieldsData({
       cv: 'MARIO',
-      kind: item.kind,
+      kind: item.kind as IKindPROFESSIONALExperience,
       key: 'PLACE',
       section: 'PROFESSIONAL_EXPERIENCE',
     }),
