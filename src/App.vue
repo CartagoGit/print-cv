@@ -138,6 +138,16 @@ const togglePrintMode = () => {
 };
 
 const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
+
+watch(
+  [() => actualRoute.value, lang],
+  () => {
+    const name = actualRoute.value?.text || 'Mario Cabrero Volarich';
+    const title = lang.value === 'es' ? `CV - ${name}` : `CV - ${name}`;
+    document.title = title;
+  },
+  { immediate: true },
+);
 </script>
 
 <style>

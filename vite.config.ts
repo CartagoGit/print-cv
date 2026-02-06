@@ -10,6 +10,7 @@ export default defineConfig({
     host: process.env.VITE_HOST,
     port: Number(process.env.VITE_PORT),
   },
+  base: '/print-cv/',
   plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
