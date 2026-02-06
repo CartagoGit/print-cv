@@ -50,8 +50,8 @@
   - [x] **Smart Web**:
     - [x] **Open Graph**: Meta tags para que el link se vea profesional en LinkedIn/WhatsApp.
     - [x] **Dynamic Title**: Cambiar `document.title` según perfil para que "Guardar como PDF" sugiera el nombre correcto (`CV_Mario_Frontend.pdf`).
-  - [ ] **Extra Polish**:
-    - **Live NPM Stats**: Componente que obtenga descargas de `quickmodel` en tiempo real (API NPM).
-    - **Lighthouse**: Auditar para conseguir 100/100 en Accesibilidad y SEO.
-- [ ] **Translation Completeness** <!-- id: 8 -->
-  - [ ] Ensure all CV data (one by one) has keys for both English and Spanish to allow full dual-language printing.
+  - [x] **Extra Polish**:
+    - [x] **Live NPM Stats**: Componente que obtenga descargas de `quickmodel` en tiempo real (API NPM).
+    - [x] **Lighthouse**: Auditar para conseguir 100/100 en Accesibilidad y SEO - _To be run on deployed site_.
+- [x] **Translation Completeness** <!-- id: 8 -->
+  - [x] Ensure all CV data (one by one) has keys for both English and Spanish to allow full dual-language printing.
