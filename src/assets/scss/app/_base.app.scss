@@ -62,9 +62,13 @@ body {
 
 h2 {
   font-size: 32px;
+  break-after: avoid;
+  page-break-after: avoid;
 }
 h3 {
   font-size: 26px;
+  break-after: avoid;
+  page-break-after: avoid;
 }
 
 .mr5 {

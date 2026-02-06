@@ -71,4 +71,10 @@ defineProps({
   text-wrap: pretty;
   text-align: justify;
 }
+
+.field-data {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 1rem; /* Add spacing between items */
+}
 </style>

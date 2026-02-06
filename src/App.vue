@@ -245,6 +245,16 @@ watch(
 
     /* Ensure sections break correctly */
     page-break-after: always;
+
+    /* Visual guide for page breaks */
+    background-image: linear-gradient(
+      to bottom,
+      transparent calc(297mm - 1px),
+      #ccc calc(297mm - 1px),
+      #ccc 297mm
+    );
+    background-size: 100% 297mm;
+    background-repeat: repeat-y;
   }
 }
 
