@@ -9,13 +9,14 @@
 import { computed } from 'vue';
 import FieldCourses from '../components/FieldCourses.vue';
 import cvData from '../data/cv-data.json';
-import { tCourses } from '../helpers/traductor.helper';
+import { tCourses, tDate } from '../helpers/traductor.helper';
 
 const fields = computed(() =>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (cvData.complementaryEducation as any[]).map((item) => ({
     ...item,
     description: tCourses(item.kind),
+    date: tDate(item.date),
   })),
 );
 </script>

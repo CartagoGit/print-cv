@@ -12,7 +12,7 @@
 import { computed } from 'vue';
 import FieldData from '../components/FieldData.vue';
 import cvData from '../data/cv-data.json';
-import { tFieldsData } from '../helpers/traductor.helper';
+import { tDate, tFieldsData } from '../helpers/traductor.helper';
 
 const fields = computed(() =>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -30,6 +30,10 @@ const fields = computed(() =>
       key: 'PLACE',
       section: 'PROFESSIONAL_EXPERIENCE',
     }),
+    date: {
+      start: tDate(item.date.start),
+      end: tDate(item.date.end),
+    },
   })),
 );
 
@@ -43,6 +47,10 @@ const otherFields = computed(() =>
       key: 'PLACE',
       section: 'PROFESSIONAL_EXPERIENCE',
     }),
+    date: {
+      start: tDate(item.date.start),
+      end: tDate(item.date.end),
+    },
   })),
 );
 </script>

@@ -9,7 +9,7 @@
 import { computed } from 'vue';
 import FieldCourses from '../components/FieldCourses.vue';
 import cvData from '../data/cv-data.json';
-import { tLangGrade } from '../helpers/traductor.helper';
+import { tDate, tLangGrade } from '../helpers/traductor.helper';
 
 const fields = computed(() =>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,6 +17,7 @@ const fields = computed(() =>
     ...item,
     description: tLangGrade({ lang: item.kind, key: 'DESCRIPTION' }),
     subDescription: tLangGrade({ lang: item.kind, key: 'SUBDESCRIPTION' }),
+    date: tDate(item.date),
   })),
 );
 </script>

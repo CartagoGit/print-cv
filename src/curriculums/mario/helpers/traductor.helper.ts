@@ -137,3 +137,41 @@ export const tMonth = (
     () => pre + (isShort ? t(`MONTHS.${month}`).slice(0, 3) : t(`MONTHS.${month}`)) + next,
   );
 };
+export const tDate = (dateString?: string) => {
+  return computed(() => {
+    if (!dateString) return '';
+    // Handle "Actual"
+    if (dateString.toLowerCase() === 'actual') {
+      return t('MARIO.DATES.STATUS.ACTUAL');
+    }
+    // Handle months parsing
+    const parts = dateString.split(' ');
+    const translatedParts = parts.map((part) => {
+      const upper = part.toUpperCase();
+      const map: Record<string, string> = {
+        ENE: 'JAN',
+        FEB: 'FEB',
+        MAR: 'MAR',
+        ABR: 'APR',
+        MAY: 'MAY',
+        JUN: 'JUN',
+        JUL: 'JUL',
+        AGO: 'AUG',
+        SEP: 'SEP',
+        OCT: 'OCT',
+        NOV: 'NOV',
+        DIC: 'DEC',
+        // English variants just in case
+        JAN: 'JAN',
+        APR: 'APR',
+        AUG: 'AUG',
+        DEC: 'DEC',
+      };
+      if (map[upper]) {
+        return t(`MARIO.DATES.MONTHS.${map[upper]}`);
+      }
+      return part;
+    });
+    return translatedParts.join(' ');
+  });
+};

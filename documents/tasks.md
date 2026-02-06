@@ -34,6 +34,8 @@
   - [x] Mover datos a JSON.
 - [ ] **Content Update** <!-- id: 5 -->
   - [x] **Highlight**: Destacar `quickmodel` al inicio de la sección "Librerías/Proyectos" con descripción detallada.
+    - [x] Refactor components to use `tFieldsData` and other helpers.
+    - [x] Localize dates (months, "Actual").
   - [x] **Refactor Experience**: Dividir en "Experiencia Principal" (Detallada) y "Otros Trabajos" (Resumida).
   - [ ] **Data Entry**: Digitalizar info de las capturas (Beateam, Ezentis, Hispatel).
   - [x] **Cleanup**: Evaluar y eliminar apartados obsoletos tras el rediseño.
