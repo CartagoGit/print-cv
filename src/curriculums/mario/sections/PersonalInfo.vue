@@ -23,6 +23,14 @@
           <span class="font-bold">
             {{ typeof field.value === 'string' ? field.value : field.value.value }}
           </span>
+          <QRCodeWrapper
+            v-if="['github', 'linkedin'].includes(field.kind) && !isPublicMode"
+            :value="
+              'https://' + (typeof field.value === 'string' ? field.value : field.value.value)
+            "
+            :size="40"
+            class="print-only ml-2"
+          />
         </span>
       </div>
     </div>
@@ -44,6 +52,7 @@ import {
 import { DockerIcon } from '@/assets/icons/techs/techs.icons';
 import { tPlace } from '../helpers/traductor.helper';
 import type { IInfoContact } from '@/shared/interfaces/index.interfaces';
+import QRCodeWrapper from '@/shared/components/QRCodeWrapper.vue';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const iconMap: Record<string, any> = {

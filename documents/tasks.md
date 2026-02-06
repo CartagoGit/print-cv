@@ -44,8 +44,8 @@
   - [x] **Semantic HTML**: Usar etiquetas semánticas HTML5 precisas (`<article>`, `<time>`).
   - [x] **Privacy Shield**: Ocultar teléfono/email según `VITE_PUBLIC_MODE`.
 - [ ] **Enhancements** <!-- id: 7 -->
-  - [ ] **QR Codes**: Generar QRs para impresión (links a repos/demos).
-  - [ ] **Data Validation**: Validar JSONs con **Zod** en los tests.
+  - [x] **QR Codes**: Generar QRs para impresión (links a repos/demos).
+  - [x] **Data Validation**: Validar JSONs con **Zod** en los tests.
   - [ ] **CI/CD**: Workflow de GitHub Actions para deploy a GitHub Pages (versión censurada).
   - [ ] **Smart Web**:
     - **Open Graph**: Meta tags para que el link se vea profesional en LinkedIn/WhatsApp.
