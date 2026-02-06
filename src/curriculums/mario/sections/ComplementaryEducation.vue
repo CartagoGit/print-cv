@@ -9,13 +9,15 @@
 import { computed } from 'vue';
 import FieldCourses from '../components/FieldCourses.vue';
 import cvData from '../data/cv-data.json';
-import { tCourses, tDate } from '../helpers/traductor.helper';
+import { tCourses, tDate, type ICourses } from '../helpers/traductor.helper';
+import type { CvData } from '../data/cv-schema';
+
+const typedCvData = cvData as unknown as CvData;
 
 const fields = computed(() =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (cvData.complementaryEducation as any[]).map((item) => ({
+  typedCvData.complementaryEducation.map((item) => ({
     ...item,
-    description: tCourses(item.kind),
+    description: tCourses(item.kind as ICourses),
     date: tDate(item.date),
   })),
 );

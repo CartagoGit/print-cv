@@ -1,4 +1,3 @@
-
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 import MarioCv from '@/curriculums/mario/view/MarioCv.vue';
@@ -9,15 +8,17 @@ describe('Layout Refactor', () => {
     legacy: false,
     locale: 'es',
     messages: {
-      es: { 'GENERAL.LANG': 'es' }
-    }
+      es: { 'GENERAL.LANG': 'es' },
+    },
+    missingWarn: false,
+    fallbackWarn: false,
   });
 
   it('should verify the current structure before refactor', () => {
     const wrapper = mount(MarioCv, {
       global: {
-        plugins: [i18n]
-      }
+        plugins: [i18n],
+      },
     });
 
     // Expect single fluid container
@@ -27,7 +28,7 @@ describe('Layout Refactor', () => {
     // Expect NO legacy page classes
     const pages = wrapper.findAll('.page');
     expect(pages.length).toBe(0);
-    
+
     // Verify all sections are present
     expect(wrapper.find('.personal').exists()).toBe(true);
     expect(wrapper.find('.professional-experience').exists()).toBe(true);

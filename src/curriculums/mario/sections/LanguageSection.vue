@@ -9,14 +9,16 @@
 import { computed } from 'vue';
 import FieldCourses from '../components/FieldCourses.vue';
 import cvData from '../data/cv-data.json';
-import { tDate, tLangGrade } from '../helpers/traductor.helper';
+import { tDate, tLangGrade, type ILanguages } from '../helpers/traductor.helper';
+import type { CvData } from '../data/cv-schema';
+
+const typedCvData = cvData as unknown as CvData;
 
 const fields = computed(() =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (cvData.languages as any[]).map((item) => ({
+  typedCvData.languages.map((item) => ({
     ...item,
-    description: tLangGrade({ lang: item.kind, key: 'DESCRIPTION' }),
-    subDescription: tLangGrade({ lang: item.kind, key: 'SUBDESCRIPTION' }),
+    description: tLangGrade({ lang: item.kind as ILanguages, key: 'DESCRIPTION' }),
+    subDescription: tLangGrade({ lang: item.kind as ILanguages, key: 'SUBDESCRIPTION' }),
     date: tDate(item.date),
   })),
 );

@@ -27,7 +27,7 @@ type IPlace = 'SEVILLE';
 
 type ISection = 'PROFESSIONAL_EXPERIENCE' | 'OFICIAL_EDUCATION';
 
-type ICourses =
+export type ICourses =
   | 'ANGULAR_ADVANCED'
   | 'DOCKER'
   | 'SOLID'
@@ -52,8 +52,8 @@ type ICourses =
   | 'COPPER'
   | 'FTTH'
   | 'FLASH';
-type ILanguages = 'ENGLISH' | 'SPANISH';
-type ILanguagesFields = 'DESCRIPTION' | 'SUBDESCRIPTION';
+export type ILanguages = 'ENGLISH' | 'SPANISH';
+export type ILanguagesFields = 'DESCRIPTION' | 'SUBDESCRIPTION';
 
 type IOpenProjects = 'KEYER' | 'DOCKER_IMAGES' | 'QUICKMODEL';
 type IOpenProjectsFields = 'DESCRIPTION' | 'SHORT_DESCRIPTION';
