@@ -6,6 +6,10 @@
       :class="{ 'new-line': (project.dependency?.length ?? 0) > 26 }"
       >{{ project.dependency }}</span
     >
+    <NpmStats
+      v-if="project.npm && project.dependency && !project.dependency.includes('docker')"
+      :package-name="project.dependency"
+    />
     <div class="short-description" :class="{ 'highlighted-description': project.highlight }">
       {{ project.highlight ? project.description.value : project.shortDescription.value }}
     </div>
@@ -15,6 +19,7 @@
 import { computed } from 'vue';
 import cvData from '../data/cv-data.json';
 import { tOpenProjects } from '../helpers/traductor.helper';
+import NpmStats from '@/shared/components/NpmStats.vue';
 
 const openProjects = computed(() =>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
