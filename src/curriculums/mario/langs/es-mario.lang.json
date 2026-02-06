@@ -145,7 +145,7 @@
         "SHORT_DESCRIPTION": "Libreria con cli para codificar y decodificar datos en hashes."
       },
       "DOCKER_IMAGES": {
-        "DESCRIPCIÓN": "Imágenes Docker para entornos de desarrollo y producción. Con Dockerfiles y documentación para una fácil implementación.",
+        "DESCRIPTION": "Imágenes Docker para entornos de desarrollo y producción. Con Dockerfiles y documentación para una fácil implementación.",
         "SHORT_DESCRIPTION": "Imágenes de Docker para entornos de desarrollo y producción."
       }
     },
@@ -167,5 +167,8 @@
       "TITLE": "Otros datos de interés",
       "DRIVE": "Carnet B de conducir (2014)"
     }
+  },
+  "PLACES": {
+    "SEVILLE": "Sevilla"
   }
 }

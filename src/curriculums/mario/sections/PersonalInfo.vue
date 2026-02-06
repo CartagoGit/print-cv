@@ -37,7 +37,7 @@
   </article>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, type Component } from 'vue';
 import cvData from '../data/cv-data.json';
 import {
   EmailIcon,
@@ -54,8 +54,9 @@ import { tPlace } from '../helpers/traductor.helper';
 import type { IInfoContact } from '@/shared/interfaces/index.interfaces';
 import QRCodeWrapper from '@/shared/components/QRCodeWrapper.vue';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const iconMap: Record<string, any> = {
+import type { CvData } from '../data/cv-schema';
+
+const iconMap: Record<string, Component> = {
   EmailIcon,
   PhoneIcon,
   GithubIcon,
@@ -69,8 +70,8 @@ const iconMap: Record<string, any> = {
 
 const isPublicMode = import.meta.env.VITE_PUBLIC_MODE === 'true';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const contactData = (cvData as any).contact as (IInfoContact & { isPlace?: boolean })[];
+const typedCvData = cvData as unknown as CvData;
+const contactData = typedCvData.contact as (IInfoContact & { isPlace?: boolean })[];
 
 const fields = computed(() => {
   return contactData.map((item) => {
