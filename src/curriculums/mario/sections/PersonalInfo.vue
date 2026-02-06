@@ -37,7 +37,7 @@
   </article>
 </template>
 <script setup lang="ts">
-import { computed, type Component } from 'vue';
+import { computed } from 'vue';
 import cvData from '../data/cv-data.json';
 import {
   EmailIcon,
@@ -56,7 +56,7 @@ import QRCodeWrapper from '@/shared/components/QRCodeWrapper.vue';
 
 import type { CvData } from '../data/cv-schema';
 
-const iconMap: Record<string, Component> = {
+const iconMap: Record<string, object | string> = {
   EmailIcon,
   PhoneIcon,
   GithubIcon,

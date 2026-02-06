@@ -140,9 +140,8 @@ import {
 
 const techs = cvData.techs;
 
-// iconMap needs strict types but SVGs currently infer as string. Disabling any check.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const iconMap: Record<string, any> = {
+// iconMap needs strict types but SVGs currently infer as string.
+const iconMap: Record<string, object | string> = {
   NpmIcon,
   GithubIcon,
   WindowsIcon,
