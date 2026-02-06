@@ -37,7 +37,7 @@
     - [x] Refactor components to use `tFieldsData` and other helpers.
     - [x] Localize dates (months, "Actual").
   - [x] **Refactor Experience**: Dividir en "Experiencia Principal" (Detallada) y "Otros Trabajos" (Resumida).
-  - [ ] **Data Entry**: Digitalizar info de las capturas (Beateam, Ezentis, Hispatel).
+  - [x] **Data Entry**: Digitalizar info de las capturas (Beateam, Ezentis, Hispatel) - _Completed as summary-only for older jobs_.
   - [x] **Cleanup**: Evaluar y eliminar apartados obsoletos tras el rediseño.
 - [x] **Agent Readability (SEO for AI)** <!-- id: 6 -->
   - [x] **JSON-LD**: Generar script `application/ld+json` con Schema.org/Person y datos del CV.
