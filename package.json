@@ -12,6 +12,7 @@
     "lint": "eslint . --fix",
     "format": "prettier --write .",
     "test": "vitest",
+    "test:e2e": "playwright test",
     "validate": "run-s lint type-check test"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@rushstack/eslint-patch": "^1.15.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@tsconfig/node20": "^20.1.9",

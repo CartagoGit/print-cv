@@ -55,3 +55,10 @@
     - [x] **Lighthouse**: Auditar para conseguir 100/100 en Accesibilidad y SEO - _To be run on deployed site_.
 - [x] **Translation Completeness** <!-- id: 8 -->
   - [x] Ensure all CV data (one by one) has keys for both English and Spanish to allow full dual-language printing.
+
+## Improvements
+
+- [x] Theme Switcher (Color Picker)
+- [x] Dark Mode for Web View
+- [x] SEO: robots.txt & sitemap.xml
+- [x] E2E Testing with Playwright

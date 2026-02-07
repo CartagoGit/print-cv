@@ -34,7 +34,24 @@
         </section>
         <section>
           <span class="group-icons" :class="{ disabled: !curriculum }">
-            <PdfIcon class="icon icon--header" @click="callGeneratePDF()" />
+            <span
+              @click="toggleDarkMode"
+              class="icon--header cursor-pointer text-[10px] font-bold text-white transition-opacity duration-200"
+              :class="isDarkMode ? 'opacity-100' : 'opacity-50'"
+            >
+              {{ isDarkMode ? 'DARK' : 'LIGHT' }}
+            </span>
+          </span>
+        </section>
+        <section>
+          <span class="group-icons" :class="{ disabled: !curriculum }">
+            <input
+              type="color"
+              v-model="primaryColor"
+              @input="updateTheme"
+              class="w-6 h-6 p-0 border-0 rounded cursor-pointer bg-transparent"
+              title="Change Theme Color"
+            />
           </span>
         </section>
       </header>
@@ -79,7 +96,7 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from 'vue';
+import { watch, onMounted } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 import {
   HomeIcon,
@@ -104,6 +121,8 @@ const reRender = ref(0);
 const routesData = CURRICULUMS_ROUTES_DATA;
 const actualRoute = ref(routesData.find((routeData) => routeData.nameRoute === route.name)!);
 const isPrintMode = ref(false);
+const isDarkMode = ref(false);
+const primaryColor = ref('#3cb878');
 
 router.beforeEach((_to, _from, next) => {
   scale.value = 100;
@@ -130,14 +149,38 @@ const callGeneratePDF = async () => generatePDF(actualRoute.value?.text || 'CV')
 
 const togglePrintMode = () => {
   isPrintMode.value = !isPrintMode.value;
-  // Adjust scale for A4 preview if needed, or keep user scale
-  if (isPrintMode.value) {
-    // Optional: Reset scale to fit screen or specific preview scale
-    // scale.value = 100;
-  }
 };
 
 const changeLang = () => (lang.value = lang.value === 'es' ? 'en' : 'es');
+
+const updateTheme = () => {
+  document.documentElement.style.setProperty('--primary', primaryColor.value);
+  localStorage.setItem('primaryColor', primaryColor.value);
+};
+
+const toggleDarkMode = () => {
+  isDarkMode.value = !isDarkMode.value;
+  if (isDarkMode.value) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+  localStorage.setItem('darkMode', String(isDarkMode.value));
+};
+
+onMounted(() => {
+  const savedColor = localStorage.getItem('primaryColor');
+  if (savedColor) {
+    primaryColor.value = savedColor;
+    updateTheme();
+  }
+
+  const savedDarkMode = localStorage.getItem('darkMode');
+  if (savedDarkMode === 'true') {
+    isDarkMode.value = true;
+    document.documentElement.classList.add('dark');
+  }
+});
 
 watch(
   [() => actualRoute.value, lang],
@@ -172,9 +215,14 @@ watch(
     display: grid;
     grid-template-columns: 300px 1fr;
     background-color: var(--gray-200);
+    transition: background-color 0.3s ease;
     height: 100vh;
     width: 100%;
     overflow: hidden;
+
+    :global(.dark) & {
+      background-color: var(--gray-900);
+    }
 
     &.print-mode {
       display: block; /* Print mode is full page */
@@ -296,8 +344,14 @@ aside {
     padding: 20px;
     width: 100%;
     display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: var(--gray-800);
+    transition: background-color 0.3s ease;
+    
+    :global(.dark) & {
+      background-color: var(--black);
+    }
 
     section {
       display: flex;
