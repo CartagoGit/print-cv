@@ -27,9 +27,17 @@
               data-testid="preview-btn"
               class="sidebar-preview-btn icon--header cursor-pointer text-[10px] font-bold text-white transition-opacity duration-200"
               :class="isPrintMode ? 'opacity-100' : 'opacity-50'"
+              role="button"
+              aria-label="Toggle Print Preview Mode"
+              title="Toggle Print Preview Mode"
             >
               PREVIEW
             </span>
+          </span>
+        </section>
+        <section>
+          <span class="group-icons" :class="{ disabled: !curriculum }">
+            <PdfIcon class="icon icon--header" @click="callGeneratePDF()" />
           </span>
         </section>
         <section>
@@ -38,6 +46,9 @@
               @click="toggleDarkMode"
               class="icon--header cursor-pointer text-[10px] font-bold text-white transition-opacity duration-200"
               :class="isDarkMode ? 'opacity-100' : 'opacity-50'"
+              role="button"
+              aria-label="Toggle Dark Mode"
+              title="Toggle Dark Mode"
             >
               {{ isDarkMode ? 'DARK' : 'LIGHT' }}
             </span>
@@ -344,11 +355,10 @@ aside {
     padding: 20px;
     width: 100%;
     display: grid;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: var(--gray-800);
     transition: background-color 0.3s ease;
-    
+
     :global(.dark) & {
       background-color: var(--black);
     }

@@ -55,8 +55,8 @@ export type ICourses =
 export type ILanguages = 'ENGLISH' | 'SPANISH';
 export type ILanguagesFields = 'DESCRIPTION' | 'SUBDESCRIPTION';
 
-type IOpenProjects = 'KEYER' | 'DOCKER_IMAGES' | 'QUICKMODEL';
-type IOpenProjectsFields = 'DESCRIPTION' | 'SHORT_DESCRIPTION';
+export type IOpenProjects = 'KEYER' | 'DOCKER_IMAGES' | 'QUICKMODEL';
+export type IOpenProjectsFields = 'DESCRIPTION' | 'SHORT_DESCRIPTION';
 
 type IOtherInteresData = 'DRIVE';
 

@@ -18,15 +18,17 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import cvData from '../data/cv-data.json';
-import { tOpenProjects } from '../helpers/traductor.helper';
+import { tOpenProjects, type IOpenProjects } from '../helpers/traductor.helper';
 import NpmStats from '@/shared/components/NpmStats.vue';
+import type { CvData } from '../data/cv-schema';
+
+const typedCvData = cvData as unknown as CvData;
 
 const openProjects = computed(() =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (cvData.openProjects as any[]).map((p) => ({
+  typedCvData.openProjects.map((p) => ({
     ...p,
-    description: tOpenProjects({ project: p.kind, key: 'DESCRIPTION' }),
-    shortDescription: tOpenProjects({ project: p.kind, key: 'SHORT_DESCRIPTION' }),
+    description: tOpenProjects({ project: p.kind as IOpenProjects, key: 'DESCRIPTION' }),
+    shortDescription: tOpenProjects({ project: p.kind as IOpenProjects, key: 'SHORT_DESCRIPTION' }),
   })),
 );
 </script>
